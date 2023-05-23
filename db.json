@@ -1,13 +1,31 @@
 {
-  "users": {},
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "admin1234",
+      "role": "admin"
+    }
+  ],
   "categories": [
     {
-      "name": "aaaaaa",
-      "id": "6babc270-2357-4f7d-8bf6-d016045cbc56"
+      "name": "watch",
+      "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
     },
     {
-      "name": "xxxxxxxxxx",
-      "id": "d8694e16-ca47-4d46-b68c-adebd5698eba"
+      "name": "handbag",
+      "id": "800cde5c-d9a2-42a0-920d-9039d1f9bd94"
+    },
+    {
+      "name": "sunglasses",
+      "id": "4764ca75-3329-4df2-8008-6b535b388dd8"
+    },
+    {
+      "name": "fragrances",
+      "id": "b4e4cfe5-c1b2-4559-83c8-3eaff7378802"
+    },
+    {
+      "name": "casket",
+      "id": "13d78555-b79a-4fdb-948e-217d45035c18"
     }
   ]
 }

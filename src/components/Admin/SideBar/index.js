@@ -6,7 +6,7 @@ import {PlusCircleIcon} from "@heroicons/react/20/solid";
 const SideBar = ({close}) => {
     return (
         <div className="sidebar fixed h-full">
-            <div className="w-[280px] bg-primary-900 h-full px-5">
+            <div className="w-[240px] bg-primary-900 h-full px-5">
                 <div className="pt-6 mb-6 flex justify-between items-center">
                     <span className="text-gray-100 text-3xl">Hello</span>
                     <Bars3Icon className="h-8 w-8 text-gray-100 cursor-pointer" onClick={()=>close()}/>

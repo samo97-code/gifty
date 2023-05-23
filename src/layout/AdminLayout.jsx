@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import SideBar from "../components/Admin/SideBar";
 import Header from "../components/Admin/Header";
 import Modal from "../components/Ui/Modal";
@@ -6,13 +6,27 @@ import Modal from "../components/Ui/Modal";
 const AdminLayout = ({children}) => {
     const [showSidebar,setShowSidebar] = useState(true)
 
+    useEffect(()=>{
+        window.addEventListener("resize", resizePage);
+
+        return ()=>{
+            window.removeEventListener("resize", resizePage);
+        }
+    },[])
+
+    const resizePage = ()=>{
+        if (window.innerWidth <= 991){
+            setShowSidebar(false)
+        }else setShowSidebar(true)
+    }
+
     return (
         <div>
             {
                 showSidebar ? <SideBar close={()=>setShowSidebar(false)}/> : null
             }
 
-            <div className={`main ${showSidebar ? 'ml-[280px]' : ''}`}>
+            <div className={`main ${showSidebar ? 'ml-[240px]' : ''}`}>
                 <Header showSidebar={showSidebar} open={()=>setShowSidebar(true)}/>
 
                 <div className="content-wrapper bg-gray-50 h-main pt-10">

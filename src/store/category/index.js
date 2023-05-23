@@ -20,9 +20,24 @@ export const fetchCategories = (payload) => async dispatch => {
     }
 }
 
+export const fetchCategoryById = (payload) => async dispatch => {
+    try {
+        return await axios.get(`http://localhost:8081/categories/${payload.id}`)
+    } catch (e) {
+        catchErrors(e)
+    }
+}
+
+export const updateCategory = (payload) => async dispatch => {
+    try {
+        return await axios.put(`http://localhost:8081/categories/${payload.id}`,payload)
+    } catch (e) {
+        catchErrors(e)
+    }
+}
+
 export const deleteCategory = (payload) => async dispatch => {
     try {
-        console.log(payload,'payload')
         return await axios.delete(`http://localhost:8081/categories/${payload.id}`)
     } catch (e) {
         catchErrors(e)

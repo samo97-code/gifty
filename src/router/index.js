@@ -4,6 +4,7 @@ import App from "../App";
 import AdminLayout from "../layout/AdminLayout";
 import CreateCategory from "../pages/category/CreateCategory";
 import Categories from "../pages/category/Categories";
+import EditCategory from "../pages/category/EditCategory";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -28,7 +29,7 @@ export const router = createBrowserRouter(
             }/>
             <Route path="/admin/category/edit/:id" element={
                 <AdminLayout>
-                    <h1>Test</h1>
+                    <EditCategory />
                 </AdminLayout>
             }/>
             <Route path="/admin/product/create" element={

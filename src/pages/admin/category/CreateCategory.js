@@ -3,8 +3,8 @@ import {useForm} from "react-hook-form";
 import cogoToast from 'cogo-toast';
 import {useDispatch} from "react-redux";
 import { v4 as uuidv4 } from 'uuid';
-import {createCategory} from "../../store/category";
-import {catchErrors} from "../../utils";
+import {createCategory} from "../../../store/category";
+import {catchErrors} from "../../../utils";
 
 const CreateCategory = () => {
     const {register, handleSubmit, reset, formState: {errors}} = useForm();

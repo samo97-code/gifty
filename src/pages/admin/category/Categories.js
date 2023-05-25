@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {fetchCategories, deleteCategory} from "../../store/category";
-import {catchErrors} from "../../utils";
+import {fetchCategories, deleteCategory} from "../../../store/category";
+import {catchErrors} from "../../../utils";
 import {useDispatch} from "react-redux";
-import DataTable from "../../components/Ui/Table/DataTable";
+import DataTable from "../../../components/Ui/Table/DataTable";
 import {useNavigate} from "react-router";
 import cogoToast from "cogo-toast";
-import {useModal} from "../../hooks/useModal";
+import {useModal} from "../../../hooks/useModal";
 
 const Categories = () => {
     const dispatch = useDispatch()

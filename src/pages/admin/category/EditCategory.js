@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
 import {useForm} from "react-hook-form";
 import {useDispatch} from "react-redux";
-import {fetchCategoryById, updateCategory} from "../../store/category";
+import {fetchCategoryById, updateCategory} from "../../../store/category";
 import cogoToast from "cogo-toast";
-import {catchErrors} from "../../utils";
+import {catchErrors} from "../../../utils";
 import {useParams} from "react-router";
 
 const EditCategory = () => {

@@ -1,3 +1,21 @@
+export const statuses = [
+    {
+        "id": 1,
+        "name": "Ordered",
+        "color": ''
+    },
+    {
+        "id": 2,
+        "name": "Arrived",
+        "color": ''
+    },
+    {
+        "id": 3,
+        "name": "Sold",
+        "color": ''
+    }
+]
+
 export const shops = [
     {
         "id": 1,

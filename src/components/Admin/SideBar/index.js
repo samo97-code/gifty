@@ -16,6 +16,17 @@ const SideBar = ({close}) => {
 
                 <ul className="mt-8">
                     <li className="mb-2">
+                        <NavLink to="/admin"
+                                 className={({isActive, isPending}) =>
+                                     [isActive ? "active bg-primary-300 text-white" : "text-gray-100",
+                                         'flex gap-x-3 items-center px-3 py-2 hover:bg-primary-100 rounded-[4px]'].join(' ')
+                                 }>
+                            <PlusCircleIcon className="h-5 w-5" />
+                            <span>Dashboard</span>
+                        </NavLink>
+                    </li>
+
+                    <li className="mb-2">
                         <NavLink to="/admin/category/create"
                                  className={({isActive, isPending}) =>
                                      [isActive ? "active bg-primary-300 text-white" : "text-gray-100",
@@ -26,7 +37,7 @@ const SideBar = ({close}) => {
                         </NavLink>
                     </li>
 
-                    <li>
+                    <li className="mb-2">
                         <NavLink to="/admin/categories"
                                  className={({isActive, isPending}) =>
                                      [isActive ? "active bg-primary-300 text-white" : "text-gray-100",
@@ -34,6 +45,28 @@ const SideBar = ({close}) => {
                                  }>
                             <PlusCircleIcon className="h-5 w-5" />
                             <span>Categories</span>
+                        </NavLink>
+                    </li>
+
+                    <li className="mb-2">
+                        <NavLink to="/admin/product/create"
+                                 className={({isActive, isPending}) =>
+                                     [isActive ? "active bg-primary-300 text-white" : "text-gray-100",
+                                         'flex gap-x-3 items-center px-3 py-2 hover:bg-primary-100 rounded-[4px]'].join(' ')
+                                 }>
+                            <PlusCircleIcon className="h-5 w-5" />
+                            <span>Create Product</span>
+                        </NavLink>
+                    </li>
+
+                    <li className="mb-2">
+                        <NavLink to="/admin/products"
+                                 className={({isActive, isPending}) =>
+                                     [isActive ? "active bg-primary-300 text-white" : "text-gray-100",
+                                         'flex gap-x-3 items-center px-3 py-2 hover:bg-primary-100 rounded-[4px]'].join(' ')
+                                 }>
+                            <PlusCircleIcon className="h-5 w-5" />
+                            <span>Products</span>
                         </NavLink>
                     </li>
                 </ul>

@@ -21,12 +21,12 @@ const AdminLayout = ({children}) => {
     }
 
     return (
-        <div>
+        <div className="h-full">
             {
                 showSidebar ? <SideBar close={()=>setShowSidebar(false)}/> : null
             }
 
-            <div className={`main ${showSidebar ? 'ml-[240px]' : ''}`}>
+            <div className={`main h-full ${showSidebar ? 'ml-[240px]' : ''}`}>
                 <Header showSidebar={showSidebar} open={()=>setShowSidebar(true)}/>
 
                 <div className="content-wrapper bg-gray-50 h-main pt-10">

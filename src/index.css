@@ -42,6 +42,13 @@ tr:nth-child(odd) {
     position: fixed;
 }
 
+body{
+    height: 100vh;
+}
+#root{
+    height: 100%;
+}
+
 
 @media (max-width: 991px) {
     .main-container {

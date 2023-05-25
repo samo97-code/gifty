@@ -6,15 +6,16 @@ import {fetchCategories} from "../../../store/category";
 import cogoToast from "cogo-toast";
 import {catchErrors} from "../../../utils";
 import {sizes, shops, statuses} from "../../../constants";
-import {createProduct} from "../../../store/product";
-import {useNavigate} from "react-router";
+import {createProduct, fetchProductById, updateProduct} from "../../../store/product";
+import {useNavigate, useParams} from "react-router";
 
-const CreateProduct = () => {
+const EditProduct = () => {
     const dispatch = useDispatch()
+    const params = useParams()
     const navigate = useNavigate()
     const [loading, setLoading] = useState(true)
     const [categories, setCategories] = useState([])
-    const {register, handleSubmit, reset, watch, formState: {errors}} = useForm();
+    const {register, handleSubmit, watch, setValue, formState: {errors}} = useForm();
 
     const watchCategory = watch("category");
 
@@ -22,11 +23,46 @@ const CreateProduct = () => {
         fetchAllCategories()
     }, [])
 
+    useEffect(() => {
+        if (params.id) fetchCurrentProduct()
+    }, [params.id])
+
+    const setDefaultValues = (data) => {
+        setValue('title', data.title)
+        setValue('brand', data.brand)
+        setValue('productUrl', data.productUrl)
+        setValue('shop', data.shop?.name)
+        setValue('quantity', data.quantity)
+        setValue('shopPrice', data.shopPrice)
+        setValue('dollarRate', data.dollarRate)
+        setValue('orderDate', data.orderDate)
+        setValue('arrivedDate', data.arrivedDate)
+        setValue('shipmentPrice', data.shipmentPrice)
+        setValue('giftyPrice', data.giftyPrice)
+        setValue('orderNumber', data.orderNumber)
+        setValue('category', data.category?.name)
+        setValue('status', data.status?.id)
+        setValue('sizes', data.size?.id)
+        setValue('shopPriceArm', data.shopPriceArm)
+        setValue('isInStock', data.isInStock)
+    }
+
     const fetchAllCategories = async () => {
         try {
             const resp = await dispatch(fetchCategories())
             if (resp.data) {
                 setCategories(resp.data)
+            }
+        } catch (e) {
+            catchErrors(e)
+        }
+    }
+
+    const fetchCurrentProduct = async () => {
+        try {
+            const resp = await dispatch(fetchProductById({id: params.id}))
+            if (resp.status === 200) {
+                setDefaultValues(resp.data)
             }
         } catch (e) {
             catchErrors(e)
@@ -46,23 +82,22 @@ const CreateProduct = () => {
 
             data.category = categories.find((item) => item.name === data.category)
             data.shop = shops.find((item) => item.name === data.shop)
-            if (data.size) data.size = sizes.find((item) => item.id === data.size)
+            data.status = statuses.find((item) => item.id === +data.status)
+            if (data.size) data.size = sizes.find((item) => item.id === +data.size)
 
             const prepareData = {
                 ...data,
-                id: uuidv4(),
-                status: data.arrivedDate ? statuses[1] : statuses[0],
-                isInStock: true,
+                id: params.id,
+                status: data.status,
+                isInStock: data.isInStock,
                 shopPriceArm,
                 cleanIncome
             }
 
-
-            const resp = await dispatch(createProduct(prepareData))
-            if (resp.status === 201) {
+            const resp = await dispatch(updateProduct(prepareData))
+            if (resp.status === 200) {
                 await navigate('/admin/products')
-                await reset()
-                await cogoToast.success('Successfully Created')
+                await cogoToast.success('Successfully Updated')
             }
         } catch (e) {
             catchErrors(e)
@@ -71,7 +106,7 @@ const CreateProduct = () => {
 
     return (
         <div className="main-container bg-gray-50 pb-10">
-            <h2 className="text-primary-900 text-3xl font-bold mb-6">Create Product</h2>
+            <h2 className="text-primary-900 text-3xl font-bold mb-6">Edit Product</h2>
 
             <form onSubmit={handleSubmit(onSubmit)}
                   className="w-[500px] mx-auto border border-gray-400 rounded-[4px] shadow-md px-4 py-5">
@@ -121,6 +156,23 @@ const CreateProduct = () => {
                     </select>
 
                     {errors.shop ?
+                        <p className="mt-[2px] text-sm text-error font-semibold">Field is required</p> : null}
+                </div>
+
+                <div className="form-group mb-4">
+                    <label htmlFor="status"
+                           className="block mb-1 text-primary-100 text-lg font-semibold">Status</label>
+                    <select name="status" id="status" {...register('status', {required: true})}
+                            className="px-3 py-3 w-full shadow-md text-primary-100 focus:border-primary-100 focus:ring-primary-100">
+                        <option value={null}>None</option>
+                        {
+                            statuses.map((status) => {
+                                return <option value={status.id} key={status.id}>{status.name}</option>
+                            })
+                        }
+                    </select>
+
+                    {errors.status ?
                         <p className="mt-[2px] text-sm text-error font-semibold">Field is required</p> : null}
                 </div>
 
@@ -252,10 +304,18 @@ const CreateProduct = () => {
                         <p className="mt-[2px] text-sm text-error font-semibold">Field is required</p> : null}
                 </div>
 
+                <div className="form-group flex items-center gap-x-2 mb-4">
+                    <input type="checkbox" name="isInStock" id="isInStock"
+                           placeholder="In Stock" {...register('isInStock')}
+                           className=""/>
+                    <label htmlFor="isInStock"
+                           className="block text-primary-100 text-lg font-semibold cursor-pointer">In Stock</label>
+                </div>
+
 
                 <div className="form-group mt-6 flex justify-center">
                     <button type="submit"
-                            className="w-[100px] bg-blue text-white text-md font-semibold rounded-[16px] px-4 py-3">Save
+                            className="w-[100px] bg-blue text-white text-md font-semibold rounded-[16px] px-4 py-3">Update
                     </button>
                 </div>
             </form>
@@ -263,4 +323,4 @@ const CreateProduct = () => {
     );
 };
 
-export default CreateProduct;
+export default EditProduct;

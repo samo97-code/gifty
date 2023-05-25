@@ -7,6 +7,7 @@ import Categories from "../pages/admin/category/Categories";
 import EditCategory from "../pages/admin/category/EditCategory";
 import CreateProduct from "../pages/admin/product/CreateProduct";
 import Products from "../pages/admin/product/Products";
+import EditProduct from "../pages/admin/product/EditProduct";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -46,10 +47,9 @@ export const router = createBrowserRouter(
             }/>
             <Route path="/admin/product/edit/:id" element={
                 <AdminLayout>
-                    <h1>Test</h1>
+                    <EditProduct />
                 </AdminLayout>
             }/>
-
         </>
     )
 );

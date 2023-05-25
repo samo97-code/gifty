@@ -1,9 +1,8 @@
 import React, {useEffect, useMemo, useState} from 'react';
-import {fetchProducts} from "../../../store/product";
+import {deleteProduct, fetchProducts} from "../../../store/product";
 import {catchErrors} from "../../../utils";
 import {useDispatch} from "react-redux";
 import DataTable from "../../../components/Ui/Table/DataTable";
-import {deleteCategory} from "../../../store/category";
 import cogoToast from "cogo-toast";
 import {useNavigate} from "react-router";
 import {useModal} from "../../../hooks/useModal";
@@ -62,7 +61,7 @@ const Products = () => {
     }
 
     const toLink = (item) => {
-        navigate(`/admin/category/edit/${item.id}`)
+        navigate(`/admin/product/edit/${item.id}`)
     }
 
     const showDeleteModal = (item) => {
@@ -72,7 +71,7 @@ const Products = () => {
             title: 'Delete Confirm',
             data: {
                 id: item.id,
-                title: item.name,
+                title: item.title,
                 callback: deleteCurrentProduct
             }
         }
@@ -82,7 +81,7 @@ const Products = () => {
 
     const deleteCurrentProduct = async (id) => {
         try {
-            const resp = await dispatch(deleteCategory({id}))
+            const resp = await dispatch(deleteProduct({id}))
             if (resp.status === 200) {
                 await fetchAllProducts()
                 await modal.closeModal()

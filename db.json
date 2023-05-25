@@ -30,60 +30,35 @@
   ],
   "products": [
     {
-      "title": "x",
-      "brand": "xxxxxxxxxxxxx",
-      "productUrl": "xxxxxxxxxxxxxxxx",
-      "shop": "jomashop",
-      "quantity": "2",
-      "shopPrice": "50",
-      "dollarRate": "384",
-      "orderDate": "2023-05-25",
-      "orderNumber": "gxcvsdf",
-      "arrivedDate": "2023-05-25",
-      "shipmentPrice": "2000",
-      "giftyPrice": "45000",
-      "category": {
-        "name": "watch",
-        "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
+      "title": "zzzzzz",
+      "brand": "bbb",
+      "productUrl": "aaaaaaaaa",
+      "shop": {
+        "id": 2,
+        "name": "jomashop",
+        "url": "https://www.jomashop.com/"
       },
-      "id": "202685d9-2f64-4037-a1aa-3d7e19eb0268",
       "status": {
         "id": 2,
-        "name": "Arrived"
+        "name": "Arrived",
+        "color": ""
       },
-      "isInStock": true,
-      "shopPriceArm": 19200,
-      "cleanIncome": 23800
-    },
-    {
-      "title": "bvcb",
-      "brand": "bvcb",
-      "productUrl": "ccccccc",
-      "shop": "jomashop",
-      "quantity": 1,
-      "shopPrice": "15",
-      "dollarRate": "384",
+      "quantity": "1",
+      "shopPrice": "40",
+      "dollarRate": "383",
       "orderDate": "2023-05-25",
-      "orderNumber": "",
-      "arrivedDate": "",
-      "shipmentPrice": 0,
-      "giftyPrice": 0,
-      "category": {
-        "name": "fragrances",
-        "id": "b4e4cfe5-c1b2-4559-83c8-3eaff7378802"
-      },
-      "size": {
-        "id": 3,
-        "name": "30ml"
-      },
-      "id": "179ba7fd-bda1-4cd0-991a-74ec6c228542",
-      "status": {
-        "id": 1,
-        "name": "Ordered"
-      },
+      "orderNumber": "#784545",
+      "arrivedDate": "2023-05-25",
+      "shipmentPrice": "2000",
+      "giftyPrice": "40000",
       "isInStock": true,
-      "shopPriceArm": 5760,
-      "cleanIncome": 0
+      "category": {
+        "name": "sunglasses",
+        "id": "4764ca75-3329-4df2-8008-6b535b388dd8"
+      },
+      "shopPriceArm": 15320,
+      "id": "4e8129b1-a0ba-479b-bbd5-f30c43da4062",
+      "cleanIncome": 22680
     }
   ]
 }

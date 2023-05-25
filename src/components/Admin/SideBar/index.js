@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import {Bars3Icon} from "@heroicons/react/20/solid";
-import {PlusCircleIcon} from "@heroicons/react/20/solid";
+import {PlusCircleIcon,ListBulletIcon, ChartPieIcon} from "@heroicons/react/20/solid";
 
 const SideBar = ({close}) => {
     return (
@@ -21,7 +21,7 @@ const SideBar = ({close}) => {
                                      [isActive ? "active bg-primary-300 text-white" : "text-gray-100",
                                          'flex gap-x-3 items-center px-3 py-2 hover:bg-primary-100 rounded-[4px]'].join(' ')
                                  }>
-                            <PlusCircleIcon className="h-5 w-5" />
+                            <ChartPieIcon className="h-5 w-5" />
                             <span>Dashboard</span>
                         </NavLink>
                     </li>
@@ -43,7 +43,7 @@ const SideBar = ({close}) => {
                                      [isActive ? "active bg-primary-300 text-white" : "text-gray-100",
                                          'flex gap-x-3 items-center px-3 py-2 hover:bg-primary-100 rounded-[4px]'].join(' ')
                                  }>
-                            <PlusCircleIcon className="h-5 w-5" />
+                            <ListBulletIcon className="h-5 w-5" />
                             <span>Categories</span>
                         </NavLink>
                     </li>
@@ -65,7 +65,7 @@ const SideBar = ({close}) => {
                                      [isActive ? "active bg-primary-300 text-white" : "text-gray-100",
                                          'flex gap-x-3 items-center px-3 py-2 hover:bg-primary-100 rounded-[4px]'].join(' ')
                                  }>
-                            <PlusCircleIcon className="h-5 w-5" />
+                            <ListBulletIcon className="h-5 w-5" />
                             <span>Products</span>
                         </NavLink>
                     </li>

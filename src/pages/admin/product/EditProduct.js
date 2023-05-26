@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import {useForm} from "react-hook-form";
 import {useDispatch} from "react-redux";
-import {v4 as uuidv4} from "uuid";
 import {fetchCategories} from "../../../store/category";
 import cogoToast from "cogo-toast";
 import {catchErrors} from "../../../utils";
 import {sizes, shops, statuses} from "../../../constants";
-import {createProduct, fetchProductById, updateProduct} from "../../../store/product";
+import {fetchProductById, updateProduct} from "../../../store/product";
 import {useNavigate, useParams} from "react-router";
+import {convertCamelToSnack} from "../../../utils/convertCamelToSnack";
 
 const EditProduct = () => {
     const dispatch = useDispatch()
@@ -30,21 +30,21 @@ const EditProduct = () => {
     const setDefaultValues = (data) => {
         setValue('title', data.title)
         setValue('brand', data.brand)
-        setValue('productUrl', data.productUrl)
+        setValue('productUrl', data.product_url)
         setValue('shop', data.shop?.name)
         setValue('quantity', data.quantity)
-        setValue('shopPrice', data.shopPrice)
-        setValue('dollarRate', data.dollarRate)
-        setValue('orderDate', data.orderDate)
-        setValue('arrivedDate', data.arrivedDate)
-        setValue('shipmentPrice', data.shipmentPrice)
-        setValue('giftyPrice', data.giftyPrice)
-        setValue('orderNumber', data.orderNumber)
+        setValue('shopPrice', data.shop_price)
+        setValue('dollarRate', data.dollar_rate)
+        setValue('orderDate', data.order_date)
+        setValue('arrivedDate', data.arrived_date)
+        setValue('shipmentPrice', data.shipment_price)
+        setValue('giftyPrice', data.gifty_price)
+        setValue('orderNumber', data.order_number)
         setValue('category', data.category?.name)
         setValue('status', data.status?.id)
         setValue('sizes', data.size?.id)
-        setValue('shopPriceArm', data.shopPriceArm)
-        setValue('isInStock', data.isInStock)
+        setValue('shopPriceArm', data.shop_price_arm)
+        setValue('isInStock', data.is_in_stock)
     }
 
     const fetchAllCategories = async () => {
@@ -94,7 +94,7 @@ const EditProduct = () => {
                 cleanIncome
             }
 
-            const resp = await dispatch(updateProduct(prepareData))
+            const resp = await dispatch(updateProduct(await convertCamelToSnack(prepareData)))
             if (resp.status === 200) {
                 await navigate('/admin/products')
                 await cogoToast.success('Successfully Updated')

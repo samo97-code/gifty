@@ -8,6 +8,7 @@ import {catchErrors} from "../../../utils";
 import {sizes, shops, statuses} from "../../../constants";
 import {createProduct} from "../../../store/product";
 import {useNavigate} from "react-router";
+import {convertCamelToSnack} from "../../../utils/convertCamelToSnack";
 
 const CreateProduct = () => {
     const dispatch = useDispatch()
@@ -58,7 +59,7 @@ const CreateProduct = () => {
             }
 
 
-            const resp = await dispatch(createProduct(prepareData))
+            const resp = await dispatch(createProduct(await convertCamelToSnack(prepareData)))
             if (resp.status === 201) {
                 await navigate('/admin/products')
                 await reset()

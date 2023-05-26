@@ -2,17 +2,17 @@ export const statuses = [
     {
         "id": 1,
         "name": "Ordered",
-        "color": ''
+        "color": '#6c757d'
     },
     {
         "id": 2,
         "name": "Arrived",
-        "color": ''
+        "color": '#28a745'
     },
     {
         "id": 3,
         "name": "Sold",
-        "color": ''
+        "color": '#dc3545'
     }
 ]
 

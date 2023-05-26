@@ -6,11 +6,12 @@ import DataTable from "../../../components/Ui/Table/DataTable";
 import cogoToast from "cogo-toast";
 import {useNavigate} from "react-router";
 import {useModal} from "../../../hooks/useModal";
+import {toUnderscore} from "../../../utils/toUnderscore";
 
 const Products = () => {
     const dispatch = useDispatch()
     const [products, setProducts] = useState([])
-    const [defaultHeaders, setDefaultHeaders] = useState(['title', 'brand', 'productUrl', 'status', 'shopPriceDollar', 'giftyPrice', 'cleanIncome', 'action'])
+    const [defaultHeaders, setDefaultHeaders] = useState(['title', 'brand', 'product_url', 'status', 'shop_price', 'gifty_price', 'clean_income', 'action'])
     const [loader, setLoader] = useState(true)
 
     const navigate = useNavigate()
@@ -19,22 +20,22 @@ const Products = () => {
     const allHeaders = [
         {id: 1, label: 'Name', value: 'title'},
         {id: 2, label: 'Brand', value: 'brand'},
-        {id: 3, label: 'Product Url', value: 'productUrl'},
+        {id: 3, label: 'Product Url', value: 'product_url'},
         {id: 4, label: 'Shop Name', value: 'shop'},
         {id: 5, label: 'Status', value: 'status'},
-        {id: 6, label: 'In Stock', value: 'inStock'},
+        {id: 6, label: 'In Stock', value: 'in_stock'},
         {id: 7, label: 'Category', value: 'category'},
         {id: 8, label: 'Size', value: 'size'},
         {id: 9, label: 'Quantity', value: 'quantity'},
-        {id: 10, label: 'Shop Price($)', value: 'shopPrice'},
-        {id: 11, label: 'Dollar Rate', value: 'dollarRate'},
-        {id: 12, label: 'Shop Price(dr)', value: 'shopPriceArm'},
-        {id: 13, label: 'Order Date', value: 'orderDate'},
-        {id: 14, label: 'Order Number', value: 'orderNumber'},
-        {id: 15, label: 'Arrived Date', value: 'arrivedDate'},
-        {id: 16, label: 'Shipment Price(dr)', value: 'shipmentPrice'},
-        {id: 17, label: 'Gifty Price(dr)', value: 'giftyPrice'},
-        {id: 18, label: 'Clean Income(dr)', value: 'cleanIncome'},
+        {id: 10, label: 'Shop Price($)', value: 'shop_price'},
+        {id: 11, label: 'Dollar Rate', value: 'dollar_rate'},
+        {id: 12, label: 'Shop Price(dr)', value: 'shop_price_arm'},
+        {id: 13, label: 'Order Date', value: 'order_date'},
+        {id: 14, label: 'Order Number', value: 'order_number'},
+        {id: 15, label: 'Arrived Date', value: 'arrived_date'},
+        {id: 16, label: 'Shipment Price(dr)', value: 'shipment_price'},
+        {id: 17, label: 'Gifty Price(dr)', value: 'gifty_price'},
+        {id: 18, label: 'Clean Income(dr)', value: 'clean_income'},
         {id: 19, label: 'Sold', value: 'sold'},
         {id: 20, label: 'Action', value: 'action'},
     ]
@@ -51,6 +52,7 @@ const Products = () => {
         try {
             const resp = await dispatch(fetchProducts())
             if (resp.status === 200) {
+                console.log(resp.data, 'resp.data')
                 setProducts(resp.data)
             }
         } catch (e) {
@@ -103,21 +105,25 @@ const Products = () => {
                                     defaultHeaders.includes('title') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span>{item.title}</span>
+                                            <span className="text-sm">{item.title}</span>
                                         </td> : null
                                 }
                                 {
                                     defaultHeaders.includes('brand') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span>{item.brand}</span>
+                                            <span className="text-sm">{item.brand}</span>
                                         </td> : null
                                 }
                                 {
-                                    defaultHeaders.includes('productUrl') ?
+                                    defaultHeaders.includes('product_url') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span>{item.productUrl}</span>
+                                            <a className="text-blue underline overflow-ellipsis overflow-hidden whitespace-normal line-clamp-1"
+                                               href={item.product_url} target="_blank">
+                                                <span>{item.product_url}</span>
+                                            </a>
+
                                         </td> : null
                                 }
                                 {
@@ -131,14 +137,15 @@ const Products = () => {
                                     defaultHeaders.includes('status') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span>{item.status?.name}</span>
+                                            <span style={{background: `${item.status.color}`}}
+                                                  className={`px-4 py-2 rounded-[16px] text-white font-semibold`}>{item.status?.name}</span>
                                         </td> : null
                                 }
                                 {
-                                    defaultHeaders.includes('isInStock') ?
+                                    defaultHeaders.includes('is_in_stock') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span>{item.isInStock ? 'Yes' : 'no'}</span>
+                                            <span>{item.is_in_stock ? 'Yes' : 'no'}</span>
                                         </td> : null
                                 }
                                 {
@@ -163,66 +170,66 @@ const Products = () => {
                                         </td> : null
                                 }
                                 {
-                                    defaultHeaders.includes('shopPrice') ?
+                                    defaultHeaders.includes('shop_price') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span>{item.shopPrice}</span>
+                                            <b className="text-sm">{item.shop_price}</b>
                                         </td> : null
                                 }
                                 {
-                                    defaultHeaders.includes('dollarRate') ?
+                                    defaultHeaders.includes('dollar_rate') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span>{item.dollarRate}</span>
+                                            <span>{item.dollar_rate}</span>
                                         </td> : null
                                 }
                                 {
-                                    defaultHeaders.includes('shopPriceArm') ?
+                                    defaultHeaders.includes('shop_price_arm') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span>{item.shopPriceArm} dr</span>
+                                            <b className="text-sm">{item.shop_price_arm} dr</b>
                                         </td> : null
                                 }
                                 {
-                                    defaultHeaders.includes('orderDate') ?
+                                    defaultHeaders.includes('order_date') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span>{item.orderDate}</span>
+                                            <span>{item.order_date}</span>
                                         </td> : null
                                 }
                                 {
-                                    defaultHeaders.includes('orderNumber') ?
+                                    defaultHeaders.includes('order_number') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span>{item.orderNumber}</span>
+                                            <span>{item.order_number}</span>
                                         </td> : null
                                 }
                                 {
-                                    defaultHeaders.includes('arrivedDate') ?
+                                    defaultHeaders.includes('arrived_date') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span>{item.arrivedDate}</span>
+                                            <span>{item.arrived_date}</span>
                                         </td> : null
                                 }
                                 {
-                                    defaultHeaders.includes('shipmentPrice') ?
+                                    defaultHeaders.includes('shipment_price') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span>{item.shipmentPrice}</span>
+                                            <b className="text-sm">{item.shipment_price}</b>
                                         </td> : null
                                 }
                                 {
-                                    defaultHeaders.includes('giftyPrice') ?
+                                    defaultHeaders.includes('gifty_price') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span>{item.giftyPrice}</span>
+                                            <b className="text-sm">{item.gifty_price}</b>
                                         </td> : null
                                 }
                                 {
-                                    defaultHeaders.includes('cleanIncome') ?
+                                    defaultHeaders.includes('clean_income') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span>{item.cleanIncome}</span>
+                                            <b className="text-sm">{item.clean_income}</b>
                                         </td> : null
                                 }
                                 {

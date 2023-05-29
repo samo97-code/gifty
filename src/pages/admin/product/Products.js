@@ -13,8 +13,10 @@ import Pagination from "../../../components/Ui/Pagination";
 import {productDefaultLimit} from "../../../constants";
 
 const defaultValues = {
-    search: '',
+    name: '',
+    brand: '',
     categories: [],
+    statuses: [],
     dates: []
 }
 
@@ -66,8 +68,10 @@ const Products = () => {
         try {
             setProducts([])
             const options = {
-                search: filters.search,
+                name: filters.name,
+                brand: filters.brand,
                 categories: filters.categories,
+                statuses: filters.statuses,
                 dateRanges: filters.dates,
                 paginate: pagination ? pagination : `_page=1&_limit=${productDefaultLimit}`
             }
@@ -76,7 +80,6 @@ const Products = () => {
             const resp = await dispatch(fetchProducts(options))
 
             if (resp.status === 200) {
-                console.log(resp,'resp')
                 setProducts(resp.data)
 
                 const obj = {

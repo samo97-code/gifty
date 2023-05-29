@@ -56,6 +56,24 @@ tr:nth-child(odd) {
     padding: 0;
 }
 
+#categories .search-wrapper{
+    min-height: 48px;
+    background: white;
+}
+#categories .search-wrapper input{
+   margin-top: 6px;
+}
+
+.rmdp-container{
+    height: 48px !important;
+    max-width: 100%;
+    width: 100%;
+}
+.rmdp-container input{
+    width: 100%;
+    height: 48px;
+}
+
 .middle-screen{
     top: 40%;
     left: 50%;

@@ -48,8 +48,8 @@ const Pagination = ({headerData, updateProducts}) => {
 
 
     return (
-        <div className="mt-4 flex justify-end">
-            <div className="flex gap-x-6 items-center">
+        <div className="mt-4 flex sm:justify-end">
+            <div className="flex flex-col sm:flex-row gap-x-6 gap-y-3 sm:gap-y-0 sm:items-center">
                 <div className="flex gap-x-2 items-center">
                     <span className="text-primary-900">Rows per page:</span>
                     <Multiselect

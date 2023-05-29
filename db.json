@@ -131,9 +131,9 @@
         "url": "https://www.6pm.com/"
       },
       "status": {
-        "id": 2,
-        "name": "Arrived",
-        "color": "#28a745"
+        "id": 3,
+        "name": "Sold",
+        "color": "#dc3545"
       },
       "quantity": "1",
       "category": {
@@ -192,10 +192,10 @@
         "name": "6pm",
         "url": "https://www.6pm.com/"
       },
-      "status": {
-        "id": 2,
-        "name": "Arrived",
-        "color": "#28a745"
+      "status":  {
+        "id": 1,
+        "name": "Ordered",
+        "color": "#6c757d"
       },
       "quantity": "1",
       "category": {

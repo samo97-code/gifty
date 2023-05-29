@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import {XMarkIcon} from "@heroicons/react/20/solid";
 import Multiselect from 'multiselect-react-dropdown';
 import DatePicker from "react-multi-date-picker"
+import {statuses} from "../../../constants";
 
 const ProductFilters = ({showFilters, filters, defaultValues, categories, onSetFilters, close}) => {
     const [dates, setValues] = useState([])
@@ -29,6 +30,18 @@ const ProductFilters = ({showFilters, filters, defaultValues, categories, onSetF
         }))
     }
 
+    //Statuses
+    const onSelectStatus = (selectedList, selectedItem) => {
+        onSetFilters((prevState) => ({...prevState, statuses: [...prevState.statuses, selectedItem.name]}));
+    }
+    const onRemoveStatus = (selectedList, removedItem) => {
+        onSetFilters((prevState) => ({
+            ...prevState,
+            statuses: prevState.statuses.filter((item) => item !== removedItem.name)
+        }))
+    }
+
+    // Inputs
     const onChangeHandler = (e) => {
         onSetFilters((prevState => ({...prevState, [e.target.name]: e.target.value})))
     }
@@ -54,17 +67,27 @@ const ProductFilters = ({showFilters, filters, defaultValues, categories, onSetF
 
             <div className="filter-content mt-7">
                 <div className="form-group mb-4">
-                    <label htmlFor="search" className="block mb-1 text-lg font-semibold">Search</label>
-                    <input id="search" name="search"
-                           value={filters.search}
+                    <label htmlFor="name" className="block mb-1 text-lg font-semibold">Search Name</label>
+                    <input id="name" name="name"
+                           value={filters.name}
                            className="px-3 py-3 w-full shadow-md text-primary-100 focus:border-primary-100 focus:ring-primary-100"
-                           placeholder="Search by title" type="text"
+                           placeholder="Search By Name" type="text"
                            onChange={(e) => onChangeHandler(e)}
                     />
                 </div>
 
                 <div className="form-group mb-4">
-                    <label htmlFor="categories" className="block mb-1 text-lg font-semibold">Category</label>
+                    <label htmlFor="brand" className="block mb-1 text-lg font-semibold">Search Brand</label>
+                    <input id="brand" name="brand"
+                           value={filters.brand}
+                           className="px-3 py-3 w-full shadow-md text-primary-100 focus:border-primary-100 focus:ring-primary-100"
+                           placeholder="Search By Brand" type="text"
+                           onChange={(e) => onChangeHandler(e)}
+                    />
+                </div>
+
+                <div className="form-group mb-4">
+                    <label htmlFor="categories" className="block mb-1 text-lg font-semibold">Select Categories</label>
                     <Multiselect
                         id="categories"
                         options={categories}
@@ -72,23 +95,40 @@ const ProductFilters = ({showFilters, filters, defaultValues, categories, onSetF
                         onSelect={onSelect}
                         onRemove={onRemove}
                         displayValue="name"
+                        placeholder="Search By Categories"
                     />
                 </div>
 
                 <div className="form-group mb-4">
-                    <label htmlFor="date" className="block mb-1 text-lg font-semibold">Order Date Range</label>
+                    <label htmlFor="categories" className="block mb-1 text-lg font-semibold">Select Status</label>
+                    <Multiselect
+                        id="categories"
+                        options={statuses}
+                        ref={multiselectRef}
+                        onSelect={onSelectStatus}
+                        onRemove={onRemoveStatus}
+                        displayValue="name"
+                        placeholder="Search By Statuses"
+                    />
+                </div>
+
+                <div className="form-group mb-4">
+                    <label htmlFor="date" className="block mb-1 text-lg font-semibold">Select Orders Date</label>
                     <DatePicker
                         id="date"
                         value={dates}
                         onChange={setValues}
                         range
+                        placeholder="Search By Orders Date"
                     />
                 </div>
 
-                <button type="button"
-                        className="bg-blue text-white text-md font-semibold rounded-[16px] px-4 py-3"
-                        onClick={() => resetFilters()}>Reset Filters
-                </button>
+               <div>
+                   <button type="button"
+                           className="w-full bg-blue text-white text-md font-semibold rounded-[8px] px-4 py-3"
+                           onClick={() => resetFilters()}>Reset Filters
+                   </button>
+               </div>
             </div>
         </div>
     );

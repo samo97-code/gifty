@@ -6,61 +6,93 @@ import DataTable from "../../../components/Ui/Table/DataTable";
 import cogoToast from "cogo-toast";
 import {useNavigate} from "react-router";
 import {useModal} from "../../../hooks/useModal";
-import {toUnderscore} from "../../../utils/toUnderscore";
+import {allHeaders} from "../../../constants";
+import {fetchCategories} from "../../../store/category";
+import ProductFilters from "../../../components/Admin/ProductFilters";
+import Pagination from "../../../components/Ui/Pagination";
+import {productDefaultLimit} from "../../../constants";
+
+const defaultValues = {
+    search: '',
+    categories: [],
+    dates: []
+}
 
 const Products = () => {
     const dispatch = useDispatch()
-    const [products, setProducts] = useState([])
-    const [defaultHeaders, setDefaultHeaders] = useState(['title', 'brand', 'product_url', 'status', 'shop_price', 'gifty_price', 'clean_income', 'action'])
-    const [loader, setLoader] = useState(true)
-
     const navigate = useNavigate()
     const modal = useModal()
 
-    const allHeaders = [
-        {id: 1, label: 'Name', value: 'title'},
-        {id: 2, label: 'Brand', value: 'brand'},
-        {id: 3, label: 'Product Url', value: 'product_url'},
-        {id: 4, label: 'Shop Name', value: 'shop'},
-        {id: 5, label: 'Status', value: 'status'},
-        {id: 6, label: 'In Stock', value: 'in_stock'},
-        {id: 7, label: 'Category', value: 'category'},
-        {id: 8, label: 'Size', value: 'size'},
-        {id: 9, label: 'Quantity', value: 'quantity'},
-        {id: 10, label: 'Shop Price($)', value: 'shop_price'},
-        {id: 11, label: 'Dollar Rate', value: 'dollar_rate'},
-        {id: 12, label: 'Shop Price(dr)', value: 'shop_price_arm'},
-        {id: 13, label: 'Order Date', value: 'order_date'},
-        {id: 14, label: 'Order Number', value: 'order_number'},
-        {id: 15, label: 'Arrived Date', value: 'arrived_date'},
-        {id: 16, label: 'Shipment Price(dr)', value: 'shipment_price'},
-        {id: 17, label: 'Gifty Price(dr)', value: 'gifty_price'},
-        {id: 18, label: 'Clean Income(dr)', value: 'clean_income'},
-        {id: 19, label: 'Sold', value: 'sold'},
-        {id: 20, label: 'Action', value: 'action'},
-    ]
+    const [products, setProducts] = useState([])
+    const [defaultHeaders, setDefaultHeaders] = useState(['title', 'brand', 'category', 'product_url', 'status', 'shop_price', 'gifty_price', 'clean_income', 'action'])
+    const [loader, setLoader] = useState(true)
+    const [showFilters, setShowFilters] = useState(false)
+    const [categories, setCategories] = useState([])
+    const [filters, setFilters] = useState(defaultValues)
+    const [headerData, setHeaderData] = useState(null)
 
-    useEffect(() => {
-        fetchAllProducts()
-    }, [])
 
     const headers = useMemo(() => {
         return allHeaders.filter((item) => defaultHeaders.includes(item.value))
     }, [])
 
-    const fetchAllProducts = async () => {
+    useEffect(() => {
+        fetchAllCategories()
+    }, [])
+
+    useEffect(() => {
+        setLoader(true)
+
+        setTimeout(() => {
+            fetchAllProducts()
+        }, 300)
+
+    }, [filters])
+
+
+    const fetchAllCategories = async () => {
         try {
-            const resp = await dispatch(fetchProducts())
-            if (resp.status === 200) {
-                console.log(resp.data, 'resp.data')
-                setProducts(resp.data)
+            const resp = await dispatch(fetchCategories())
+            if (resp.data) {
+                setCategories(resp.data)
             }
+        } catch (e) {
+            catchErrors(e)
+        }
+    }
+
+
+    const fetchAllProducts = async (pagination) => {
+        try {
+            setProducts([])
+            const options = {
+                search: filters.search,
+                categories: filters.categories,
+                dateRanges: filters.dates,
+                paginate: pagination ? pagination : `_page=1&_limit=${productDefaultLimit}`
+            }
+
+
+            const resp = await dispatch(fetchProducts(options))
+
+            if (resp.status === 200) {
+                console.log(resp,'resp')
+                setProducts(resp.data)
+
+                const obj = {
+                    total: resp.headers['x-total-count'],
+                    links: resp.headers.link,
+                }
+                setHeaderData(obj)
+            }
+
         } catch (e) {
             catchErrors(e)
         } finally {
             setLoader(false)
         }
     }
+
 
     const toLink = (item) => {
         navigate(`/admin/product/edit/${item.id}`)
@@ -94,8 +126,30 @@ const Products = () => {
         }
     }
 
+
+    console.log(filters, 'filters')
+
+
     return (
         <div className="main-container">
+            <ProductFilters
+                showFilters={showFilters}
+                filters={filters}
+                defaultValues={defaultValues}
+                categories={categories}
+                onSetFilters={setFilters}
+                close={() => setShowFilters(false)}
+            />
+
+
+            <div className="filters flex items-center justify-between mb-6">
+                <h2 className="text-primary-900 text-2xl font-bold">Products</h2>
+
+                <span className="text-md font-semibold underline cursor-pointer"
+                      onClick={() => setShowFilters(true)}>Show Filters
+                </span>
+            </div>
+
             <DataTable headers={headers} data={products} loader={loader}>
                 {
                     products.map((item) => {
@@ -258,6 +312,12 @@ const Products = () => {
                     })
                 }
             </DataTable>
+
+            {
+                !loader ? <Pagination headerData={headerData} updateProducts={fetchAllProducts}/> : null
+            }
+
+
         </div>
     );
 };

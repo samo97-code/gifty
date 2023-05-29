@@ -3,7 +3,7 @@ import Loader from "../Loader";
 
 const DataTable = ({children,headers,data,loader}) => {
     return (
-        <div className="block w-full overflow-x-auto">
+        <div className={`${data.length >= 8 ? 'h-[500px] sm:h-[600px]' : ''} block w-full overflow-x-auto`}>
             <table className="items-center w-full bg-transparent border-collapse">
                 <thead>
                 <tr>

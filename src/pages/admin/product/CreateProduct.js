@@ -54,8 +54,8 @@ const CreateProduct = () => {
                 id: uuidv4(),
                 status: data.arrivedDate ? statuses[1] : statuses[0],
                 isInStock: true,
-                shopPriceArm,
-                cleanIncome
+                shopPriceArm: +shopPriceArm.toFixed(2),
+                cleanIncome: +cleanIncome.toFixed(2)
             }
 
 
@@ -180,7 +180,7 @@ const CreateProduct = () => {
                     <label htmlFor="shopPrice"
                            className="block mb-1 text-primary-100 text-lg font-semibold">Shop Price($)</label>
                     <input type="number" name="shopPrice" id="shopPrice"
-                           placeholder="Shop Price" {...register('shopPrice', {required: true})}
+                           placeholder="Shop Price" step="any" {...register('shopPrice', {required: true})}
                            className="px-3 py-3 w-full shadow-md text-primary-100 focus:border-primary-100 focus:ring-primary-100"/>
 
                     {errors.shopPrice ?

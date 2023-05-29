@@ -29,7 +29,7 @@ const AdminLayout = ({children}) => {
             <div className={`main h-full ${showSidebar ? 'ml-[240px]' : ''}`}>
                 <Header showSidebar={showSidebar} open={()=>setShowSidebar(true)}/>
 
-                <div className="content-wrapper bg-gray-50 h-main pt-10">
+                <div className="content-wrapper bg-gray-50 h-main py-10">
                     {children}
                 </div>
             </div>

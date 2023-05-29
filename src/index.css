@@ -26,6 +26,14 @@ code {
 .h-main {
     height: calc(100vh - 60px);
 }
+table th{
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    z-index: 1;
+    background: #374252;
+}
+
 
 tbody tr:hover {
     background-color: #e1e1e1;
@@ -33,6 +41,19 @@ tbody tr:hover {
 
 tr:nth-child(odd) {
     background-color: #f2f2f2;
+}
+
+#row, #row_input{
+    width: 84px;
+}
+#row .optionListContainer{
+    top: -60px;
+}
+#row .closeIcon{
+    display: none;
+}
+#row .singleSelect{
+    padding: 0;
 }
 
 .middle-screen{

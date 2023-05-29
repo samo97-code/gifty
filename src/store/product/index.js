@@ -14,7 +14,25 @@ export const createProduct = (payload) => async dispatch => {
 
 export const fetchProducts = (payload) => async dispatch => {
     try {
-        return await axios.get('http://localhost:8081/products')
+        console.log(payload,'payload')
+        let url = `http://localhost:8081/products?${payload.paginate}`
+
+        if (payload.search) url += `&title_like=${payload.search}`
+
+        if (payload.categories) {
+            let str = ''
+            payload.categories.forEach((item)=>{
+                str += `&category.name=${item}`
+            })
+
+            url += str
+        }
+
+        if (payload.dateRanges?.length){
+            url += `order_date_gte=${payload.dateRanges[0]}&order_date_lte=${payload.dateRanges[1]}`
+        }
+
+        return await axios.get(url)
     } catch (e) {
         catchErrors(e)
     }

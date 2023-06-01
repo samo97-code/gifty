@@ -34,7 +34,7 @@ const Products = () => {
     const [categories, setCategories] = useState([])
     const [filters, setFilters] = useState(defaultValues)
     const [paginationData, setPaginationData] = useState(null)
-    console.log(defaultHeaders,'defaultHeaders')
+    console.log(defaultHeaders, 'defaultHeaders')
 
 
     const headers = useMemo(() => {
@@ -141,10 +141,10 @@ const Products = () => {
     // console.log(filters, 'filters')
 
     const onSelect = (selectedList, selectedItem) => {
-        setDefaultHeaders((prevState) =>  [...prevState, selectedItem.value]);
+        setDefaultHeaders((prevState) => [...prevState, selectedItem.value]);
     }
     const onRemove = (selectedList, removedItem) => {
-        setDefaultHeaders((prevState) =>  prevState.filter((item) => item !== removedItem.value));
+        setDefaultHeaders((prevState) => prevState.filter((item) => item !== removedItem.value));
     }
 
 
@@ -225,17 +225,18 @@ const Products = () => {
                                         </td> : null
                                 }
                                 {
-                                    defaultHeaders.includes('is_in_stock') ?
-                                        <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-                                            width="15%">
-                                            <span>{item.is_in_stock ? 'Yes' : 'no'}</span>
-                                        </td> : null
-                                }
-                                {
                                     defaultHeaders.includes('category') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
                                             <span>{item.category?.name}</span>
+                                        </td> : null
+                                }
+                                {
+                                    defaultHeaders.includes('is_in_stock') ?
+                                        <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+                                            width="15%">
+                                            <span
+                                                className={`${item.is_in_stock ? 'bg-[#28a745]' : 'bg-[#dc3545]'} px-4 py-2 rounded-[16px] text-white font-semibold`}>{item.is_in_stock ? 'Yes' : 'no'}</span>
                                         </td> : null
                                 }
                                 {

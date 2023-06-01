@@ -9,6 +9,10 @@ const AdminLayout = ({children}) => {
     useEffect(()=>{
         window.addEventListener("resize", resizePage);
 
+        if (window.innerWidth <= 991){
+            setShowSidebar(false)
+        }
+
         return ()=>{
             window.removeEventListener("resize", resizePage);
         }

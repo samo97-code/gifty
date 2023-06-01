@@ -6,7 +6,7 @@ import {ChevronDoubleLeftIcon} from "@heroicons/react/20/solid";
 import {ChevronDoubleRightIcon} from "@heroicons/react/20/solid";
 import {productDefaultLimit} from "../../../constants";
 
-const Pagination = ({headerData, updateProducts}) => {
+const Pagination = ({paginationData, updateProducts}) => {
     const options = [8, 10, 20, 30, 50]
     const [page, setPage] = useState(1)
     const [pageSize, setPageSize] = useState(productDefaultLimit)
@@ -17,11 +17,11 @@ const Pagination = ({headerData, updateProducts}) => {
     const current = +page === 1 ? 1 : (+page - 1) * pageSize + 1
 
     useEffect(() => {
-        if (headerData) {
-            if (headerData.total) setTotal(headerData.total)
-            if (headerData.links) parseLinkHeader(headerData.links)
+        if (paginationData) {
+            if (paginationData.total) setTotal(paginationData.total)
+            if (paginationData.links) parseLinkHeader(paginationData.links)
         }
-    }, [headerData])
+    }, [paginationData])
 
     const onSelect = (selectedList, selectedItem) => {
         setPageSize(selectedItem)
@@ -70,7 +70,7 @@ const Pagination = ({headerData, updateProducts}) => {
                     <span className="text-primary-900">{current}–{currentCounts} of <b>{total}</b></span>
 
                     {
-                        headerData?.links ? <div className="flex items-center">
+                        paginationData?.links ? <div className="flex items-center">
                         <span
                             onClick={paginationLinks?.first && paginationLinks?.prev ? () => paginate('first') : null}
                             className={`${paginationLinks?.first && paginationLinks?.prev ? 'cursor-pointer bg-white' : 'bg-gray-200 cursor-not-allowed'} px-2 py-1 border`}>

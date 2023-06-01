@@ -42,7 +42,7 @@ const CreateProduct = () => {
             const shopPriceArm = data.shopPrice * data.dollarRate
 
             if (data.giftyPrice && data.shipmentPrice) {
-                cleanIncome = +data.giftyPrice - +data.shipmentPrice - +shopPriceArm
+                cleanIncome = +data.giftyPrice - +data.shipmentPrice - +shopPriceArm - 2000
             }
 
             data.category = categories.find((item) => item.name === data.category)

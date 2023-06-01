@@ -11,6 +11,7 @@ import {fetchCategories} from "../../../store/category";
 import ProductFilters from "../../../components/Admin/ProductFilters";
 import Pagination from "../../../components/Ui/Pagination";
 import {productDefaultLimit} from "../../../constants";
+import Multiselect from "multiselect-react-dropdown";
 
 const defaultValues = {
     name: '',
@@ -32,11 +33,16 @@ const Products = () => {
     const [showFilters, setShowFilters] = useState(false)
     const [categories, setCategories] = useState([])
     const [filters, setFilters] = useState(defaultValues)
-    const [headerData, setHeaderData] = useState(null)
+    const [paginationData, setPaginationData] = useState(null)
+    console.log(defaultHeaders,'defaultHeaders')
 
 
     const headers = useMemo(() => {
         return allHeaders.filter((item) => defaultHeaders.includes(item.value))
+    }, [defaultHeaders])
+
+    const selectBoxHeaders = useMemo(() => {
+        return allHeaders.filter((item) => !defaultHeaders.includes(item.value))
     }, [])
 
     useEffect(() => {
@@ -88,7 +94,7 @@ const Products = () => {
                     total: resp.headers['x-total-count'],
                     links: resp.headers.link,
                 }
-                setHeaderData(obj)
+                setPaginationData(obj)
             }
 
         } catch (e) {
@@ -132,7 +138,14 @@ const Products = () => {
     }
 
 
-    console.log(filters, 'filters')
+    // console.log(filters, 'filters')
+
+    const onSelect = (selectedList, selectedItem) => {
+        setDefaultHeaders((prevState) =>  [...prevState, selectedItem.value]);
+    }
+    const onRemove = (selectedList, removedItem) => {
+        setDefaultHeaders((prevState) =>  prevState.filter((item) => item !== removedItem.value));
+    }
 
 
     return (
@@ -146,13 +159,24 @@ const Products = () => {
                 close={() => setShowFilters(false)}
             />
 
-
             <div className="filters flex items-center justify-between mb-6">
                 <h2 className="text-primary-900 text-2xl font-bold">Products</h2>
 
                 <span className="text-md font-semibold underline cursor-pointer"
                       onClick={() => setShowFilters(true)}>Show Filters
                 </span>
+            </div>
+
+            <div className="form-group mb-6">
+                <label htmlFor="tableColumns" className="block mb-1 text-lg font-semibold">New Table Columns</label>
+                <Multiselect
+                    id="tableColumns"
+                    options={selectBoxHeaders}
+                    onSelect={onSelect}
+                    onRemove={onRemove}
+                    displayValue="label"
+                    placeholder="New Table Columns"
+                />
             </div>
 
             <DataTable headers={headers} data={products} loader={loader}>
@@ -246,7 +270,7 @@ const Products = () => {
                                     defaultHeaders.includes('shop_price_arm') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <b className="text-sm">{item.shop_price_arm} dr</b>
+                                            <b className="text-sm">{item.shop_price_arm}</b>
                                         </td> : null
                                 }
                                 {
@@ -281,7 +305,7 @@ const Products = () => {
                                     defaultHeaders.includes('gifty_price') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <b className="text-sm">{item.gifty_price}</b>
+                                            <b className="text-[16px] text-[#0b35d5]">{item.gifty_price}</b>
                                         </td> : null
                                 }
                                 {
@@ -319,7 +343,7 @@ const Products = () => {
             </DataTable>
 
             {
-                !loader ? <Pagination headerData={headerData} updateProducts={fetchAllProducts}/> : null
+                !loader ? <Pagination paginationData={paginationData} updateProducts={fetchAllProducts}/> : null
             }
 
 

@@ -41,9 +41,13 @@ const Pagination = ({headerData, updateProducts}) => {
 
     const paginate = (type) => {
         const splitItem = paginationLinks[type].split("?")
-        setPage(splitItem[1].split('&')[0].split('=')[1])
+        const tempSplitItem = splitItem[1].split("&")
 
-        updateProducts(splitItem[1])
+        const url = `${tempSplitItem[0]}&${tempSplitItem[1]}`
+        const page = tempSplitItem[0].split('=')[1]
+
+        setPage(page)
+        updateProducts(url)
     }
 
 

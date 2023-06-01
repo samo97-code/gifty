@@ -15,6 +15,7 @@ import {productDefaultLimit} from "../../../constants";
 const defaultValues = {
     name: '',
     brand: '',
+    sortBy: '',
     categories: [],
     statuses: [],
     dates: []
@@ -72,6 +73,7 @@ const Products = () => {
                 brand: filters.brand,
                 categories: filters.categories,
                 statuses: filters.statuses,
+                sortBy: filters.sortBy,
                 dateRanges: filters.dates,
                 paginate: pagination ? pagination : `_page=1&_limit=${productDefaultLimit}`
             }

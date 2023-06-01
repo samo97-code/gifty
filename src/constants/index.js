@@ -1,5 +1,32 @@
 export const productDefaultLimit = 8
 
+export const sortBy = [
+    {
+        "id": 1,
+        "name": "Order Date Desc",
+        "value": 'order_date',
+        "order": 'desc'
+    },
+    {
+        "id": 2,
+        "name": "Order Date Asc",
+        "value": 'order_date',
+        "order": 'asc'
+    },
+    {
+        "id": 3,
+        "name": "Price($): High to Low",
+        "value": 'shop_price',
+        "order": 'desc'
+    },
+    {
+        "id": 4,
+        "name": "Price($): Low to High",
+        "value": 'shop_price',
+        "order": 'asc'
+    },
+]
+
 export const statuses = [
     {
         "id": 1,

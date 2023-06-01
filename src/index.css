@@ -64,6 +64,12 @@ tr:nth-child(odd) {
    margin-top: 6px;
 }
 
+.sort-by .singleChip{
+    margin-bottom: 0;
+    margin-top: 3px;
+    font-size: 14px;
+}
+
 .rmdp-container{
     height: 48px !important;
     max-width: 100%;

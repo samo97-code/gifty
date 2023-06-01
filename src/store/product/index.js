@@ -14,18 +14,18 @@ export const createProduct = (payload) => async dispatch => {
 
 export const fetchProducts = (payload) => async dispatch => {
     try {
-        // console.log(payload,'payload')
+        console.log(payload,'payload')
         let url = `http://localhost:8081/products?${payload.paginate}`
 
         if (payload.name) url += `&title_like=${payload.name}`
         if (payload.brand) url += `&brand_like=${payload.brand}`
+        if (payload.sortBy) url += `&${payload.sortBy}`
 
         if (payload.categories) {
             let str = ''
             payload.categories.forEach((item)=>{
-                str += `&category.name=${item}`
+                url += `&category.name=${item}`
             })
-
             url += str
         }
 
@@ -34,7 +34,6 @@ export const fetchProducts = (payload) => async dispatch => {
             payload.statuses.forEach((item)=>{
                 str += `&status.name=${item}`
             })
-
             url += str
         }
 

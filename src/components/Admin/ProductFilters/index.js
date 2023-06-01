@@ -2,11 +2,13 @@ import React, {useEffect, useRef, useState} from 'react';
 import {XMarkIcon} from "@heroicons/react/20/solid";
 import Multiselect from 'multiselect-react-dropdown';
 import DatePicker from "react-multi-date-picker"
-import {statuses} from "../../../constants";
+import {sortBy, statuses} from "../../../constants";
 
 const ProductFilters = ({showFilters, filters, defaultValues, categories, onSetFilters, close}) => {
     const [dates, setValues] = useState([])
-    const multiselectRef = useRef()
+    const multiselectCategoriesRef = useRef()
+    const multiselectStatuesRef = useRef()
+    const multiselectOrderRef = useRef()
 
     //Dates
     useEffect(() => {
@@ -41,6 +43,12 @@ const ProductFilters = ({showFilters, filters, defaultValues, categories, onSetF
         }))
     }
 
+    //Sort
+    const onSelectSort = (selectedList, selectedItem) => {
+        const sortBy = `_sort=${selectedItem.value}&_order=${selectedItem.order}`
+        onSetFilters((prevState => ({...prevState, sortBy: sortBy})))
+    }
+
     // Inputs
     const onChangeHandler = (e) => {
         onSetFilters((prevState => ({...prevState, [e.target.name]: e.target.value})))
@@ -50,7 +58,9 @@ const ProductFilters = ({showFilters, filters, defaultValues, categories, onSetF
     const resetFilters = () => {
         onSetFilters(defaultValues)
         setValues([])
-        multiselectRef.current.resetSelectedValues();
+        multiselectStatuesRef.current.resetSelectedValues();
+        multiselectCategoriesRef.current.resetSelectedValues();
+        multiselectOrderRef.current.resetSelectedValues();
     }
 
     return (
@@ -86,12 +96,25 @@ const ProductFilters = ({showFilters, filters, defaultValues, categories, onSetF
                     />
                 </div>
 
+                <div className="form-group mb-4 sort-by">
+                    <label className="block mb-1 text-lg font-semibold">Sort By</label>
+                    <Multiselect
+                        id="categories"
+                        singleSelect
+                        ref={multiselectOrderRef}
+                        options={sortBy}
+                        onSelect={onSelectSort}
+                        displayValue="name"
+                        placeholder="Sort By"
+                    />
+                </div>
+
                 <div className="form-group mb-4">
                     <label htmlFor="categories" className="block mb-1 text-lg font-semibold">Select Categories</label>
                     <Multiselect
                         id="categories"
                         options={categories}
-                        ref={multiselectRef}
+                        ref={multiselectCategoriesRef}
                         onSelect={onSelect}
                         onRemove={onRemove}
                         displayValue="name"
@@ -104,7 +127,7 @@ const ProductFilters = ({showFilters, filters, defaultValues, categories, onSetF
                     <Multiselect
                         id="categories"
                         options={statuses}
-                        ref={multiselectRef}
+                        ref={multiselectStatuesRef}
                         onSelect={onSelectStatus}
                         onRemove={onRemoveStatus}
                         displayValue="name"
@@ -123,12 +146,12 @@ const ProductFilters = ({showFilters, filters, defaultValues, categories, onSetF
                     />
                 </div>
 
-               <div>
-                   <button type="button"
-                           className="w-full bg-blue text-white text-md font-semibold rounded-[8px] px-4 py-3"
-                           onClick={() => resetFilters()}>Reset Filters
-                   </button>
-               </div>
+                <div>
+                    <button type="button"
+                            className="w-full bg-blue text-white text-md font-semibold rounded-[8px] px-4 py-3"
+                            onClick={() => resetFilters()}>Reset Filters
+                    </button>
+                </div>
             </div>
         </div>
     );

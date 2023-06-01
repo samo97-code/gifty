@@ -8,12 +8,13 @@ import EditCategory from "../pages/admin/category/EditCategory";
 import CreateProduct from "../pages/admin/product/CreateProduct";
 import Products from "../pages/admin/product/Products";
 import EditProduct from "../pages/admin/product/EditProduct";
+import Login from "../pages/login/Login";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <>
             <Route path="/" element={
-                <h1>Login</h1>
+                <Login/>
             }/>
             <Route path="/admin" element={
                 <AdminLayout>
@@ -22,32 +23,32 @@ export const router = createBrowserRouter(
             }/>
             <Route path="/admin/category/create" element={
                 <AdminLayout>
-                    <CreateCategory />
+                    <CreateCategory/>
                 </AdminLayout>
             }/>
             <Route path="/admin/categories" element={
                 <AdminLayout>
-                    <Categories />
+                    <Categories/>
                 </AdminLayout>
             }/>
             <Route path="/admin/category/edit/:id" element={
                 <AdminLayout>
-                    <EditCategory />
+                    <EditCategory/>
                 </AdminLayout>
             }/>
             <Route path="/admin/product/create" element={
                 <AdminLayout>
-                    <CreateProduct />
+                    <CreateProduct/>
                 </AdminLayout>
             }/>
             <Route path="/admin/products" element={
                 <AdminLayout>
-                    <Products />
+                    <Products/>
                 </AdminLayout>
             }/>
             <Route path="/admin/product/edit/:id" element={
                 <AdminLayout>
-                    <EditProduct />
+                    <EditProduct/>
                 </AdminLayout>
             }/>
         </>

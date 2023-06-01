@@ -3,10 +3,9 @@ import axios from "axios";
 
 // Actions
 // Example of action
-export const fetchProfile = (payload)=> async dispatch =>{
+export const fetchAllUsers = (payload)=> async dispatch =>{
     try {
-        const resp = await axios.get('http://localhost:8081/users')
-        console.log(resp,'resp')
+        return await axios.get('http://localhost:8081/users')
     }catch (e) {
         console.log(e,'e')
     }

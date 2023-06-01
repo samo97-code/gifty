@@ -2,16 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 import {useEffect} from "react";
 import {useDispatch} from "react-redux";
-import {fetchProfile} from "./store/user";
 
 
 function App() {
   const dispatch = useDispatch()
 
-  useEffect(()=>{
-    dispatch(fetchProfile({name: 'test'}))
-
-  },[])
+  // useEffect(()=>{
+  //   dispatch(fetchProfile({name: 'test'}))
+  //
+  // },[])
 
   // const fetchProfile = async()=>{
   //   try {

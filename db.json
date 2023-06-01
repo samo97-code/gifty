@@ -3,11 +3,15 @@
     {
       "email": "admin@gmail.com",
       "password": "admin1234",
+      "first_name": "Samvel",
+      "last_name": "Danielyan",
       "role": "super-admin"
     },
     {
       "email": "julia@gmail.com",
       "password": "admin1234",
+      "first_name": "Samvel",
+      "last_name": "Danielyan",
       "role": "admin"
     }
   ],

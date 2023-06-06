@@ -37,6 +37,18 @@
       "id": "13d78555-b79a-4fdb-948e-217d45035c18"
     }
   ],
+  "ads": [
+    {
+      "id": "74950215-2e8a-49bc-b941-a14cb6aab0be",
+      "price": "10",
+      "dollar_rate": "384",
+      "price_arm": 3840,
+      "social": {
+        "id": 1,
+        "label": "Instagram"
+      }
+    }
+  ],
   "products": [
     {
       "title": "Watch and Multi Bracelet Set SMWS066",
@@ -67,70 +79,7 @@
       "gifty_price": "33000",
       "is_in_stock": true,
       "shop_price_arm": 17325,
-      "clean_income": 12675
-    },
-    {
-      "title": "58 Mm Gf6152",
-      "brand": "Guess",
-      "shop": {
-        "id": 1,
-        "name": "6pm",
-        "url": "https://www.6pm.com/"
-      },
-      "status": {
-        "id": 2,
-        "name": "Arrived",
-        "color": "#28a745"
-      },
-      "quantity": "1",
-      "category": {
-        "name": "sunglasses",
-        "id": "4764ca75-3329-4df2-8008-6b535b388dd8"
-      },
-      "id": "f543765a-017f-4894-afa9-8fdf41337ec7",
-      "product_url": "",
-      "shop_price": "28.99",
-      "dollar_rate": "385",
-      "order_date": "2023-03-19",
-      "order_number": "#113-4490020-3207430",
-      "arrived_date": "2023-04-03",
-      "shipment_price": "1000",
-      "gifty_price": "18000",
-      "is_in_stock": true,
-      "shop_price_arm": 11161.15,
-      "clean_income": 5838.85
-    },
-    {
-      "title": "Louie Mini Shoulder Crossbody",
-      "brand": "Nine West",
-      "shop": {
-        "id": 1,
-        "name": "6pm",
-        "url": "https://www.6pm.com/"
-      },
-      "status": {
-        "id": 2,
-        "name": "Arrived",
-        "color": "#28a745"
-      },
-      "quantity": "1",
-      "category": {
-        "name": "handbag",
-        "id": "800cde5c-d9a2-42a0-920d-9039d1f9bd94"
-      },
-      "id": "d9db0d7b-b943-42a3-961b-9033c09e52a7",
-      "product_url": "https://www.6pm.com/p/nine-west-louie-mini-shoulder-crossbody-optic-white/product/9833853/color/22819",
-      "shop_price": "36.59",
-      "dollar_rate": "385",
-      "order_date": "2023-03-19",
-      "order_number": "#113-4490020-3207430",
-      "arrived_date": "2023-04-03",
-      "shipment_price": "4000",
-      "gifty_price": "27500",
-      "is_in_stock": true,
-      "shop_price_arm": 14087.15,
-      "clean_income": 9412.85
+      "clean_income": 10675
     }
   ]
 }
-

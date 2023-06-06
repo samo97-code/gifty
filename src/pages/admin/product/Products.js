@@ -70,7 +70,6 @@ const Products = () => {
         }
     }
 
-
     const fetchAllProducts = async (pagination) => {
         try {
             setProducts([])
@@ -103,7 +102,6 @@ const Products = () => {
             setLoader(false)
         }
     }
-
 
     const toLink = (item) => {
         navigate(`/admin/product/edit/${item.id}`)

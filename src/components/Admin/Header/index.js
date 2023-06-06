@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Bars3Icon} from "@heroicons/react/20/solid";
 import {useCookies} from "react-cookie";
 import {useNavigate} from "react-router";
@@ -6,7 +6,14 @@ import cogoToast from "cogo-toast";
 
 const Header = ({showSidebar,open}) => {
     const [cookies, setCookie, removeCookie] = useCookies([]);
+    const [user,setUser] = useState(null)
     const navigate = useNavigate()
+
+
+    useEffect(()=>{
+
+        if (cookies.gifty_user) setUser(cookies.gifty_user)
+    },[])
 
     const logout = async ()=>{
          removeCookie('gifty_user')
@@ -14,12 +21,13 @@ const Header = ({showSidebar,open}) => {
          navigate('/')
     }
 
+
     return (
         <div className="bg-white shadow-md w-full h-[60px] px-6 sticky top-0">
             {!showSidebar ? <Bars3Icon className="h-8 w-8 text-gray-600 cursor-pointer" onClick={()=>open()}/> : ''}
 
             <div className="flex justify-between items-center h-full">
-                <b>Admin Admin</b>
+                <b>{user?.first_name} {user?.last_name}</b>
 
                 <div>
 

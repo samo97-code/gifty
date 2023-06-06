@@ -98,6 +98,11 @@ export const sizes = [
     },
 ]
 
+export const socials = [
+    {id: 1, label: 'Instagram'},
+    {id: 2, label: 'Facebook'},
+]
+
 export const allHeaders =  [
     {id: 1, label: 'Name', value: 'title'},
     {id: 2, label: 'Brand', value: 'brand'},

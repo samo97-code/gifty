@@ -14,14 +14,14 @@ export const createProduct = (payload) => async dispatch => {
 
 export const fetchProducts = (payload) => async dispatch => {
     try {
-        console.log(payload,'payload')
-        let url = `http://localhost:8081/products?${payload.paginate}`
+        let url = `http://localhost:8081/products?`
 
-        if (payload.name) url += `&title_like=${payload.name}`
-        if (payload.brand) url += `&brand_like=${payload.brand}`
-        if (payload.sortBy) url += `&${payload.sortBy}`
+        if (payload?.paginate) url += `${payload.paginate}`
+        if (payload?.name) url += `&title_like=${payload.name}`
+        if (payload?.brand) url += `&brand_like=${payload.brand}`
+        if (payload?.sortBy) url += `&${payload.sortBy}`
 
-        if (payload.categories) {
+        if (payload?.categories) {
             let str = ''
             payload.categories.forEach((item)=>{
                 url += `&category.name=${item}`
@@ -29,7 +29,7 @@ export const fetchProducts = (payload) => async dispatch => {
             url += str
         }
 
-        if (payload.statuses) {
+        if (payload?.statuses) {
             let str = ''
             payload.statuses.forEach((item)=>{
                 str += `&status.name=${item}`
@@ -37,7 +37,7 @@ export const fetchProducts = (payload) => async dispatch => {
             url += str
         }
 
-        if (payload.dateRanges?.length){
+        if (payload?.dateRanges?.length){
             url += `order_date_gte=${payload.dateRanges[0]}&order_date_lte=${payload.dateRanges[1]}`
         }
 

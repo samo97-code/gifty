@@ -49,6 +49,28 @@ const SideBar = ({close}) => {
                     </li>
 
                     <li className="mb-2">
+                        <NavLink to="/admin/ads/create"
+                                 className={({isActive, isPending}) =>
+                                     [isActive ? "active bg-primary-300 text-white" : "text-gray-100",
+                                         'flex gap-x-3 items-center px-3 py-2 hover:bg-primary-100 rounded-[4px]'].join(' ')
+                                 }>
+                            <PlusCircleIcon className="h-5 w-5" />
+                            <span>Create Ads</span>
+                        </NavLink>
+                    </li>
+
+                    <li className="mb-2">
+                        <NavLink to="/admin/ads"
+                                 className={({isActive, isPending}) =>
+                                     [isActive ? "active bg-primary-300 text-white" : "text-gray-100",
+                                         'flex gap-x-3 items-center px-3 py-2 hover:bg-primary-100 rounded-[4px]'].join(' ')
+                                 }>
+                            <ListBulletIcon className="h-5 w-5" />
+                            <span>Ads</span>
+                        </NavLink>
+                    </li>
+
+                    <li className="mb-2">
                         <NavLink to="/admin/product/create"
                                  className={({isActive, isPending}) =>
                                      [isActive ? "active bg-primary-300 text-white" : "text-gray-100",

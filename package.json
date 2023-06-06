@@ -29,7 +29,8 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently -n 'server,client' -c 'red,green'  \"npm run server\" \"npm run start1\"",
+    "start1": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

@@ -14,7 +14,7 @@ export const createCategory = (payload) => async dispatch => {
 
 export const fetchCategories = (payload) => async dispatch => {
     try {
-        return await axios.get('https://gifty-store-am.vercel.app:8081/categories')
+        return await axios.get('https://gifty-store-am.vercel.app/categories')
     } catch (e) {
         catchErrors(e)
     }

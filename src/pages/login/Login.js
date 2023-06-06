@@ -15,8 +15,6 @@ const Login = () => {
 
     useEffect(() => {
         checkUser()
-
-        fetchUsers()
     }, [])
 
     const checkUser = () => {

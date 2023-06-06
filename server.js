@@ -15,3 +15,5 @@ server.use(
 
 server.use(router)
 server.listen(port,()=>{console.log(`Server is running on ${port}`)})
+
+module.exports = server;

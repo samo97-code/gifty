@@ -22,9 +22,9 @@ const AdminLayout = ({children}) => {
     }, [])
 
     const checkUser = () => {
-        if (!cookies.gifty_user) {
-            return navigate('/')
-        }
+        // if (!cookies.gifty_user) {
+        //     return navigate('/')
+        // }
     }
 
     const resizePage = () => {

@@ -24,6 +24,7 @@ const Login = () => {
     const onSubmit = async (data) => {
         try {
             const users = await fetchUsers()
+
             const findItem = users.find((item) => item.email === data.email)
 
             if (!findItem) return cogoToast.success('User not exists')

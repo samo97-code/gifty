@@ -3,6 +3,7 @@ import {fetchProducts} from "../../store/product";
 import {catchErrors} from "../../utils";
 import Loader from "../../components/Ui/Loader";
 import {useDispatch} from "react-redux";
+import {fetchAds} from "../../store/ads";
 
 const Dashboard = () => {
     const dispatch = useDispatch()
@@ -11,7 +12,30 @@ const Dashboard = () => {
 
     useEffect(() => {
         fetchAllProducts()
+
+        fetchAllAds()
     }, [])
+
+    const fetchAllAds = async (pagination) => {
+        try {
+
+            const resp = await dispatch(fetchAds())
+            if (resp.status === 200) {
+
+                let sum = 0
+                resp.data.forEach((ads) => {
+                    sum += +ads.price_arm
+                })
+
+                setShopInfo((prevState)=>({...prevState, adsTotalSpent: sum}))
+
+            }
+        } catch (e) {
+            catchErrors(e)
+        } finally {
+            setLoader(false)
+        }
+    }
 
     const fetchAllProducts = async () => {
         try {
@@ -47,7 +71,9 @@ const Dashboard = () => {
                     : <div className="text-3xl">
                         <p>Total Spent on Shops: <b>{shopInfo.totalShopSum}</b> dram</p>
 
-                        <p>Onex shipment: <b>{shopInfo.deliveryOnex}</b> dram</p>
+                        <p>Total Spent on Onex: <b>{shopInfo.deliveryOnex}</b> dram</p>
+
+                        <p>Total Spent on Ads: <b>{shopInfo.adsTotalSpent}</b> dram</p>
 
                         <p>Clean Income: <b>{shopInfo.income}</b> dram</p>
                     </div>

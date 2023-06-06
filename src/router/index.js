@@ -19,52 +19,52 @@ export const router = createBrowserRouter(
             <Route path="/" element={
                 <Login/>
             }/>
-            <Route path="/admin"  element={
+            <Route path="/admin/"  element={
                 <AdminLayout>
                     <Dashboard/>
                 </AdminLayout>
             }/>
-            <Route path="/admin/category/create" end element={
+            <Route path="/admin/category/create/" end element={
                 <AdminLayout>
                     <CreateCategory/>
                 </AdminLayout>
             }/>
-            <Route path="/admin/categories" element={
+            <Route path="/admin/categories/" element={
                 <AdminLayout>
                     <Categories/>
                 </AdminLayout>
             }/>
-            <Route path="/admin/category/edit/:id" element={
+            <Route path="/admin/category/edit/:id/" element={
                 <AdminLayout>
                     <EditCategory/>
                 </AdminLayout>
             }/>
-            <Route path="/admin/ads/create" end element={
+            <Route path="/admin/ads/create/" end element={
                 <AdminLayout>
                     <CreateAds/>
                 </AdminLayout>
             }/>
-            <Route path="/admin/ads" element={
+            <Route path="/admin/ads/" element={
                 <AdminLayout>
                     <Ads/>
                 </AdminLayout>
             }/>
-            <Route path="/admin/ads/edit/:id" element={
+            <Route path="/admin/ads/edit/:id/" element={
                 <AdminLayout>
                     <EditAds/>
                 </AdminLayout>
             }/>
-            <Route path="/admin/product/create" element={
+            <Route path="/admin/product/create/" element={
                 <AdminLayout>
                     <CreateProduct/>
                 </AdminLayout>
             }/>
-            <Route path="/admin/products" element={
+            <Route path="/admin/products/" element={
                 <AdminLayout>
                     <Products/>
                 </AdminLayout>
             }/>
-            <Route path="/admin/product/edit/:id" element={
+            <Route path="/admin/product/edit/:id/" element={
                 <AdminLayout>
                     <EditProduct/>
                 </AdminLayout>

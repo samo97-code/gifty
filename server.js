@@ -1,6 +1,6 @@
 const jsonServer = require("json-server")
 const server = jsonServer.create()
-const router = jsonServer.router("https://gifty-json-server.vercel.app/db.json")
+const router = jsonServer.router("./db.json")
 const middlewares = jsonServer.defaults({
     static: './build'
 })

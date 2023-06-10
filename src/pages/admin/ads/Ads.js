@@ -35,6 +35,8 @@ const Ads = () => {
                 paginate: pagination ? pagination : `_page=1&_limit=8`
             }
 
+            console.log(options,'options')
+
             const resp = await dispatch(fetchAds(options))
             if (resp.status === 200) {
                 setAds(resp.data)
@@ -43,6 +45,7 @@ const Ads = () => {
                     total: resp.headers['x-total-count'],
                     links: resp.headers.link,
                 }
+                console.log(obj,'obj')
                 setPaginationData(obj)
             }
         } catch (e) {
@@ -126,9 +129,9 @@ const Ads = () => {
                 }
             </DataTable>
 
-            {
-                !loader ? <Pagination paginationData={paginationData} updateProducts={fetchAllAds}/> : null
-            }
+            {/*{*/}
+            {/*    !loader && ads.length ? <Pagination paginationData={paginationData} updateProducts={fetchAllAds}/> : null*/}
+            {/*}*/}
         </div>
     )
 };

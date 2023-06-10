@@ -122,6 +122,7 @@ export const allHeaders =  [
     {id: 16, label: 'Onex Price(dr)', value: 'shipment_price'},
     {id: 17, label: 'Gifty Price(dr)', value: 'gifty_price'},
     {id: 18, label: 'Clean Income(dr)', value: 'clean_income'},
-    {id: 19, label: 'Sold', value: 'sold'},
-    {id: 20, label: 'Action', value: 'action'},
+    {id: 19, label: 'Sold', value: 'is_sold'},
+    {id: 20, label: 'Used', value: 'is_used'},
+    {id: 21, label: 'Action', value: 'action'},
 ]

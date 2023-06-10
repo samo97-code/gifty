@@ -28,7 +28,7 @@ const Products = () => {
     const modal = useModal()
 
     const [products, setProducts] = useState([])
-    const [defaultHeaders, setDefaultHeaders] = useState(['title', 'brand', 'category', 'product_url', 'status', 'shop_price', 'gifty_price', 'clean_income', 'action'])
+    const [defaultHeaders, setDefaultHeaders] = useState(['title', 'brand', 'category', 'product_url', 'status', 'shop_price', 'gifty_price', 'clean_income', 'is_sold', 'action'])
     const [loader, setLoader] = useState(true)
     const [showFilters, setShowFilters] = useState(false)
     const [categories, setCategories] = useState([])
@@ -315,10 +315,25 @@ const Products = () => {
                                         </td> : null
                                 }
                                 {
-                                    defaultHeaders.includes('sold') ?
+                                    defaultHeaders.includes('is_sold') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span>Sold</span>
+                                            <span style={{
+                                                background: `${item.is_sold ? '#dc3545' : ''}`,
+                                                color: `${item.is_sold ? 'text-white' : ''}`
+                                            }}
+                                                  className={`px-4 py-2 rounded-[16px] font-semibold`}>{item.is_sold ? 'Sold' : 'No'}</span>
+                                        </td> : null
+                                }
+                                {
+                                    defaultHeaders.includes('is_used') ?
+                                        <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+                                            width="15%">
+                                            <span style={{
+                                                background: `${item.is_used ? '#dc3545' : ''}`,
+                                                color: `${item.is_used ? 'text-white' : ''}`
+                                            }}
+                                                  className={`px-4 py-2 rounded-[16px] font-semibold`}>item.is_used ? 'Used' : 'No'}</span>
                                         </td> : null
                                 }
                                 <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"

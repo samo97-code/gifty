@@ -6,7 +6,7 @@ import {catchErrors} from "../../utils";
 // Example of action
 export const createCategory = (payload) => async dispatch => {
     try {
-        return await axios.post('https://gifty-json-server.vercel.app/categories', payload)
+        return await axios.post('http://localhost:8081/categories', payload)
     } catch (e) {
        catchErrors(e)
     }
@@ -14,7 +14,7 @@ export const createCategory = (payload) => async dispatch => {
 
 export const fetchCategories = (payload) => async dispatch => {
     try {
-        return await axios.get('https://gifty-json-server.vercel.app/categories')
+        return await axios.get('http://localhost:8081/categories')
     } catch (e) {
         catchErrors(e)
     }

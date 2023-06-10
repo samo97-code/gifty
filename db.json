@@ -35,18 +35,188 @@
     {
       "name": "casket",
       "id": "13d78555-b79a-4fdb-948e-217d45035c18"
+    },
+    {
+      "name": "perfume",
+      "id": "67156383-d0aa-4f8e-9db4-b4a1e6770fa8"
     }
   ],
   "ads": [
     {
-      "id": "74950215-2e8a-49bc-b941-a14cb6aab0be",
-      "price": "10",
+      "id": "0d4676f5-decc-42a0-8232-6f2a7ea60a0b",
+      "price": "14.5",
       "dollar_rate": "384",
-      "price_arm": 3840,
+      "price_arm": 5568,
       "social": {
         "id": 1,
         "label": "Instagram"
-      }
+      },
+      "created_at": "2023-06-10T11:35:55.783Z"
+    },
+    {
+      "id": "2c9d73e0-f6c6-4580-b802-dd84ecb59ad0",
+      "price": "30",
+      "dollar_rate": "384",
+      "price_arm": 11520,
+      "social": {
+        "id": 1,
+        "label": "Instagram"
+      },
+      "created_at": "2023-06-10T11:36:55.783Z"
+    },
+    {
+      "id": "ddb55d0f-95eb-4975-b0fe-d710788170c7",
+      "price": "25",
+      "dollar_rate": "384",
+      "price_arm": 9600,
+      "social": {
+        "id": 1,
+        "label": "Instagram"
+      },
+      "created_at": "2023-06-10T11:37:55.783Z"
+    },
+    {
+      "id": "adf369a5-e50a-4891-96e1-a929fc32a09d",
+      "price": "18",
+      "dollar_rate": "384",
+      "price_arm": 6912,
+      "social": {
+        "id": 1,
+        "label": "Instagram"
+      },
+      "created_at": "2023-06-10T11:37:55.783Z"
+    },
+    {
+      "id": "33896198-46b9-4f83-b85b-58c085880407",
+      "price": "15",
+      "dollar_rate": "384",
+      "price_arm": 5760,
+      "social": {
+        "id": 1,
+        "label": "Instagram"
+      },
+      "created_at": "2023-06-10T11:38:55.783Z"
+    },
+    {
+      "id": "0bfb3d42-3557-4c5f-acf0-8da4a63383bd",
+      "price": "10.8",
+      "dollar_rate": "385",
+      "price_arm": 4158,
+      "social": {
+        "id": 2,
+        "label": "Facebook"
+      },
+      "created_at": "2023-06-10T11:39:55.783Z"
+    },
+    {
+      "id": "80e71b93-afb9-407e-92cb-d42ead7ddfd5",
+      "price": "12",
+      "dollar_rate": "384",
+      "price_arm": 4608,
+      "social": {
+        "id": 1,
+        "label": "Instagram"
+      },
+      "created_at": "2023-06-10T11:40:55.783Z"
+    },
+    {
+      "id": "d803dd59-13dd-4e8e-9df9-e863c98dcdee",
+      "price": "21.6",
+      "dollar_rate": "384",
+      "price_arm": 8294.4,
+      "social": {
+        "id": 1,
+        "label": "Instagram"
+      },
+      "created_at": "2023-06-10T11:41:55.783Z"
+    },
+    {
+      "id": "5fcc49f5-9da8-4bff-b471-2358aee386c0",
+      "price": "18",
+      "dollar_rate": "384",
+      "price_arm": 6912,
+      "social": {
+        "id": 2,
+        "label": "Facebook"
+      },
+      "created_at": "2023-06-10T11:42:55.783Z"
+    },
+    {
+      "id": "df9fb248-ad60-47ef-9243-9b1e0c912863",
+      "price": "5",
+      "dollar_rate": "384",
+      "price_arm": 1920,
+      "social": {
+        "id": 2,
+        "label": "Facebook"
+      },
+      "created_at": "2023-06-10T11:43:55.783Z"
+    },
+    {
+      "id": "46d6fd97-22a7-414c-88ab-2b4ab5406ac9",
+      "price": "18",
+      "dollar_rate": "384",
+      "price_arm": 6912,
+      "social": {
+        "id": 1,
+        "label": "Instagram"
+      },
+      "created_at": "2023-06-10T11:54:33.250Z"
+    },
+    {
+      "id": "44d3eeae-0434-45f1-8d91-371adb4e2fbd",
+      "price": "18",
+      "dollar_rate": "384",
+      "price_arm": 6912,
+      "social": {
+        "id": 1,
+        "label": "Instagram"
+      },
+      "created_at": "2023-06-10T11:54:39.065Z"
+    },
+    {
+      "id": "11e7706f-335d-4628-9a5a-fdc06922c752",
+      "price": "18",
+      "dollar_rate": "384",
+      "price_arm": 6912,
+      "social": {
+        "id": 2,
+        "label": "Facebook"
+      },
+      "created_at": "2023-06-10T11:54:44.897Z"
+    },
+    {
+      "id": "a88b373b-4ed4-468a-bbed-b97c9d9f73c1",
+      "price": "24",
+      "dollar_rate": "384",
+      "price_arm": 9216,
+      "social": {
+        "id": 1,
+        "label": "Instagram"
+      },
+      "created_at": "2023-06-10T11:55:05.297Z"
+    },
+    {
+      "id": "8bc6a41a-fef6-4054-9a88-97d8b87fa6d8",
+      "price": "18",
+      "dollar_rate": "384",
+      "price_arm": 6912,
+      "social": {
+        "id": 1,
+        "label": "Instagram"
+      },
+      "created_at": "2023-06-10T11:55:12.705Z"
+    },
+    {
+      "id": "6cf9c3d9-a95d-4a78-8367-3d4e92ecff49",
+      "price": "21.5",
+      "dollar_rate": "384",
+      "price_arm": 8256,
+      "social": {
+        "id": 2,
+        "label": "Facebook"
+      },
+      "created_at": "2023-06-10T11:55:21.929Z"
     }
   ],
   "products": [
@@ -78,6 +248,8 @@
       "shipment_price": "3000",
       "gifty_price": "33000",
       "is_in_stock": true,
+      "is_used": false,
+      "is_sold": false,
       "shop_price_arm": 17325,
       "clean_income": 10675
     }

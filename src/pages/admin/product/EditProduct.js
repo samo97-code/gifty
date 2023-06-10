@@ -45,6 +45,8 @@ const EditProduct = () => {
         setValue('sizes', data.size?.id)
         setValue('shopPriceArm', data.shop_price_arm)
         setValue('isInStock', data.is_in_stock)
+        setValue('isUsed', data.is_used)
+        setValue('isSold', data.is_sold)
     }
 
     const fetchAllCategories = async () => {
@@ -305,12 +307,30 @@ const EditProduct = () => {
                         <p className="mt-[2px] text-sm text-error font-semibold">Field is required</p> : null}
                 </div>
 
-                <div className="form-group flex items-center gap-x-2 mb-4">
-                    <input type="checkbox" name="isInStock" id="isInStock"
-                           placeholder="In Stock" {...register('isInStock')}
-                           className=""/>
-                    <label htmlFor="isInStock"
-                           className="block text-primary-100 text-lg font-semibold cursor-pointer">In Stock</label>
+                <div className="flex gap-x-6 items-center">
+                    <div className="form-group flex items-center gap-x-2 mb-4">
+                        <input type="checkbox" name="isInStock" id="isInStock"
+                               placeholder="In Stock" {...register('isInStock')}
+                               className=""/>
+                        <label htmlFor="isInStock"
+                               className="block text-primary-100 text-lg font-semibold cursor-pointer">In Stock</label>
+                    </div>
+
+                    <div className="form-group flex items-center gap-x-2 mb-4">
+                        <input type="checkbox" name="isUsed" id="isUsed"
+                               placeholder="Used" {...register('isUsed')}
+                               className=""/>
+                        <label htmlFor="isUsed"
+                               className="block text-primary-100 text-lg font-semibold cursor-pointer">Used</label>
+                    </div>
+
+                    <div className="form-group flex items-center gap-x-2 mb-4">
+                        <input type="checkbox" name="isSold" id="isSold"
+                               placeholder="Sold" {...register('isSold')}
+                               className=""/>
+                        <label htmlFor="isSold"
+                               className="block text-primary-100 text-lg font-semibold cursor-pointer">Sold</label>
+                    </div>
                 </div>
 
 

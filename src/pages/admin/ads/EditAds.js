@@ -35,7 +35,7 @@ const EditAds = () => {
                 id: params.id,
                 price: data.price,
                 dollar_rate: data.dollarRate,
-                price_arm: data.price * data.dollarRate,
+                price_arm: +(data.price * data.dollarRate).toFixed(2),
                 social: socials.find((item)=>item.label === data.social)
             }
 
@@ -58,7 +58,7 @@ const EditAds = () => {
                     <label htmlFor="price" className="block mb-1 text-primary-100 text-lg font-semibold">Price($)</label>
                     <input id="price" name="price"
                            className="px-3 py-3 w-full shadow-md text-primary-100 focus:border-primary-100 focus:ring-primary-100"
-                           placeholder="Price($)" type="number" {...register('price', {required: true})}/>
+                           placeholder="Price($)" type="text" {...register('price', {required: true})}/>
 
                     {errors.price ?
                         <p className="mt-[2px] text-sm text-error font-semibold">Field is required</p> : null}

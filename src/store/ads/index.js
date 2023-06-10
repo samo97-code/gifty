@@ -14,10 +14,7 @@ export const createAds = (payload) => async dispatch => {
 
 export const fetchAds = (payload) => async dispatch => {
     try {
-        let url = `http://localhost:8081/ads?`
-
-        if (payload?.paginate) url += `${payload.paginate}`
-
+        let url = `http://localhost:8081/ads?_sort=created_at&_order=desc`
         return await axios.get(url)
     } catch (e) {
         catchErrors(e)

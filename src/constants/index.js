@@ -42,6 +42,11 @@ export const statuses = [
         "id": 3,
         "name": "Sold",
         "color": '#dc3545'
+    },
+    {
+        "id": 4,
+        "name": "Used",
+        "color": '#007bff'
     }
 ]
 

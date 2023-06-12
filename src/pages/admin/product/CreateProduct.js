@@ -53,9 +53,14 @@ const CreateProduct = () => {
                 ...data,
                 id: uuidv4(),
                 status: data.arrivedDate ? statuses[1] : statuses[0],
-                isInStock: true,
+                isInStock: !!data.arrivedDate,
+                shopPrice: +data.shopPrice,
+                dollarRate: +data.dollarRate,
+                giftyPrice: +data.giftyPrice,
+                shipmentPrice: +data.shipmentPrice,
                 shopPriceArm: +shopPriceArm.toFixed(2),
-                cleanIncome: +cleanIncome.toFixed(2)
+                cleanIncome: +cleanIncome.toFixed(2),
+                created_at: new Date()
             }
 
 
@@ -108,23 +113,6 @@ const CreateProduct = () => {
                         <p className="mt-[2px] text-sm text-error font-semibold">Field is required</p> : null}
                 </div>
 
-                <div className="form-group mb-4">
-                    <label htmlFor="shop"
-                           className="block mb-1 text-primary-100 text-lg font-semibold">Shop</label>
-                    <select name="shop" id="shop" {...register('shop')}
-                            className="px-3 py-3 w-full shadow-md text-primary-100 focus:border-primary-100 focus:ring-primary-100">
-                        <option value={null}>None</option>
-                        {
-                            shops.map((shop) => {
-                                return <option value={shop.name} key={shop.id}>{shop.name}</option>
-                            })
-                        }
-                    </select>
-
-                    {errors.shop ?
-                        <p className="mt-[2px] text-sm text-error font-semibold">Field is required</p> : null}
-                </div>
-
                 {
                     !loading ? <div className="form-group mb-4">
                         <label htmlFor="category"
@@ -146,7 +134,7 @@ const CreateProduct = () => {
                 }
 
                 {
-                    watchCategory === 'fragrances' ?
+                    watchCategory === 'perfume' ?
                         <div className="form-group mb-4">
                             <label htmlFor="size"
                                    className="block mb-1 text-primary-100 text-lg font-semibold">Size</label>
@@ -173,6 +161,23 @@ const CreateProduct = () => {
                            className="px-3 py-3 w-full shadow-md text-primary-100 focus:border-primary-100 focus:ring-primary-100"/>
 
                     {errors.quantity ?
+                        <p className="mt-[2px] text-sm text-error font-semibold">Field is required</p> : null}
+                </div>
+
+                <div className="form-group mb-4">
+                    <label htmlFor="shop"
+                           className="block mb-1 text-primary-100 text-lg font-semibold">Shop</label>
+                    <select name="shop" id="shop" {...register('shop')}
+                            className="px-3 py-3 w-full shadow-md text-primary-100 focus:border-primary-100 focus:ring-primary-100">
+                        <option value={null}>None</option>
+                        {
+                            shops.map((shop) => {
+                                return <option value={shop.name} key={shop.id}>{shop.name}</option>
+                            })
+                        }
+                    </select>
+
+                    {errors.shop ?
                         <p className="mt-[2px] text-sm text-error font-semibold">Field is required</p> : null}
                 </div>
 

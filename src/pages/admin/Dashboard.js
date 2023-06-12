@@ -69,13 +69,13 @@ const Dashboard = () => {
             {
                 loader ? <Loader/>
                     : <div className="text-3xl">
-                        <p>Total Spent on Shops: <b>{shopInfo.totalShopSum}</b> dram</p>
+                        <p>Total Spent on Shops: <b>{shopInfo.totalShopSum.toFixed(2)}</b> dram</p>
 
                         <p>Total Spent on Onex: <b>{shopInfo.deliveryOnex}</b> dram</p>
 
                         <p>Total Spent on Ads: <b>{shopInfo.adsTotalSpent}</b> dram</p>
 
-                        <p>Clean Income: <b>{shopInfo.income}</b> dram</p>
+                        <p>Clean Income: <b>{shopInfo.income.toFixed(2)}</b> dram</p>
                     </div>
             }
 

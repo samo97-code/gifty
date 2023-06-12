@@ -28,13 +28,12 @@ const Products = () => {
     const modal = useModal()
 
     const [products, setProducts] = useState([])
-    const [defaultHeaders, setDefaultHeaders] = useState(['title', 'brand', 'category', 'product_url', 'status', 'shop_price', 'gifty_price', 'clean_income', 'is_sold', 'action'])
+    const [defaultHeaders, setDefaultHeaders] = useState(['title', 'brand', 'category', 'product_url', 'status', 'shop_price', 'is_in_stock','gifty_price', 'clean_income', 'action'])
     const [loader, setLoader] = useState(true)
     const [showFilters, setShowFilters] = useState(false)
     const [categories, setCategories] = useState([])
     const [filters, setFilters] = useState(defaultValues)
     const [paginationData, setPaginationData] = useState(null)
-    console.log(defaultHeaders, 'defaultHeaders')
 
 
     const headers = useMemo(() => {
@@ -82,7 +81,6 @@ const Products = () => {
                 dateRanges: filters.dates,
                 paginate: pagination ? pagination : `_page=1&_limit=${productDefaultLimit}`
             }
-
 
             const resp = await dispatch(fetchProducts(options))
 
@@ -186,7 +184,7 @@ const Products = () => {
                                     defaultHeaders.includes('title') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span className="text-sm">{item.title}</span>
+                                            <span className="text-sm w-[330px] overflow-ellipsis overflow-hidden whitespace-normal line-clamp-1">{item.title}</span>
                                         </td> : null
                                 }
                                 {
@@ -234,7 +232,7 @@ const Products = () => {
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
                                             <span
-                                                className={`${item.is_in_stock ? 'bg-[#28a745]' : 'bg-[#dc3545]'} px-4 py-2 rounded-[16px] text-white font-semibold`}>{item.is_in_stock ? 'Yes' : 'no'}</span>
+                                                className={`${item.is_in_stock ? 'bg-[#28a745]' : 'bg-[#dc3545]'} px-4 py-2 rounded-[16px] text-white font-semibold`}>{item.is_in_stock ? 'Yes' : 'No'}</span>
                                         </td> : null
                                 }
                                 {
@@ -312,28 +310,6 @@ const Products = () => {
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
                                             <b className="text-sm">{item.clean_income}</b>
-                                        </td> : null
-                                }
-                                {
-                                    defaultHeaders.includes('is_sold') ?
-                                        <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-                                            width="15%">
-                                            <span style={{
-                                                background: `${item.is_sold ? '#dc3545' : ''}`,
-                                                color: `${item.is_sold ? 'text-white' : ''}`
-                                            }}
-                                                  className={`px-4 py-2 rounded-[16px] font-semibold`}>{item.is_sold ? 'Sold' : 'No'}</span>
-                                        </td> : null
-                                }
-                                {
-                                    defaultHeaders.includes('is_used') ?
-                                        <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-                                            width="15%">
-                                            <span style={{
-                                                background: `${item.is_used ? '#dc3545' : ''}`,
-                                                color: `${item.is_used ? 'text-white' : ''}`
-                                            }}
-                                                  className={`px-4 py-2 rounded-[16px] font-semibold`}>item.is_used ? 'Used' : 'No'}</span>
                                         </td> : null
                                 }
                                 <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"

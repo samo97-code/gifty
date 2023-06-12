@@ -19,7 +19,10 @@ export const fetchProducts = (payload) => async dispatch => {
         if (payload?.paginate) url += `${payload.paginate}`
         if (payload?.name) url += `&title_like=${payload.name}`
         if (payload?.brand) url += `&brand_like=${payload.brand}`
-        if (payload?.sortBy) url += `&${payload.sortBy}`
+        if (payload?.sortBy) {
+            url += `&${payload.sortBy}`
+        }else  url += `&_sort=created_at&_order=desc`
+
 
         if (payload?.categories) {
             let str = ''

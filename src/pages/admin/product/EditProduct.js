@@ -45,8 +45,7 @@ const EditProduct = () => {
         setValue('sizes', data.size?.id)
         setValue('shopPriceArm', data.shop_price_arm)
         setValue('isInStock', data.is_in_stock)
-        setValue('isUsed', data.is_used)
-        setValue('isSold', data.is_sold)
+        setValue('createdAt', data.created_at)
     }
 
     const fetchAllCategories = async () => {
@@ -92,10 +91,13 @@ const EditProduct = () => {
                 id: params.id,
                 status: data.status,
                 isInStock: data.isInStock,
+                shopPrice: +data.shopPrice,
+                dollarRate: +data.dollarRate,
+                giftyPrice: +data.giftyPrice,
+                shipmentPrice: +data.shipmentPrice,
                 shopPriceArm: +shopPriceArm.toFixed(2),
-                cleanIncome: +cleanIncome.toFixed(2)
+                cleanIncome: +cleanIncome.toFixed(2),
             }
-
 
             const resp = await dispatch(updateProduct(await convertCamelToSnack(prepareData)))
             if (resp.status === 200) {
@@ -200,7 +202,7 @@ const EditProduct = () => {
                 }
 
                 {
-                    watchCategory === 'fragrances' ?
+                    watchCategory === 'perfume' ?
                         <div className="form-group mb-4">
                             <label htmlFor="size"
                                    className="block mb-1 text-primary-100 text-lg font-semibold">Size</label>
@@ -314,22 +316,6 @@ const EditProduct = () => {
                                className=""/>
                         <label htmlFor="isInStock"
                                className="block text-primary-100 text-lg font-semibold cursor-pointer">In Stock</label>
-                    </div>
-
-                    <div className="form-group flex items-center gap-x-2 mb-4">
-                        <input type="checkbox" name="isUsed" id="isUsed"
-                               placeholder="Used" {...register('isUsed')}
-                               className=""/>
-                        <label htmlFor="isUsed"
-                               className="block text-primary-100 text-lg font-semibold cursor-pointer">Used</label>
-                    </div>
-
-                    <div className="form-group flex items-center gap-x-2 mb-4">
-                        <input type="checkbox" name="isSold" id="isSold"
-                               placeholder="Sold" {...register('isSold')}
-                               className=""/>
-                        <label htmlFor="isSold"
-                               className="block text-primary-100 text-lg font-semibold cursor-pointer">Sold</label>
                     </div>
                 </div>
 

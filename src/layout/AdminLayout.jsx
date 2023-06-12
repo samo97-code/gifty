@@ -3,12 +3,13 @@ import SideBar from "../components/Admin/SideBar";
 import Header from "../components/Admin/Header";
 import Modal from "../components/Ui/Modal";
 import {useCookies} from "react-cookie";
-import {useNavigate} from "react-router";
+import {useLocation, useNavigate} from "react-router";
 
 const AdminLayout = ({children}) => {
     const [showSidebar, setShowSidebar] = useState(true)
     const [cookies, setCookie] = useCookies(['gifty_user']);
     const navigate = useNavigate()
+    const route = useLocation()
 
     useEffect(() => {
         checkUser()
@@ -42,7 +43,7 @@ const AdminLayout = ({children}) => {
             <div className={`main h-full ${showSidebar ? 'ml-[240px]' : ''}`}>
                 <Header showSidebar={showSidebar} open={() => setShowSidebar(true)}/>
 
-                <div className="content-wrapper bg-gray-50 h-main py-10">
+                <div className={`${route.pathname === '/admin/' ? 'h-auto' : 'h-main'} content-wrapper bg-gray-50 py-10`}>
                     {children}
                 </div>
             </div>

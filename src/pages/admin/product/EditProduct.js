@@ -20,8 +20,6 @@ const EditProduct = () => {
     const watchCategory = watch("category");
     const watchStatus = watch("status");
 
-    console.log(watchStatus, 'watchStatus')
-
     useEffect(() => {
         fetchAllCategories()
     }, [])

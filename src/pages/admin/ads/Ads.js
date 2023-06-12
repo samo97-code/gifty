@@ -21,7 +21,7 @@ const Ads = () => {
         {id: 1, label: 'Social'},
         {id: 2, label: 'Price($)'},
         {id: 3, label: 'Dollar Rate'},
-        {id: 4, label: 'Price(dr)'},
+        {id: 4, label: 'Price(դր)'},
         {id: 5, label: 'Action'},
     ]
 
@@ -35,8 +35,6 @@ const Ads = () => {
                 paginate: pagination ? pagination : `_page=1&_limit=8`
             }
 
-            console.log(options,'options')
-
             const resp = await dispatch(fetchAds(options))
             if (resp.status === 200) {
                 setAds(resp.data)
@@ -45,7 +43,6 @@ const Ads = () => {
                     total: resp.headers['x-total-count'],
                     links: resp.headers.link,
                 }
-                console.log(obj,'obj')
                 setPaginationData(obj)
             }
         } catch (e) {

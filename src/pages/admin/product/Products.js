@@ -133,9 +133,6 @@ const Products = () => {
         }
     }
 
-
-    // console.log(filters, 'filters')
-
     const onSelect = (selectedList, selectedItem) => {
         setDefaultHeaders((prevState) => [...prevState, selectedItem.value]);
     }

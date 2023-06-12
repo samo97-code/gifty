@@ -18,6 +18,9 @@ const EditProduct = () => {
     const {register, handleSubmit, watch, setValue, formState: {errors}} = useForm();
 
     const watchCategory = watch("category");
+    const watchStatus = watch("status");
+
+    console.log(watchStatus, 'watchStatus')
 
     useEffect(() => {
         fetchAllCategories()
@@ -46,6 +49,7 @@ const EditProduct = () => {
         setValue('shopPriceArm', data.shop_price_arm)
         setValue('isInStock', data.is_in_stock)
         setValue('createdAt', data.created_at)
+        setValue('soldDate', data.sold_date)
     }
 
     const fetchAllCategories = async () => {
@@ -89,6 +93,7 @@ const EditProduct = () => {
             const prepareData = {
                 ...data,
                 id: params.id,
+                sold_date: +watchStatus !== 3 ? null : data.soldDate,
                 status: data.status,
                 isInStock: data.isInStock,
                 shopPrice: +data.shopPrice,
@@ -180,6 +185,20 @@ const EditProduct = () => {
                     {errors.status ?
                         <p className="mt-[2px] text-sm text-error font-semibold">Field is required</p> : null}
                 </div>
+
+                {
+                    +watchStatus === 3 ? <div className="form-group mb-4">
+                        <label htmlFor="soldDate"
+                               className="block mb-1 text-primary-100 text-lg font-semibold">Sold Date</label>
+                        <input type="date" name="orderDate" id="soldDate"
+                               placeholder="Sold Date" {...register('soldDate', {required: true})}
+                               className="px-3 py-3 w-full shadow-md text-primary-100 focus:border-primary-100 focus:ring-primary-100"/>
+
+                        {errors.soldDate ?
+                            <p className="mt-[2px] text-sm text-error font-semibold">Field is required</p> : null}
+                    </div> : ''
+                }
+
 
                 {
                     !loading ? <div className="form-group mb-4">

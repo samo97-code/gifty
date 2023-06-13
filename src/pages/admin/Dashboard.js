@@ -20,7 +20,9 @@ const Dashboard = () => {
     useEffect(() => {
         fetchAllProducts()
 
-        fetchAllAds()
+        setTimeout(()=>{
+            fetchAllAds()
+        },500)
     }, [])
 
     const fetchAllAds = async () => {
@@ -51,7 +53,11 @@ const Dashboard = () => {
 
     const fetchAllProducts = async () => {
         try {
-            const resp = await dispatch(fetchProducts())
+            const options = {
+                ne: 'Wishlist'
+            }
+
+            const resp = await dispatch(fetchProducts(options))
             if (resp.status === 200) {
                 const obj = {
                     totalShopSum: 0,

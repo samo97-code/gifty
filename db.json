@@ -240,6 +240,7 @@
       },
       "id": "c5b0220e-2a22-401a-b403-33a8cde57ed9",
       "created_at": "2023-06-10T12:42:37.947Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.6pm.com/p/steve-madden-watch-and-multi-bracelet-set-smws066-black/product/9335082/color/3",
       "shop_price": 45,
       "dollar_rate": "385",
@@ -284,6 +285,7 @@
       "is_in_stock": false,
       "shop_price_arm": 11161.15,
       "created_at": "2023-06-10T12:42:43.109Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "clean_income": 5338.85
     },
     {
@@ -306,6 +308,7 @@
       },
       "id": "1b219469-f291-41a7-acbc-206be404e8f3",
       "created_at": "2023-06-10T12:42:51.781Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.6pm.com/p/nine-west-louie-mini-shoulder-crossbody-optic-white/product/9833853/color/22819",
       "shop_price": 36.59,
       "dollar_rate": "385",
@@ -338,6 +341,7 @@
       },
       "id": "dc9f80d5-6e54-4206-a5cb-be1e0a05b787",
       "created_at": "2023-06-10T12:42:56.617Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.6pm.com/p/aldo-alalalia-light-pink/product/9881980/color/433",
       "shop_price": 39.75,
       "dollar_rate": "385",
@@ -370,6 +374,7 @@
       },
       "id": "a4d2d18e-a72f-4f72-bb1c-44008ca481f4",
       "created_at": "2023-06-10T12:43:00.609Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.jomashop.com/invicta-pro-diver-quartz-green-dial-ladies-watch-36531.html",
       "shop_price": 39.99,
       "dollar_rate": "385",
@@ -402,6 +407,7 @@
       },
       "id": "5867f9f6-a4de-491f-b349-da3056b74952",
       "created_at": "2023-06-10T12:43:04.193Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.jomashop.com/armani-exchange-lady-banks-quartz-white-dial-ladies-watch-set-ax7126.html",
       "shop_price": 69.9,
       "dollar_rate": "385",
@@ -434,6 +440,7 @@
       },
       "id": "156bd2ae-6b4b-410d-8bec-b78b545b7ada",
       "created_at": "2023-06-10T12:43:08.125Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.jomashop.com/invicta-pro-diver-quartz-black-dial-batman-bezel-mens-watch-30627.html",
       "shop_price": 54.99,
       "dollar_rate": "385",
@@ -466,6 +473,7 @@
       },
       "id": "379b1156-ac7f-40bc-8f13-891627d15cf7",
       "created_at": "2023-06-10T12:43:12.873Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.jomashop.com/perry-ellis-ladies-360-degrees-purple-for-women-gift-set-fragrances-844061012837.html",
       "shop_price": 29.99,
       "dollar_rate": "385",
@@ -498,6 +506,7 @@
       },
       "id": "af6d6c4a-3c44-4a1c-a758-3e1bc0caf613",
       "created_at": "2023-06-10T12:43:19.217Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.jomashop.com/glow-by-jennifer-lopez-for-women-3-pc-gift-set-3-3oz-edt-spray-2-5oz-body-lotion-2-5oz-shower-gel-3607347614821.html",
       "shop_price": 29.99,
       "dollar_rate": "385",
@@ -530,6 +539,7 @@
       },
       "id": "28839816-1b26-4a6d-8ea8-6671c12ba63f",
       "created_at": "2023-06-10T12:43:26.337Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.jomashop.com/guess-by-marcian-gradient-blue-cat-eye-ladies-sunglasses-gm0804-20w-56.html",
       "shop_price": 29.99,
       "dollar_rate": "385",
@@ -562,6 +572,7 @@
       },
       "id": "d17793f5-a116-4ce3-b019-f37e3bca3187",
       "created_at": "2023-06-10T12:43:32.081Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.jomashop.com/timberland-green-rectangular-mens-sunglasses-tb9195-01r.html",
       "shop_price": 28.99,
       "dollar_rate": "385",
@@ -594,6 +605,7 @@
       },
       "id": "91f88d61-cd79-4773-b14b-6705d835a88f",
       "created_at": "2023-06-10T12:44:55.607Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "",
       "shop_price": 32.98,
       "dollar_rate": "385",
@@ -637,6 +649,7 @@
       "is_in_stock": false,
       "shop_price_arm": 11326.7,
       "created_at": "2023-06-10T12:56:55.607Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "clean_income": 2673.3
     },
     {
@@ -669,6 +682,7 @@
       "is_in_stock": true,
       "shop_price_arm": 10048.5,
       "created_at": "2023-06-10T12:58:55.607Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "clean_income": 9451.5
     },
     {
@@ -691,6 +705,7 @@
         "color": "#28a745"
       },
       "created_at": "2023-06-10T13:06:16.422Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.6pm.com/p/nine-west-georgi-mini-convertible-camera-crossbody-wild-rose/product/9833851/color/12951",
       "shop_price": 22.5,
       "dollar_rate": "385",
@@ -733,6 +748,7 @@
       "is_in_stock": true,
       "shop_price_arm": 11742.5,
       "created_at": "2023-06-10T13:07:26.337Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "clean_income": 11759.5
     },
     {
@@ -755,6 +771,7 @@
         "color": "#28a745"
       },
       "created_at": "2023-06-10T13:08:36.689Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.6pm.com/p/steve-madden-btamela-quilt-w-chain-mango/product/9877514/color/3683",
       "shop_price": 42.12,
       "dollar_rate": "385",
@@ -787,6 +804,7 @@
         "color": "#28a745"
       },
       "created_at": "2023-06-10T13:10:02.925Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.jomashop.com/invicta-pro-diver-quartz-black-dial-ladies-watch-36528.html",
       "shop_price": 34.99,
       "dollar_rate": "386",
@@ -819,6 +837,7 @@
         "color": "#28a745"
       },
       "created_at": "2023-06-10T13:11:15.281Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.jomashop.com/nixon-corporal-quartz-blue-dial-mens-watch-a346-2655-00.html",
       "shop_price": 39.99,
       "dollar_rate": "386",
@@ -851,6 +870,7 @@
         "color": "#28a745"
       },
       "created_at": "2023-06-10T13:12:10.189Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.jomashop.com/ice-watch-quartz-crystal-green-dial-ladies-watch-020381.html",
       "shop_price": 59.99,
       "dollar_rate": "386",
@@ -883,6 +903,7 @@
         "color": "#28a745"
       },
       "created_at": "2023-06-10T13:12:59.413Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.jomashop.com/ellen-tracy-quartz-crystal-two-tone-ladies-watch-et5315ttrg.html",
       "shop_price": 28.89,
       "dollar_rate": "386",
@@ -915,6 +936,7 @@
         "color": "#28a745"
       },
       "created_at": "2023-06-10T13:13:49.291Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.jomashop.com/polaroid-core-polarized-brown-gradient-square-ladies-sunglasses-pld-4110-s-x-010a-la-51.html",
       "shop_price": 19.99,
       "dollar_rate": "386",
@@ -947,6 +969,7 @@
         "color": "#28a745"
       },
       "created_at": "2023-06-10T13:14:35.613Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.jomashop.com/guess-blue-gradient-pilot-mens-sunglasses-gg2148-91x-61.html",
       "shop_price": 29.99,
       "dollar_rate": "386",
@@ -984,6 +1007,7 @@
       "is_in_stock": true,
       "shop_price_arm": 8256,
       "created_at": "2023-06-10T13:58:54.928Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "clean_income": 6744
     },
     {
@@ -1001,6 +1025,7 @@
         "color": "#28a745"
       },
       "created_at": "2023-06-10T14:02:04.138Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "",
       "shop_price": 32,
       "dollar_rate": "384",
@@ -1028,6 +1053,7 @@
         "color": "#28a745"
       },
       "created_at": "2023-06-10T14:02:51.345Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "",
       "shop_price": 21.5,
       "dollar_rate": "384",
@@ -1055,6 +1081,7 @@
         "color": "#28a745"
       },
       "created_at": "2023-06-10T14:03:35.933Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "",
       "shop_price": 21.5,
       "dollar_rate": "384",
@@ -1082,6 +1109,7 @@
         "color": "#28a745"
       },
       "created_at": "2023-06-10T14:04:12.668Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "",
       "shop_price": 32,
       "dollar_rate": "384",
@@ -1109,6 +1137,7 @@
         "color": "#28a745"
       },
       "created_at": "2023-06-10T14:04:54.228Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "",
       "shop_price": 32,
       "dollar_rate": "384",
@@ -1136,6 +1165,7 @@
         "color": "#28a745"
       },
       "created_at": "2023-06-10T14:05:40.148Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "",
       "shop_price": 32,
       "dollar_rate": "384",
@@ -1163,6 +1193,7 @@
         "color": "#28a745"
       },
       "created_at": "2023-06-10T14:06:38.733Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "",
       "shop_price": 32,
       "dollar_rate": "384",
@@ -1190,6 +1221,7 @@
         "color": "#28a745"
       },
       "created_at": "2023-06-10T14:07:15.036Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "",
       "shop_price": 32,
       "dollar_rate": "384",
@@ -1232,6 +1264,7 @@
       "is_in_stock": false,
       "shop_price_arm": 13086.72,
       "created_at": "2023-06-10T14:35:01.754Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "clean_income": 0
     },
     {
@@ -1264,6 +1297,7 @@
       "is_in_stock": false,
       "shop_price_arm": 16128,
       "created_at": "2023-06-10T14:36:28.593Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "clean_income": 0
     },
     {
@@ -1296,6 +1330,7 @@
       "is_in_stock": false,
       "shop_price_arm": 13405.44,
       "created_at": "2023-06-10T14:37:22.985Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "clean_income": 0
     },
     {
@@ -1307,9 +1342,9 @@
         "url": "https://www.jomashop.com/"
       },
       "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
+        "id": 2,
+        "name": "Arrived",
+        "color": "#28a745"
       },
       "quantity": "1",
       "category": {
@@ -1317,18 +1352,19 @@
         "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
       },
       "id": "4a617f4a-9f76-474e-9b3c-13635cc00b1f",
+      "updated_at": "2023-06-13T06:51:52.759Z",
       "product_url": "https://www.jomashop.com/armani-exchange-watch-ax7101.html",
       "shop_price": 109,
-      "dollar_rate": "383",
+      "dollar_rate": 383,
       "order_date": "2023-05-26",
       "order_number": "#3A49002",
-      "arrived_date": "",
-      "shipment_price": "",
-      "gifty_price": "",
-      "is_in_stock": false,
+      "arrived_date": "2023-06-13",
+      "shipment_price": 3000,
+      "gifty_price": 69500,
+      "is_in_stock": true,
       "shop_price_arm": 41747,
       "created_at": "2023-06-10T14:38:57.609Z",
-      "clean_income": 0
+      "clean_income": 22753
     },
     {
       "title": "Objet D Art Automatic Black Dial Men's Watch",
@@ -1339,9 +1375,9 @@
         "url": "https://www.jomashop.com/"
       },
       "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
+        "id": 2,
+        "name": "Arrived",
+        "color": "#28a745"
       },
       "quantity": "1",
       "category": {
@@ -1349,18 +1385,19 @@
         "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
       },
       "id": "16f01ec8-8351-4b85-9ddc-00342fee1b28",
+      "updated_at": "2023-06-13T06:29:34.494Z",
       "product_url": "https://www.jomashop.com/invicta-objet-d-art-watch-27585.html",
       "shop_price": 71.99,
-      "dollar_rate": "383",
+      "dollar_rate": 383,
       "order_date": "2023-05-26",
       "order_number": "#3A49002",
-      "arrived_date": "",
-      "shipment_price": "",
-      "gifty_price": "",
-      "is_in_stock": false,
+      "arrived_date": "2023-06-13",
+      "shipment_price": 3000,
+      "gifty_price": 49500,
+      "is_in_stock": true,
       "shop_price_arm": 27572.17,
       "created_at": "2023-06-10T14:45:07.961Z",
-      "clean_income": 0
+      "clean_income": 16927.83
     },
     {
       "title": "Objet D Art Automatic Silver Dial Men's Watch",
@@ -1371,9 +1408,9 @@
         "url": "https://www.jomashop.com/"
       },
       "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
+        "id": 2,
+        "name": "Arrived",
+        "color": "#28a745"
       },
       "quantity": "1",
       "category": {
@@ -1381,50 +1418,52 @@
         "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
       },
       "id": "c73b6e17-3030-406e-93eb-851eddbf428a",
+      "updated_at": "2023-06-13T06:29:21.374Z",
       "product_url": "https://www.jomashop.com/invicta-objet-d-art-watch-27586.html",
       "shop_price": 74.99,
-      "dollar_rate": "383",
+      "dollar_rate": 383,
       "order_date": "2023-05-26",
       "order_number": "#3A49002",
-      "arrived_date": "",
-      "shipment_price": "",
-      "gifty_price": "",
-      "is_in_stock": false,
+      "arrived_date": "2023-06-13",
+      "shipment_price": 3000,
+      "gifty_price": 54000,
+      "is_in_stock": true,
       "shop_price_arm": 28721.17,
       "created_at": "2023-06-10T14:45:57.513Z",
-      "clean_income": 0
+      "clean_income": 20278.83
     },
     {
       "title": "Even Quartz White Dial Ladies Watch",
       "brand": "CALVIN KLEIN",
-      "quantity": "1",
       "shop": {
         "id": 2,
         "name": "jomashop",
         "url": "https://www.jomashop.com/"
       },
+      "status": {
+        "id": 2,
+        "name": "Arrived",
+        "color": "#28a745"
+      },
+      "quantity": "1",
       "category": {
         "name": "watch",
         "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
       },
       "id": "0b35a5b9-8274-42ee-8958-5cfa77e97a32",
-      "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
-      },
-      "created_at": "2023-06-10T14:46:45.521Z",
+      "updated_at": "2023-06-13T06:46:55.538Z",
       "product_url": "https://www.jomashop.com/calvin-klein-even-quartz-white-dial-ladies-watch-k7b23626.html",
       "shop_price": 49.99,
-      "dollar_rate": "380",
+      "dollar_rate": 380,
       "order_date": "2023-05-26",
       "order_number": "#3A49002",
-      "arrived_date": "",
-      "shipment_price": "",
-      "gifty_price": "",
-      "is_in_stock": false,
+      "arrived_date": "2023-06-13",
+      "shipment_price": 2400,
+      "gifty_price": 39500,
+      "is_in_stock": true,
       "shop_price_arm": 18996.2,
-      "clean_income": 0
+      "created_at": "2023-06-10T14:46:45.521Z",
+      "clean_income": 16103.8
     },
     {
       "title": "шкатулка для украшений",
@@ -1456,6 +1495,7 @@
       "is_in_stock": true,
       "shop_price_arm": 9467.76,
       "created_at": "2023-06-10T14:49:38.257Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "clean_income": 6032.24
     },
     {
@@ -1478,6 +1518,7 @@
         "color": "#6c757d"
       },
       "created_at": "2023-06-10T14:52:01.324Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.jomashop.com/hugo-boss-ladies-ma-vie-gift-set-fragrances-3616303428655.html",
       "shop_price": 29.09,
       "dollar_rate": "384",
@@ -1520,6 +1561,7 @@
       "is_in_stock": false,
       "shop_price_arm": 11170.56,
       "created_at": "2023-06-10T14:52:47.396Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "clean_income": 0
     },
     {
@@ -1542,6 +1584,7 @@
         "color": "#6c757d"
       },
       "created_at": "2023-06-10T14:53:47.621Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.jomashop.com/dolce-and-gabbana-mens-dolce-gabbana-k-king-3-38-oz-gift-set-fragrances-3423222066185.html",
       "shop_price": 56.25,
       "dollar_rate": "384",
@@ -1574,6 +1617,7 @@
         "color": "#6c757d"
       },
       "created_at": "2023-06-10T14:54:46.636Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.6pm.com/p/u-s-polo-assn-diamond-stripe-crossbody-grey/product/9733924/color/401",
       "shop_price": 24.99,
       "dollar_rate": "384",
@@ -1606,6 +1650,7 @@
         "color": "#6c757d"
       },
       "created_at": "2023-06-10T14:55:51.724Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.6pm.com/p/u-s-polo-assn-diamond-stripe-crossbody-light-blue/product/9733924/color/430",
       "shop_price": 24.99,
       "dollar_rate": "384",
@@ -1638,6 +1683,7 @@
         "color": "#6c757d"
       },
       "created_at": "2023-06-10T14:56:26.292Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.6pm.com/p/tommy-hilfiger-lara-ii-square-crossbody-breezy-blue-multi/product/9812371/color/1023091",
       "shop_price": 32.64,
       "dollar_rate": "384",
@@ -1670,6 +1716,7 @@
         "color": "#6c757d"
       },
       "created_at": "2023-06-10T14:57:02.004Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.6pm.com/p/aldo-kirsten-white/product/9865739/color/14",
       "shop_price": 34.77,
       "dollar_rate": "384",
@@ -1702,6 +1749,7 @@
         "color": "#6c757d"
       },
       "created_at": "2023-06-10T14:58:25.721Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.jomashop.com/invicta-specialty-chronograph-quartz-blue-dial-pepsi-bezel-mens-watch-39123.html",
       "shop_price": 49.99,
       "dollar_rate": "384",
@@ -1734,6 +1782,7 @@
         "color": "#6c757d"
       },
       "created_at": "2023-06-10T14:59:09.458Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "https://www.jomashop.com/invicta-watch-14330.html",
       "shop_price": 68.99,
       "dollar_rate": "384",
@@ -1766,6 +1815,7 @@
         "color": "#28a745"
       },
       "created_at": "2023-06-10T15:07:15.741Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
       "product_url": "",
       "shop_price": 22.24,
       "dollar_rate": "384",

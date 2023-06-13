@@ -1,7 +1,7 @@
 import React, {useMemo} from 'react';
 import {Bar} from "react-chartjs-2";
 import zoomPlugin from 'chartjs-plugin-zoom';
-import { CategoryScale, LinearScale, Chart } from "chart.js/auto";
+import {CategoryScale, LinearScale, Chart} from "chart.js/auto";
 import moment from 'moment'
 
 Chart.register(CategoryScale);
@@ -34,23 +34,25 @@ const options = {
 };
 
 const OrderSoldChart = ({products}) => {
-    const labels = ['Jan', "Feb",'Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+    const labels = ['Jan', "Feb", 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
-    const datesOrdered = products.reduce((acc, { order_date }) => {
-        const orderDate = labels[moment(order_date).month()]
+    const datesOrdered = products.reduce((acc, {order_date}) => {
+        if (order_date) {
+            const orderDate = labels[moment(order_date).month()]
 
-        if (orderDate in acc) acc[orderDate].push(order_date);
-        else acc[orderDate] = [order_date];
+            if (orderDate in acc) acc[orderDate].push(order_date);
+            else acc[orderDate] = [order_date];
+        }
 
         return acc;
     }, {});
 
-    const datesSold = products.reduce((acc, { sold_date }) => {
-        if (sold_date){
+    const datesSold = products.reduce((acc, {sold_date}) => {
+        if (sold_date) {
             const soldDate = labels[moment(sold_date).month()]
 
             if (soldDate in acc) {
-                if (sold_date)  acc[soldDate].push(sold_date);
+                if (sold_date) acc[soldDate].push(sold_date);
             } else acc[soldDate] = [sold_date];
         }
 
@@ -58,30 +60,29 @@ const OrderSoldChart = ({products}) => {
     }, {});
 
 
-    const dataOrdered = useMemo(()=>{
+    const dataOrdered = useMemo(() => {
         const temp = []
 
-        labels.map((label)=>{
-            if (datesOrdered[label]){
+        labels.map((label) => {
+            if (datesOrdered[label]) {
                 temp.push(datesOrdered[label].length)
-            }else temp.push(0)
+            } else temp.push(0)
         })
         return temp
 
-    },[datesOrdered])
+    }, [datesOrdered])
 
-    const dataSold = useMemo(()=>{
+    const dataSold = useMemo(() => {
         const temp = []
 
-        labels.map((label)=>{
-            if (datesSold[label]){
+        labels.map((label) => {
+            if (datesSold[label]) {
                 temp.push(datesSold[label].length)
-            }else temp.push(0)
+            } else temp.push(0)
         })
         return temp
 
-    },[datesSold])
-
+    }, [datesSold])
 
 
     const data = {

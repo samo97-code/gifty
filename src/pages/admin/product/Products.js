@@ -28,7 +28,7 @@ const Products = () => {
     const modal = useModal()
 
     const [products, setProducts] = useState([])
-    const [defaultHeaders, setDefaultHeaders] = useState(['title', 'brand', 'category', 'product_url', 'status', 'shop_price', 'is_in_stock','gifty_price', 'clean_income', 'action'])
+    const [defaultHeaders, setDefaultHeaders] = useState(['title', 'brand', 'category', 'product_url', 'status', 'shop_price', 'is_in_stock', 'gifty_price', 'clean_income', 'action'])
     const [loader, setLoader] = useState(true)
     const [showFilters, setShowFilters] = useState(false)
     const [categories, setCategories] = useState([])
@@ -79,7 +79,7 @@ const Products = () => {
                 statuses: filters.statuses,
                 sortBy: filters.sortBy,
                 dateRanges: filters.dates,
-                paginate: pagination ? pagination : `_page=1&_limit=${productDefaultLimit}`
+                paginate: pagination ? pagination : `_page=1&_limit=${productDefaultLimit}`,
             }
 
             const resp = await dispatch(fetchProducts(options))
@@ -181,7 +181,8 @@ const Products = () => {
                                     defaultHeaders.includes('title') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span className="text-sm w-[330px] overflow-ellipsis overflow-hidden whitespace-normal line-clamp-1">{item.title}</span>
+                                            <span
+                                                className="text-sm w-[330px] overflow-ellipsis overflow-hidden whitespace-normal line-clamp-1">{item.title}</span>
                                         </td> : null
                                 }
                                 {

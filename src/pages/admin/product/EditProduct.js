@@ -15,14 +15,29 @@ const EditProduct = () => {
     const navigate = useNavigate()
     const [loading, setLoading] = useState(true)
     const [categories, setCategories] = useState([])
+    const [tempClean, setTempClean] = useState(0)
     const {register, handleSubmit, watch, setValue, formState: {errors}} = useForm();
 
     const watchCategory = watch("category");
     const watchStatus = watch("status");
+    const watchGiftyPrice = watch("giftyPrice");
+    const watchShopPrice = watch("shopPrice");
+    const watchDollarRate = watch("dollarRate");
+    const watchShipmentPrice = watch("shipmentPrice");
+    console.log(watchGiftyPrice,'watchGiftyPrice')
 
     useEffect(() => {
         fetchAllCategories()
     }, [])
+
+    useEffect(()=>{
+        if (watchGiftyPrice && watchShipmentPrice){
+            const shopPriceArm = watchShopPrice * watchDollarRate
+            const cleanIncome = +watchGiftyPrice - +watchShipmentPrice - +shopPriceArm - 2000
+            setTempClean(cleanIncome)
+
+        }
+    },[watchGiftyPrice])
 
     useEffect(() => {
         if (params.id) fetchCurrentProduct()
@@ -100,6 +115,7 @@ const EditProduct = () => {
                 shipmentPrice: +data.shipmentPrice,
                 shopPriceArm: +shopPriceArm.toFixed(2),
                 cleanIncome: +cleanIncome.toFixed(2),
+                updated_at: new Date()
             }
 
             const resp = await dispatch(updateProduct(await convertCamelToSnack(prepareData)))
@@ -275,7 +291,7 @@ const EditProduct = () => {
                     <label htmlFor="orderDate"
                            className="block mb-1 text-primary-100 text-lg font-semibold">Order Date</label>
                     <input type="date" name="orderDate" id="orderDate"
-                           placeholder="Order Date" {...register('orderDate', {required: true})}
+                           placeholder="Order Date" {...register('orderDate')}
                            className="px-3 py-3 w-full shadow-md text-primary-100 focus:border-primary-100 focus:ring-primary-100"/>
 
                     {errors.orderDate ?
@@ -317,7 +333,7 @@ const EditProduct = () => {
 
                 <div className="form-group mb-4">
                     <label htmlFor="giftyPrice"
-                           className="block mb-1 text-primary-100 text-lg font-semibold">Gifty Price(dr)</label>
+                           className="block mb-1 text-primary-100 text-lg font-semibold">Gifty Price(դր)</label>
                     <input type="number" name="giftyPrice" id="giftyPrice"
                            placeholder="Gifty Price" {...register('giftyPrice')}
                            className="px-3 py-3 w-full shadow-md text-primary-100 focus:border-primary-100 focus:ring-primary-100"/>
@@ -325,6 +341,13 @@ const EditProduct = () => {
                     {errors.giftyPrice ?
                         <p className="mt-[2px] text-sm text-error font-semibold">Field is required</p> : null}
                 </div>
+
+                {
+                    tempClean ?
+                        <span>
+                        Clean Income: <b>{tempClean} դր</b>
+                    </span> : null
+                }
 
                 <div className="flex gap-x-6 items-center">
                     <div className="form-group flex items-center gap-x-2 mb-4">

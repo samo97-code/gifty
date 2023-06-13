@@ -21,7 +21,7 @@ export const fetchProducts = (payload) => async dispatch => {
         if (payload?.brand) url += `&brand_like=${payload.brand}`
         if (payload?.sortBy) {
             url += `&${payload.sortBy}`
-        }else  url += `&_sort=created_at&_order=desc`
+        }else  url += `&_sort=updated_at&_order=desc`
 
 
         if (payload?.categories) {
@@ -42,6 +42,10 @@ export const fetchProducts = (payload) => async dispatch => {
 
         if (payload?.dateRanges?.length){
             url += `order_date_gte=${payload.dateRanges[0]}&order_date_lte=${payload.dateRanges[1]}`
+        }
+
+        if (payload?.ne){
+            url += `&status.name_ne=${payload.ne}`
         }
 
         return await axios.get(url)

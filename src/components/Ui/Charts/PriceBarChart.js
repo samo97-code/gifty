@@ -36,12 +36,14 @@ const PriceBarChart = ({products}) => {
     const labels = ['Jan', "Feb",'Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 
     const priceOrdered = products.reduce((acc, { order_date, shop_price_arm }) => {
-        const orderDate = labels[moment(order_date).month()]
+        if (order_date){
+            const orderDate = labels[moment(order_date).month()]
 
-        if (orderDate in acc) {
-            acc[orderDate] += shop_price_arm;
-        } else {
-            acc[orderDate] = shop_price_arm;
+            if (orderDate in acc) {
+                acc[orderDate] += shop_price_arm;
+            } else {
+                acc[orderDate] = shop_price_arm;
+            }
         }
 
         return acc;

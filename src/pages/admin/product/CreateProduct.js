@@ -52,7 +52,7 @@ const CreateProduct = () => {
             const prepareData = {
                 ...data,
                 id: uuidv4(),
-                status: data.arrivedDate ? statuses[1] : statuses[0],
+                status: statuses.find((item)=>item.id === +data.status),
                 isInStock: !!data.arrivedDate,
                 shopPrice: +data.shopPrice,
                 dollarRate: +data.dollarRate,
@@ -182,6 +182,23 @@ const CreateProduct = () => {
                 </div>
 
                 <div className="form-group mb-4">
+                    <label htmlFor="status"
+                           className="block mb-1 text-primary-100 text-lg font-semibold">Status</label>
+                    <select name="status" id="status" {...register('status', {required: true})}
+                            className="px-3 py-3 w-full shadow-md text-primary-100 focus:border-primary-100 focus:ring-primary-100">
+                        <option value={null}>None</option>
+                        {
+                            statuses.map((status) => {
+                                return <option value={status.id} key={status.id}>{status.name}</option>
+                            })
+                        }
+                    </select>
+
+                    {errors.status ?
+                        <p className="mt-[2px] text-sm text-error font-semibold">Field is required</p> : null}
+                </div>
+
+                <div className="form-group mb-4">
                     <label htmlFor="shopPrice"
                            className="block mb-1 text-primary-100 text-lg font-semibold">Shop Price($)</label>
                     <input type="number" name="shopPrice" id="shopPrice"
@@ -207,7 +224,7 @@ const CreateProduct = () => {
                     <label htmlFor="orderDate"
                            className="block mb-1 text-primary-100 text-lg font-semibold">Order Date</label>
                     <input type="date" name="orderDate" id="orderDate"
-                           placeholder="Order Date" {...register('orderDate', {required: true})}
+                           placeholder="Order Date" {...register('orderDate')}
                            className="px-3 py-3 w-full shadow-md text-primary-100 focus:border-primary-100 focus:ring-primary-100"/>
 
                     {errors.orderDate ?

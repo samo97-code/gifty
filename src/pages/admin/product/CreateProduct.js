@@ -15,13 +15,28 @@ const CreateProduct = () => {
     const navigate = useNavigate()
     const [loading, setLoading] = useState(true)
     const [categories, setCategories] = useState([])
+    const [tempClean, setTempClean] = useState(0)
     const {register, handleSubmit, reset, watch, formState: {errors}} = useForm();
 
     const watchCategory = watch("category");
+    const watchStatus = watch("status");
+    const watchGiftyPrice = watch("giftyPrice");
+    const watchShopPrice = watch("shopPrice");
+    const watchDollarRate = watch("dollarRate");
+    const watchShipmentPrice = watch("shipmentPrice");
 
     useEffect(() => {
         fetchAllCategories()
     }, [])
+
+    useEffect(()=>{
+        if (watchGiftyPrice && watchShipmentPrice){
+            const shopPriceArm = watchShopPrice * watchDollarRate
+            const cleanIncome = +watchGiftyPrice - +watchShipmentPrice - +shopPriceArm - 2000
+            setTempClean(cleanIncome)
+
+        }
+    },[watchGiftyPrice])
 
     const fetchAllCategories = async () => {
         try {
@@ -60,7 +75,8 @@ const CreateProduct = () => {
                 shipmentPrice: +data.shipmentPrice,
                 shopPriceArm: +shopPriceArm.toFixed(2),
                 cleanIncome: +cleanIncome.toFixed(2),
-                created_at: new Date()
+                created_at: new Date(),
+                updated_at: new Date()
             }
 
 
@@ -274,6 +290,13 @@ const CreateProduct = () => {
                     {errors.giftyPrice ?
                         <p className="mt-[2px] text-sm text-error font-semibold">Field is required</p> : null}
                 </div>
+
+                {
+                    tempClean ?
+                        <span>
+                        Clean Income: <b>{tempClean} դր</b>
+                    </span> : null
+                }
 
 
                 <div className="form-group mt-6 flex justify-center">

@@ -24,7 +24,6 @@ const EditProduct = () => {
     const watchShopPrice = watch("shopPrice");
     const watchDollarRate = watch("dollarRate");
     const watchShipmentPrice = watch("shipmentPrice");
-    console.log(watchGiftyPrice,'watchGiftyPrice')
 
     useEffect(() => {
         fetchAllCategories()

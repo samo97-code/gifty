@@ -217,6 +217,49 @@
         "label": "Facebook"
       },
       "created_at": "2023-06-10T11:55:21.929Z"
+    },
+    {
+      "id": "f5d7c3c4-b09c-4719-9aea-349f9299ce43",
+      "price": "21.6",
+      "dollar_rate": "384",
+      "price_arm": 8294.4,
+      "social": {
+        "id": 1,
+        "label": "Instagram"
+      },
+      "created_at": "2023-06-16T13:12:11.790Z"
+    },
+    {
+      "id": "a9308602-70a5-49b1-98a8-f4cbeb629f53",
+      "price": "24",
+      "dollar_rate": "384",
+      "price_arm": 9216,
+      "social": {
+        "id": 2,
+        "label": "Facebook"
+      }
+    },
+    {
+      "id": "34981359-2f38-40d3-b8a5-5e3e81f3fac8",
+      "price": "21",
+      "dollar_rate": "384",
+      "price_arm": 8064,
+      "social": {
+        "id": 1,
+        "label": "Instagram"
+      },
+      "created_at": "2023-06-23T09:57:52.375Z"
+    },
+    {
+      "id": "b384ccf1-eff8-4cf5-bf1b-aa9c09fdf82b",
+      "price": "23",
+      "dollar_rate": "384",
+      "price_arm": 8832,
+      "social": {
+        "id": 2,
+        "label": "Facebook"
+      },
+      "created_at": "2023-06-23T09:58:03.832Z"
     }
   ],
   "products": [
@@ -787,34 +830,35 @@
     {
       "title": "Pro Diver Quartz Black Dial Pepsi Bezel",
       "brand": "INVICTA",
-      "quantity": "1",
       "shop": {
         "id": 2,
         "name": "jomashop",
         "url": "https://www.jomashop.com/"
       },
+      "status": {
+        "id": 3,
+        "name": "Sold",
+        "color": "#dc3545"
+      },
+      "quantity": "1",
       "category": {
         "name": "watch",
         "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
       },
       "id": "a2564ecf-e84b-40b2-9c2c-2fe73b9eeba1",
-      "status": {
-        "id": 2,
-        "name": "Arrived",
-        "color": "#28a745"
-      },
-      "created_at": "2023-06-10T13:10:02.925Z",
-      "updated_at": "2023-06-13T06:28:08.127Z",
+      "sold_date": "2023-06-20",
+      "updated_at": "2023-06-20T18:34:16.982Z",
       "product_url": "https://www.jomashop.com/invicta-pro-diver-quartz-black-dial-ladies-watch-36528.html",
       "shop_price": 34.99,
-      "dollar_rate": "386",
+      "dollar_rate": 386,
       "order_date": "2023-04-10",
       "order_number": "#38Q6220",
       "arrived_date": "2023-04-25",
-      "shipment_price": "3800",
-      "gifty_price": "32000",
-      "is_in_stock": true,
+      "shipment_price": 3800,
+      "gifty_price": 32000,
+      "is_in_stock": false,
       "shop_price_arm": 13506.14,
+      "created_at": "2023-06-10T13:10:02.925Z",
       "clean_income": 12693.86
     },
     {
@@ -1243,9 +1287,9 @@
         "url": "https://www.jomashop.com/"
       },
       "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
+        "id": 2,
+        "name": "Arrived",
+        "color": "#28a745"
       },
       "quantity": "1",
       "category": {
@@ -1253,19 +1297,19 @@
         "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
       },
       "id": "92538247-17c3-4777-8b2c-0d7ed0650423",
+      "updated_at": "2023-06-20T17:58:34.756Z",
       "product_url": "https://www.jomashop.com/august-steiner-as8125bk-watch-as8125bk.html",
       "shop_price": 34.08,
-      "dollar_rate": "384",
+      "dollar_rate": 384,
       "order_date": "2023-05-21",
       "order_number": "#3A15670",
-      "arrived_date": "",
-      "shipment_price": "",
-      "gifty_price": "",
-      "is_in_stock": false,
+      "arrived_date": "2023-06-20",
+      "shipment_price": 1800,
+      "gifty_price": 29500,
+      "is_in_stock": true,
       "shop_price_arm": 13086.72,
       "created_at": "2023-06-10T14:35:01.754Z",
-      "updated_at": "2023-06-13T06:28:08.127Z",
-      "clean_income": 0
+      "clean_income": 12613.28
     },
     {
       "title": "Quartz Blue Dial Men's Watch",
@@ -1276,9 +1320,9 @@
         "url": "https://www.jomashop.com/"
       },
       "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
+        "id": 2,
+        "name": "Arrived",
+        "color": "#28a745"
       },
       "quantity": "1",
       "category": {
@@ -1286,19 +1330,19 @@
         "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
       },
       "id": "a6ec84e5-cb3c-4ef7-80da-11e9a4144229",
+      "updated_at": "2023-06-20T17:55:21.912Z",
       "product_url": "https://www.jomashop.com/burgi-jx115bu-watch-jx115bu.html",
       "shop_price": 42,
-      "dollar_rate": "384",
+      "dollar_rate": 384,
       "order_date": "2023-05-21",
       "order_number": "#3A15670",
-      "arrived_date": "",
-      "shipment_price": "",
-      "gifty_price": "",
-      "is_in_stock": false,
+      "arrived_date": "2023-06-19",
+      "shipment_price": 1800,
+      "gifty_price": 35000,
+      "is_in_stock": true,
       "shop_price_arm": 16128,
       "created_at": "2023-06-10T14:36:28.593Z",
-      "updated_at": "2023-06-13T06:28:08.127Z",
-      "clean_income": 0
+      "clean_income": 15072
     },
     {
       "title": "Men's Mercedes Benz Man Intense 2pc Gift",
@@ -1309,9 +1353,9 @@
         "url": "https://www.jomashop.com/"
       },
       "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
+        "id": 2,
+        "name": "Arrived",
+        "color": "#28a745"
       },
       "quantity": "1",
       "category": {
@@ -1319,19 +1363,19 @@
         "id": "b4e4cfe5-c1b2-4559-83c8-3eaff7378802"
       },
       "id": "ceb10862-206a-4b47-97d5-763e0b05f994",
+      "updated_at": "2023-06-23T06:55:08.600Z",
       "product_url": "https://www.jomashop.com/mercedes-benz-mens-mercedes-benz-man-intense-2pc-gift-set-fragrances-3595471065421.html",
       "shop_price": 34.91,
-      "dollar_rate": "384",
+      "dollar_rate": 384,
       "order_date": "2023-06-06",
       "order_number": "#3AC0152",
-      "arrived_date": "",
-      "shipment_price": "",
-      "gifty_price": "",
-      "is_in_stock": false,
+      "arrived_date": "2023-06-20",
+      "shipment_price": 5000,
+      "gifty_price": 35500,
+      "is_in_stock": true,
       "shop_price_arm": 13405.44,
       "created_at": "2023-06-10T14:37:22.985Z",
-      "updated_at": "2023-06-13T06:28:08.127Z",
-      "clean_income": 0
+      "clean_income": 15094.56
     },
     {
       "title": "Hampton Black Dial Men's Gift Set",
@@ -1501,35 +1545,35 @@
     {
       "title": "Ladies Ma Vie Gift Set Fragrances",
       "brand": "HUGO BOSS",
-      "quantity": "1",
       "shop": {
         "id": 2,
         "name": "jomashop",
         "url": "https://www.jomashop.com/"
       },
+      "status": {
+        "id": 2,
+        "name": "Arrived",
+        "color": "#28a745"
+      },
+      "quantity": "1",
       "category": {
         "name": "giftset",
         "id": "b4e4cfe5-c1b2-4559-83c8-3eaff7378802"
       },
       "id": "3b4cb754-f55d-4228-925a-c375809696e9",
-      "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
-      },
-      "created_at": "2023-06-10T14:52:01.324Z",
-      "updated_at": "2023-06-13T06:28:08.127Z",
+      "updated_at": "2023-06-20T18:17:51.250Z",
       "product_url": "https://www.jomashop.com/hugo-boss-ladies-ma-vie-gift-set-fragrances-3616303428655.html",
       "shop_price": 29.09,
-      "dollar_rate": "384",
+      "dollar_rate": 384,
       "order_date": "2023-06-06",
       "order_number": "#3AC0152",
-      "arrived_date": "",
-      "shipment_price": "",
-      "gifty_price": "",
-      "is_in_stock": false,
+      "arrived_date": "2023-06-20",
+      "shipment_price": 3000,
+      "gifty_price": 29500,
+      "is_in_stock": true,
       "shop_price_arm": 11170.56,
-      "clean_income": 0
+      "created_at": "2023-06-10T14:52:01.324Z",
+      "clean_income": 13329.44
     },
     {
       "title": "Ladies Pink Spray Gift Set Fragrances 0",
@@ -1540,9 +1584,9 @@
         "url": "https://www.jomashop.com/"
       },
       "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
+        "id": 2,
+        "name": "Arrived",
+        "color": "#28a745"
       },
       "quantity": "1",
       "category": {
@@ -1550,151 +1594,151 @@
         "id": "b4e4cfe5-c1b2-4559-83c8-3eaff7378802"
       },
       "id": "a611d825-3d9d-468c-93bc-460635ffdd55",
+      "updated_at": "2023-06-20T18:22:23.209Z",
       "product_url": "https://www.jomashop.com/guess-ladies-pink-spray-gift-set-fragrances-0-85715329363-085715329363.html",
       "shop_price": 29.09,
-      "dollar_rate": "384",
+      "dollar_rate": 384,
       "order_date": "2023-06-06",
       "order_number": "#3AC0152",
-      "arrived_date": "",
-      "shipment_price": "",
-      "gifty_price": "",
-      "is_in_stock": false,
+      "arrived_date": "2023-06-20",
+      "shipment_price": 4500,
+      "gifty_price": 35000,
+      "is_in_stock": true,
       "shop_price_arm": 11170.56,
       "created_at": "2023-06-10T14:52:47.396Z",
-      "updated_at": "2023-06-13T06:28:08.127Z",
-      "clean_income": 0
+      "clean_income": 17329.44
     },
     {
       "title": "Men's K (King) 3.38 oz Gift Set Fragrances",
       "brand": "DOLCE & GABBANA",
-      "quantity": "1",
       "shop": {
         "id": 2,
         "name": "jomashop",
         "url": "https://www.jomashop.com/"
       },
+      "status": {
+        "id": 2,
+        "name": "Arrived",
+        "color": "#28a745"
+      },
+      "quantity": "1",
       "category": {
         "name": "giftset",
         "id": "b4e4cfe5-c1b2-4559-83c8-3eaff7378802"
       },
       "id": "ee9a3783-6b6f-42de-a94c-e2e3ca104ee7",
-      "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
-      },
-      "created_at": "2023-06-10T14:53:47.621Z",
-      "updated_at": "2023-06-13T06:28:08.127Z",
+      "updated_at": "2023-06-20T18:12:52.420Z",
       "product_url": "https://www.jomashop.com/dolce-and-gabbana-mens-dolce-gabbana-k-king-3-38-oz-gift-set-fragrances-3423222066185.html",
       "shop_price": 56.25,
-      "dollar_rate": "384",
+      "dollar_rate": 384,
       "order_date": "2023-06-06",
       "order_number": "",
-      "arrived_date": "",
-      "shipment_price": "",
-      "gifty_price": "",
-      "is_in_stock": false,
+      "arrived_date": "2023-06-20",
+      "shipment_price": 5500,
+      "gifty_price": 55000,
+      "is_in_stock": true,
       "shop_price_arm": 21600,
-      "clean_income": 0
+      "created_at": "2023-06-10T14:53:47.621Z",
+      "clean_income": 25900
     },
     {
       "title": "Diamond Stripe Crossbody",
       "brand": "U.S. POLO ASSN",
-      "quantity": "1",
       "shop": {
         "id": 1,
         "name": "6pm",
         "url": "https://www.6pm.com/"
       },
+      "status": {
+        "id": 1,
+        "name": "Ordered",
+        "color": "#6c757d"
+      },
+      "quantity": "1",
       "category": {
         "name": "handbag",
         "id": "800cde5c-d9a2-42a0-920d-9039d1f9bd94"
       },
       "id": "ae58723d-3955-4f02-b56e-a1a6e303e7ed",
-      "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
-      },
-      "created_at": "2023-06-10T14:54:46.636Z",
-      "updated_at": "2023-06-13T06:28:08.127Z",
+      "updated_at": "2023-06-23T06:42:53.425Z",
       "product_url": "https://www.6pm.com/p/u-s-polo-assn-diamond-stripe-crossbody-grey/product/9733924/color/401",
       "shop_price": 24.99,
-      "dollar_rate": "384",
+      "dollar_rate": 384,
       "order_date": "2023-06-06",
       "order_number": "#113-8168527-4100219",
       "arrived_date": "",
-      "shipment_price": "",
-      "gifty_price": "",
+      "shipment_price": 2000,
+      "gifty_price": 29000,
       "is_in_stock": false,
       "shop_price_arm": 9596.16,
-      "clean_income": 0
+      "created_at": "2023-06-10T14:54:46.636Z",
+      "clean_income": 15403.84
     },
     {
       "title": "Diamond Stripe Crossbody",
       "brand": "U.S. POLO ASSN",
-      "quantity": "1",
       "shop": {
         "id": 1,
         "name": "6pm",
         "url": "https://www.6pm.com/"
       },
+      "status": {
+        "id": 1,
+        "name": "Ordered",
+        "color": "#6c757d"
+      },
+      "quantity": "1",
       "category": {
         "name": "handbag",
         "id": "800cde5c-d9a2-42a0-920d-9039d1f9bd94"
       },
       "id": "f815c88c-f0f4-43ee-8f6a-efc255816fd2",
-      "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
-      },
-      "created_at": "2023-06-10T14:55:51.724Z",
-      "updated_at": "2023-06-13T06:28:08.127Z",
+      "updated_at": "2023-06-23T06:46:30.731Z",
       "product_url": "https://www.6pm.com/p/u-s-polo-assn-diamond-stripe-crossbody-light-blue/product/9733924/color/430",
       "shop_price": 24.99,
-      "dollar_rate": "384",
+      "dollar_rate": 384,
       "order_date": "2023-06-06",
       "order_number": "#113-8168527-4100219",
       "arrived_date": "",
-      "shipment_price": "",
-      "gifty_price": "",
+      "shipment_price": 2000,
+      "gifty_price": 29000,
       "is_in_stock": false,
       "shop_price_arm": 9596.16,
-      "clean_income": 0
+      "created_at": "2023-06-10T14:55:51.724Z",
+      "clean_income": 15403.84
     },
     {
       "title": "Lara II Square Crossbody",
       "brand": "Tommy Hilfiger",
-      "quantity": "1",
       "shop": {
         "id": 1,
         "name": "6pm",
         "url": "https://www.6pm.com/"
       },
-      "category": {
-        "name": "handbag",
-        "id": "800cde5c-d9a2-42a0-920d-9039d1f9bd94"
-      },
-      "id": "77b28da3-11c6-497b-ad05-1a7958d82c24",
       "status": {
         "id": 1,
         "name": "Ordered",
         "color": "#6c757d"
       },
-      "created_at": "2023-06-10T14:56:26.292Z",
-      "updated_at": "2023-06-13T06:28:08.127Z",
+      "quantity": "1",
+      "category": {
+        "name": "handbag",
+        "id": "800cde5c-d9a2-42a0-920d-9039d1f9bd94"
+      },
+      "id": "77b28da3-11c6-497b-ad05-1a7958d82c24",
+      "updated_at": "2023-06-23T06:51:21.527Z",
       "product_url": "https://www.6pm.com/p/tommy-hilfiger-lara-ii-square-crossbody-breezy-blue-multi/product/9812371/color/1023091",
       "shop_price": 32.64,
-      "dollar_rate": "384",
+      "dollar_rate": 384,
       "order_date": "2023-06-06",
       "order_number": "#113-8168527-4100219",
       "arrived_date": "",
-      "shipment_price": "",
-      "gifty_price": "",
+      "shipment_price": 2500,
+      "gifty_price": 32500,
       "is_in_stock": false,
       "shop_price_arm": 12533.76,
-      "clean_income": 0
+      "created_at": "2023-06-10T14:56:26.292Z",
+      "clean_income": 15466.24
     },
     {
       "title": "Kirsten",
@@ -1992,6 +2036,172 @@
       "is_in_stock": false,
       "shop_price_arm": 28721.17,
       "clean_income": 14778.83
+    },
+    {
+      "title": "Vintage Automatic Black Skeleton Dial Men's Watch",
+      "brand": "INVICTA",
+      "quantity": "1",
+      "shop": {
+        "id": 2,
+        "name": "jomashop",
+        "url": "https://www.jomashop.com/"
+      },
+      "status": {
+        "id": 5,
+        "name": "Wishlist",
+        "color": "#cb8122"
+      },
+      "category": {
+        "name": "watch",
+        "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
+      },
+      "id": "d73d3d77-61da-4b5f-a5f2-1d2f074b0a12",
+      "created_at": "2023-06-14T14:03:11.727Z",
+      "updated_at": "2023-06-14T14:03:11.727Z",
+      "product_url": "https://www.jomashop.com/invicta-watch-22572.html",
+      "shop_price": 59.99,
+      "dollar_rate": 384,
+      "order_date": "",
+      "order_number": "",
+      "arrived_date": "",
+      "shipment_price": 3000,
+      "gifty_price": 44000,
+      "is_in_stock": false,
+      "shop_price_arm": 23036.16,
+      "clean_income": 15963.84
+    },
+    {
+      "title": "Adam Convertible Crossbody Flap",
+      "brand": "GUESS",
+      "shop": {
+        "id": 1,
+        "name": "6pm",
+        "url": "https://www.6pm.com/"
+      },
+      "status": {
+        "id": 5,
+        "name": "Wishlist",
+        "color": "#cb8122"
+      },
+      "quantity": "1",
+      "category": {
+        "name": "handbag",
+        "id": "800cde5c-d9a2-42a0-920d-9039d1f9bd94"
+      },
+      "id": "cbe4f92a-96e9-411d-8af8-9091496da03d",
+      "updated_at": "2023-06-20T08:37:04.795Z",
+      "product_url": "https://www.6pm.com/p/guess-adam-convertible-crossbody-flap-taupe/product/9907331/color/11",
+      "shop_price": 60.18,
+      "dollar_rate": 384,
+      "order_date": "",
+      "order_number": "",
+      "arrived_date": "",
+      "shipment_price": 4000,
+      "gifty_price": 45000,
+      "is_in_stock": false,
+      "shop_price_arm": 23109.12,
+      "created_at": "2023-06-20T08:36:23.772Z",
+      "clean_income": 15890.88
+    },
+    {
+      "title": "Signature Swifty Satchel",
+      "brand": "U.S. POLO ASSN",
+      "quantity": "1",
+      "shop": {
+        "id": 1,
+        "name": "6pm",
+        "url": "https://www.6pm.com/"
+      },
+      "status": {
+        "id": 5,
+        "name": "Wishlist",
+        "color": "#cb8122"
+      },
+      "category": {
+        "name": "handbag",
+        "id": "800cde5c-d9a2-42a0-920d-9039d1f9bd94"
+      },
+      "id": "eb38c3aa-d574-4fbb-a63c-95a101146939",
+      "created_at": "2023-06-20T08:38:08.258Z",
+      "updated_at": "2023-06-20T08:38:08.258Z",
+      "product_url": "https://www.6pm.com/p/u-s-polo-assn-signature-swifty-satchel-tan/product/9733919/color/20",
+      "shop_price": 39.99,
+      "dollar_rate": 384,
+      "order_date": "",
+      "order_number": "",
+      "arrived_date": "",
+      "shipment_price": 4000,
+      "gifty_price": 35500,
+      "is_in_stock": false,
+      "shop_price_arm": 15356.16,
+      "clean_income": 14143.84
+    },
+    {
+      "title": "TechnoMarine X Invicta Five Elements WATER Men's Watch with 3 Interchangeable Straps - 44.5mm (TM-122003)",
+      "brand": "Invicta",
+      "quantity": "1",
+      "shop": {
+        "id": 4,
+        "name": "Ebay",
+        "url": "https://www.ebay.com/"
+      },
+      "status": {
+        "id": 5,
+        "name": "Wishlist",
+        "color": "#cb8122"
+      },
+      "category": {
+        "name": "watch",
+        "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
+      },
+      "id": "df9a8489-f3d1-478c-a8f6-1f06608500a1",
+      "created_at": "2023-06-22T16:56:52.653Z",
+      "updated_at": "2023-06-22T16:56:52.653Z",
+      "product_url": "https://www.ebay.com/itm/256095087031?_trkparms=amclksrc%3DITM%26aid%3D1110006%26algo%3DHOMESPLICE.SIM%26ao%3D1%26asc%3D250629%26meid%3D9da19e429cb1447182fa7050e64ad3f0%26pid%3D101195%26rk%3D5%26rkt%3D12%26sd%3D256095001800%26itm%3D256095087031%26pmt%3D1%26noa%3D0%26pg%3D4429486%26algv%3DSimplAMLv11WebTrimmedV3MskuWithLambda85KnnRecallV1V4V6ItemNrtInQueryAndCassiniVisualRankerAndBertRecallAndPBoosterV3a%26brand%3DTechnoMarine&_trksid=p4429486.c101195.m1851&amdata=cksum%3A2560950870319da19e429cb1447182fa7050e64ad3f0%7Cenc%3AAQAIAAABYOF2C1v4PvLuUMt94LTx3USaOPJBiGrcV6%252Fms53nuTmrZ3dyQNOibl5UuvBUL5wYmcuhlieo3faZqx%252BhFc6Ti9XirkkCUJ2LfxVb%252B9nxabunfUYGsMpL1Y%252FxmkjPHNCqMgXo2ECai9wWaAOy6fJOFjQGmsK74g5N29F2tgR7SnW20U7lUGL0Gs9n03OWtb0FMjtJd5k%252FRbyerTdcLDVCjKOoOUv%252BgeLOFSZtmlBTwHiNdvXY%252FPfO0zOUoQBOTx3YGoaltV02lPMc87TJvaBvhVEOgeVCEzgyPF6H4SPFZf0UwY%252FGHWs%252F0Pmq7kjNtvEa63q5QH7S6ohsIB9CW1F%252FHCsUlJUx4ohpAnRgK6jfmrrJfIz4T4zqFPqdKn8zUd3Eb6%252BYrpPrtHSRgkVMudHmyy%252FNR2aH0ETl76XbNt0h5LQxSOPo0f8ZXOgcd%252F4iR3s5OXL5bRC0Harom6yFzUtUhsk%253D%7Campid%3APL_CLK%7Cclp%3A4429486&epid=7060780114",
+      "shop_price": 219,
+      "dollar_rate": 383,
+      "order_date": "",
+      "order_number": "",
+      "arrived_date": "",
+      "shipment_price": 4000,
+      "gifty_price": 150000,
+      "is_in_stock": false,
+      "shop_price_arm": 83877,
+      "clean_income": 60123
+    },
+    {
+      "title": "Invicta Specialty 39124 Men's Stainless Steel Red/Blue Bezel Chronograph Watch",
+      "brand": "INVICTA",
+      "shop": {
+        "id": 4,
+        "name": "Ebay",
+        "url": "https://www.ebay.com/"
+      },
+      "status": {
+        "id": 1,
+        "name": "Ordered",
+        "color": "#6c757d"
+      },
+      "quantity": "1",
+      "category": {
+        "name": "watch",
+        "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
+      },
+      "id": "115331f4-602e-4b4b-bda1-6f7c46765e1f",
+      "updated_at": "2023-06-26T05:17:36.205Z",
+      "product_url": "https://www.ebay.com/itm/314656722319",
+      "shop_price": 41.99,
+      "dollar_rate": 383,
+      "order_date": "2023-06-26",
+      "order_number": "27-10209-71607",
+      "arrived_date": "",
+      "shipment_price": 3000,
+      "gifty_price": 41000,
+      "is_in_stock": false,
+      "shop_price_arm": 16082.17,
+      "created_at": "2023-06-26T03:31:32.710Z",
+      "ebay_seller": "giftstreet123",
+      "clean_income": 19917.83
     }
   ]
 }

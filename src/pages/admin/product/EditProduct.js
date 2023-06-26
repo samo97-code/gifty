@@ -24,6 +24,8 @@ const EditProduct = () => {
     const watchShopPrice = watch("shopPrice");
     const watchDollarRate = watch("dollarRate");
     const watchShipmentPrice = watch("shipmentPrice");
+    const watchShop = watch("shop");
+    console.log(watchShop,'watchShop')
 
     useEffect(() => {
         fetchAllCategories()
@@ -62,6 +64,7 @@ const EditProduct = () => {
         setValue('isInStock', data.is_in_stock)
         setValue('createdAt', data.created_at)
         setValue('soldDate', data.sold_date)
+        setValue('ebaySeller', data.ebay_seller)
     }
 
     const fetchAllCategories = async () => {
@@ -181,6 +184,16 @@ const EditProduct = () => {
                     {errors.shop ?
                         <p className="mt-[2px] text-sm text-error font-semibold">Field is required</p> : null}
                 </div>
+
+                {
+                    watchShop === 'Ebay' ? <div className="form-group mb-4">
+                        <label htmlFor="ebaySeller"
+                               className="block mb-1 text-primary-100 text-lg font-semibold">Ebay Seller</label>
+                        <input type="text" name="ebaySeller" id="ebaySeller"
+                               placeholder="Ebay Seller" {...register('ebaySeller')}
+                               className="px-3 py-3 w-full shadow-md text-primary-100 focus:border-primary-100 focus:ring-primary-100"/>
+                    </div> : null
+                }
 
                 <div className="form-group mb-4">
                     <label htmlFor="status"

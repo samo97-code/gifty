@@ -196,7 +196,7 @@ const Products = () => {
                                     defaultHeaders.includes('product_url') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <a className="text-blue underline overflow-ellipsis overflow-hidden whitespace-normal line-clamp-1"
+                                            <a className="text-blue underline overflow-ellipsis overflow-hidden whitespace-normal line-clamp-1 w-[280px]"
                                                href={item.product_url} target="_blank">
                                                 <span>{item.product_url}</span>
                                             </a>
@@ -207,7 +207,14 @@ const Products = () => {
                                     defaultHeaders.includes('shop') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span>{item.shop}</span>
+                                            <span>{item.shop.name}</span>
+                                        </td> : null
+                                }
+                                {
+                                    defaultHeaders.includes('ebay_seller') ?
+                                        <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+                                            width="15%">
+                                            <span>{item.ebay_seller}</span>
                                         </td> : null
                                 }
                                 {

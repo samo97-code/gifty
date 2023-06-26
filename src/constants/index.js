@@ -70,6 +70,11 @@ export const shops = [
         "id": 3,
         "name": "wildberries",
         "url": "https://www.wildberries.ru/"
+    },
+    {
+        "id": 4,
+        "name": "Ebay",
+        "url": "https://www.ebay.com/"
     }
 ]
 
@@ -118,6 +123,7 @@ export const allHeaders =  [
     {id: 2, label: 'Brand', value: 'brand'},
     {id: 3, label: 'Product Url', value: 'product_url'},
     {id: 4, label: 'Shop Name', value: 'shop'},
+    {id: 21, label: 'Ebay Seller', value: 'ebay_seller'},
     {id: 5, label: 'Status', value: 'status'},
     {id: 6, label: 'Category', value: 'category'},
     {id: 7, label: 'In Stock', value: 'is_in_stock'},
@@ -134,5 +140,5 @@ export const allHeaders =  [
     {id: 18, label: 'Clean Income(դր)', value: 'clean_income'},
     {id: 19, label: 'Sold', value: 'is_sold'},
     {id: 20, label: 'Used', value: 'is_used'},
-    {id: 21, label: 'Action', value: 'action'},
+    {id: 22, label: 'Action', value: 'action'},
 ]

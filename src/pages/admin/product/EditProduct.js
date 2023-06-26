@@ -25,7 +25,6 @@ const EditProduct = () => {
     const watchDollarRate = watch("dollarRate");
     const watchShipmentPrice = watch("shipmentPrice");
     const watchShop = watch("shop");
-    console.log(watchShop,'watchShop')
 
     useEffect(() => {
         fetchAllCategories()
@@ -59,7 +58,7 @@ const EditProduct = () => {
         setValue('orderNumber', data.order_number)
         setValue('category', data.category?.name)
         setValue('status', data.status?.id)
-        setValue('sizes', data.size?.id)
+        setValue('size', data.size?.id)
         setValue('shopPriceArm', data.shop_price_arm)
         setValue('isInStock', data.is_in_stock)
         setValue('createdAt', data.created_at)

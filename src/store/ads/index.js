@@ -15,6 +15,13 @@ export const createAds = (payload) => async dispatch => {
 export const fetchAds = (payload) => async dispatch => {
     try {
         let url = `http://localhost:8081/ads?_sort=created_at&_order=desc`
+
+        if (payload?.date){
+            const start = `${payload.date}-01-01`
+            const end = `${payload.date}-12-31`
+            url += `&created_at_gte=${start}&created_at_lte=${end}`
+        }
+
         return await axios.get(url)
     } catch (e) {
         catchErrors(e)

@@ -33,15 +33,19 @@ const options = {
     },
 };
 
-const OrderSoldChart = ({products}) => {
+const OrderSoldChart = ({products, year}) => {
     const labels = ['Jan', "Feb", 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
     const datesOrdered = products.reduce((acc, {order_date}) => {
         if (order_date) {
             const orderDate = labels[moment(order_date).month()]
+            const orderYearDate = moment(order_date).year()
 
-            if (orderDate in acc) acc[orderDate].push(order_date);
-            else acc[orderDate] = [order_date];
+            if (orderYearDate === +year){
+                if (orderDate in acc) acc[orderDate].push(order_date);
+                else acc[orderDate] = [order_date];
+            }
+
         }
 
         return acc;
@@ -50,10 +54,14 @@ const OrderSoldChart = ({products}) => {
     const datesSold = products.reduce((acc, {sold_date}) => {
         if (sold_date) {
             const soldDate = labels[moment(sold_date).month()]
+            const soldYearDate = moment(sold_date).year()
 
-            if (soldDate in acc) {
-                if (sold_date) acc[soldDate].push(sold_date);
-            } else acc[soldDate] = [sold_date];
+            if (soldYearDate === +year){
+                if (soldDate in acc) {
+                    if (sold_date) acc[soldDate].push(sold_date);
+                } else acc[soldDate] = [sold_date];
+            }
+
         }
 
         return acc;

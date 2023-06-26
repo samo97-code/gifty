@@ -40,8 +40,14 @@ export const fetchProducts = (payload) => async dispatch => {
             url += str
         }
 
+        if (payload?.date){
+            const start = `${payload.date}-01-01`
+            const end = `${payload.date}-12-31`
+            url += `&order_date_gte=${start}&order_date_lte=${end}`
+        }
+
         if (payload?.dateRanges?.length){
-            url += `order_date_gte=${payload.dateRanges[0]}&order_date_lte=${payload.dateRanges[1]}`
+            url += `&order_date_gte=${payload.dateRanges[0]}&order_date_lte=${payload.dateRanges[1]}`
         }
 
         if (payload?.ne){

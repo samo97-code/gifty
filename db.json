@@ -237,7 +237,8 @@
       "social": {
         "id": 2,
         "label": "Facebook"
-      }
+      },
+      "created_at": "2023-06-16T13:12:11.790Z"
     },
     {
       "id": "34981359-2f38-40d3-b8a5-5e3e81f3fac8",
@@ -1650,9 +1651,9 @@
         "url": "https://www.6pm.com/"
       },
       "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
+        "id": 2,
+        "name": "Arrived",
+        "color": "#28a745"
       },
       "quantity": "1",
       "category": {
@@ -1660,16 +1661,16 @@
         "id": "800cde5c-d9a2-42a0-920d-9039d1f9bd94"
       },
       "id": "ae58723d-3955-4f02-b56e-a1a6e303e7ed",
-      "updated_at": "2023-06-23T06:42:53.425Z",
+      "updated_at": "2023-06-26T10:30:01.686Z",
       "product_url": "https://www.6pm.com/p/u-s-polo-assn-diamond-stripe-crossbody-grey/product/9733924/color/401",
       "shop_price": 24.99,
       "dollar_rate": 384,
       "order_date": "2023-06-06",
       "order_number": "#113-8168527-4100219",
-      "arrived_date": "",
+      "arrived_date": "2023-06-26",
       "shipment_price": 2000,
       "gifty_price": 29000,
-      "is_in_stock": false,
+      "is_in_stock": true,
       "shop_price_arm": 9596.16,
       "created_at": "2023-06-10T14:54:46.636Z",
       "clean_income": 15403.84
@@ -1683,9 +1684,9 @@
         "url": "https://www.6pm.com/"
       },
       "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
+        "id": 2,
+        "name": "Arrived",
+        "color": "#28a745"
       },
       "quantity": "1",
       "category": {
@@ -1693,16 +1694,16 @@
         "id": "800cde5c-d9a2-42a0-920d-9039d1f9bd94"
       },
       "id": "f815c88c-f0f4-43ee-8f6a-efc255816fd2",
-      "updated_at": "2023-06-23T06:46:30.731Z",
+      "updated_at": "2023-06-26T10:29:45.512Z",
       "product_url": "https://www.6pm.com/p/u-s-polo-assn-diamond-stripe-crossbody-light-blue/product/9733924/color/430",
       "shop_price": 24.99,
       "dollar_rate": 384,
       "order_date": "2023-06-06",
       "order_number": "#113-8168527-4100219",
-      "arrived_date": "",
+      "arrived_date": "2023-06-26",
       "shipment_price": 2000,
       "gifty_price": 29000,
-      "is_in_stock": false,
+      "is_in_stock": true,
       "shop_price_arm": 9596.16,
       "created_at": "2023-06-10T14:55:51.724Z",
       "clean_income": 15403.84
@@ -1716,9 +1717,9 @@
         "url": "https://www.6pm.com/"
       },
       "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
+        "id": 2,
+        "name": "Arrived",
+        "color": "#28a745"
       },
       "quantity": "1",
       "category": {
@@ -1726,16 +1727,16 @@
         "id": "800cde5c-d9a2-42a0-920d-9039d1f9bd94"
       },
       "id": "77b28da3-11c6-497b-ad05-1a7958d82c24",
-      "updated_at": "2023-06-23T06:51:21.527Z",
+      "updated_at": "2023-06-26T10:29:31.232Z",
       "product_url": "https://www.6pm.com/p/tommy-hilfiger-lara-ii-square-crossbody-breezy-blue-multi/product/9812371/color/1023091",
       "shop_price": 32.64,
       "dollar_rate": 384,
       "order_date": "2023-06-06",
       "order_number": "#113-8168527-4100219",
-      "arrived_date": "",
+      "arrived_date": "2023-06-26",
       "shipment_price": 2500,
       "gifty_price": 32500,
-      "is_in_stock": false,
+      "is_in_stock": true,
       "shop_price_arm": 12533.76,
       "created_at": "2023-06-10T14:56:26.292Z",
       "clean_income": 15466.24
@@ -1743,101 +1744,102 @@
     {
       "title": "Kirsten",
       "brand": "ALDO",
-      "quantity": "1",
       "shop": {
         "id": 1,
         "name": "6pm",
         "url": "https://www.6pm.com/"
       },
+      "status": {
+        "id": 2,
+        "name": "Arrived",
+        "color": "#28a745"
+      },
+      "quantity": "1",
       "category": {
         "name": "handbag",
         "id": "800cde5c-d9a2-42a0-920d-9039d1f9bd94"
       },
       "id": "0d7d19ec-cdf7-403c-abeb-fceb18404ecb",
-      "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
-      },
-      "created_at": "2023-06-10T14:57:02.004Z",
-      "updated_at": "2023-06-13T06:28:08.127Z",
+      "updated_at": "2023-06-26T10:27:25.746Z",
       "product_url": "https://www.6pm.com/p/aldo-kirsten-white/product/9865739/color/14",
       "shop_price": 34.77,
-      "dollar_rate": "384",
+      "dollar_rate": 384,
       "order_date": "2023-06-06",
       "order_number": "#113-8168527-4100219",
-      "arrived_date": "",
-      "shipment_price": "",
-      "gifty_price": "",
-      "is_in_stock": false,
+      "arrived_date": "2023-06-26",
+      "shipment_price": 2500,
+      "gifty_price": 34000,
+      "is_in_stock": true,
       "shop_price_arm": 13351.68,
-      "clean_income": 0
+      "created_at": "2023-06-10T14:57:02.004Z",
+      "clean_income": 16148.32
     },
     {
       "title": "Specialty Chronograph Quartz Blue Dial Pepsi Bezel Men's Watch",
       "brand": "INVICTA",
-      "quantity": "1",
       "shop": {
         "id": 2,
         "name": "jomashop",
         "url": "https://www.jomashop.com/"
       },
+      "status": {
+        "id": 2,
+        "name": "Arrived",
+        "color": "#28a745"
+      },
+      "quantity": "1",
       "category": {
         "name": "watch",
         "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
       },
       "id": "019a398c-fb7b-47be-a2f0-2b2f4cb45b04",
-      "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
-      },
-      "created_at": "2023-06-10T14:58:25.721Z",
-      "updated_at": "2023-06-13T06:28:08.127Z",
+      "updated_at": "2023-06-26T10:32:03.238Z",
       "product_url": "https://www.jomashop.com/invicta-specialty-chronograph-quartz-blue-dial-pepsi-bezel-mens-watch-39123.html",
       "shop_price": 49.99,
-      "dollar_rate": "384",
+      "dollar_rate": 384,
       "order_date": "2023-06-09",
       "order_number": "#3AF0520",
-      "arrived_date": "",
-      "shipment_price": "",
-      "gifty_price": "",
-      "is_in_stock": false,
+      "arrived_date": "2023-06-26",
+      "shipment_price": 2000,
+      "gifty_price": 45500,
+      "is_in_stock": true,
       "shop_price_arm": 19196.16,
-      "clean_income": 0
+      "created_at": "2023-06-10T14:58:25.721Z",
+      "clean_income": 22303.84
     },
     {
       "title": "Specialty Chronograph Quartz White Dial Men's Watch",
       "brand": "INVICTA",
-      "quantity": "1",
       "shop": {
         "id": 2,
         "name": "jomashop",
         "url": "https://www.jomashop.com/"
       },
+      "status": {
+        "id": 3,
+        "name": "Sold",
+        "color": "#dc3545"
+      },
+      "quantity": "1",
       "category": {
         "name": "watch",
         "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
       },
       "id": "14231bcd-a6db-4e63-a7df-6fd715a106af",
-      "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
-      },
-      "created_at": "2023-06-10T14:59:09.458Z",
-      "updated_at": "2023-06-13T06:28:08.127Z",
+      "sold_date": "2023-06-26",
+      "updated_at": "2023-06-26T10:31:54.469Z",
       "product_url": "https://www.jomashop.com/invicta-watch-14330.html",
       "shop_price": 68.99,
-      "dollar_rate": "384",
+      "dollar_rate": 384,
       "order_date": "2023-06-09",
       "order_number": "#3AF0520",
-      "arrived_date": "",
-      "shipment_price": "",
-      "gifty_price": "",
+      "arrived_date": "2023-06-26",
+      "shipment_price": 2400,
+      "gifty_price": 47000,
       "is_in_stock": false,
       "shop_price_arm": 26492.16,
-      "clean_income": 0
+      "created_at": "2023-06-10T14:59:09.458Z",
+      "clean_income": 16107.84
     },
     {
       "title": "шкатулка для украшений",
@@ -2040,7 +2042,6 @@
     {
       "title": "Vintage Automatic Black Skeleton Dial Men's Watch",
       "brand": "INVICTA",
-      "quantity": "1",
       "shop": {
         "id": 2,
         "name": "jomashop",
@@ -2051,13 +2052,13 @@
         "name": "Wishlist",
         "color": "#cb8122"
       },
+      "quantity": "1",
       "category": {
         "name": "watch",
         "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
       },
       "id": "d73d3d77-61da-4b5f-a5f2-1d2f074b0a12",
-      "created_at": "2023-06-14T14:03:11.727Z",
-      "updated_at": "2023-06-14T14:03:11.727Z",
+      "updated_at": "2023-06-26T11:05:51.691Z",
       "product_url": "https://www.jomashop.com/invicta-watch-22572.html",
       "shop_price": 59.99,
       "dollar_rate": 384,
@@ -2065,10 +2066,11 @@
       "order_number": "",
       "arrived_date": "",
       "shipment_price": 3000,
-      "gifty_price": 44000,
+      "gifty_price": 46500,
       "is_in_stock": false,
       "shop_price_arm": 23036.16,
-      "clean_income": 15963.84
+      "created_at": "2023-06-14T14:03:11.727Z",
+      "clean_income": 18463.84
     },
     {
       "title": "Adam Convertible Crossbody Flap",
@@ -2202,6 +2204,110 @@
       "created_at": "2023-06-26T03:31:32.710Z",
       "ebay_seller": "giftstreet123",
       "clean_income": 19917.83
+    },
+    {
+      "title": "Ladies Flora",
+      "brand": "Gucci",
+      "shop": {
+        "id": 4,
+        "name": "Ebay",
+        "url": "https://www.ebay.com/"
+      },
+      "status": {
+        "id": 5,
+        "name": "Wishlist",
+        "color": "#cb8122"
+      },
+      "quantity": "1",
+      "category": {
+        "name": "perfume",
+        "id": "67156383-d0aa-4f8e-9db4-b4a1e6770fa8"
+      },
+      "id": "70bb3933-5fea-4a93-903f-fb95e8442ec9",
+      "updated_at": "2023-06-26T12:16:48.263Z",
+      "product_url": "https://www.ebay.com/itm/404214942827?epid=26050665093&hash=item5e1d168c6b:g:8v4AAOSwE5ZkkKSI",
+      "shop_price": 76.74,
+      "dollar_rate": 383,
+      "order_date": "",
+      "order_number": "",
+      "arrived_date": "",
+      "shipment_price": 3000,
+      "gifty_price": 50000,
+      "is_in_stock": false,
+      "shop_price_arm": 29391.42,
+      "created_at": "2023-06-26T12:11:38.701Z",
+      "ebay_seller": "1-perfumes",
+      "clean_income": 15608.58
+    },
+    {
+      "title": "Miss Dior Blooming Bouquet",
+      "brand": "CHRISTIAN DIOR",
+      "shop": {
+        "id": 2,
+        "name": "jomashop",
+        "url": "https://www.jomashop.com/"
+      },
+      "status": {
+        "id": 5,
+        "name": "Wishlist",
+        "color": "#cb8122"
+      },
+      "quantity": "1",
+      "category": {
+        "name": "perfume",
+        "id": "67156383-d0aa-4f8e-9db4-b4a1e6770fa8"
+      },
+      "size": {
+        "id": 7,
+        "name": "100ml"
+      },
+      "id": "90100572-0d49-4fda-bafb-7f0d645f2e2b",
+      "updated_at": "2023-06-26T13:38:01.485Z",
+      "product_url": "https://www.jomashop.com/miss-dior-blooming-bouquet-christian-dior-edt-spray-3-4-oz-100-ml-w-3348900871991.html",
+      "shop_price": 109,
+      "dollar_rate": 383,
+      "order_date": "",
+      "order_number": "",
+      "arrived_date": "",
+      "shipment_price": 3000,
+      "gifty_price": 62500,
+      "is_in_stock": false,
+      "shop_price_arm": 41747,
+      "created_at": "2023-06-26T12:22:35.617Z",
+      "clean_income": 15753
+    },
+    {
+      "title": "шкатулка для украшений",
+      "brand": "Milomilo",
+      "quantity": "1",
+      "shop": {
+        "id": 3,
+        "name": "wildberries",
+        "url": "https://www.wildberries.ru/"
+      },
+      "category": {
+        "name": "casket",
+        "id": "13d78555-b79a-4fdb-948e-217d45035c19"
+      },
+      "id": "4894e7df-8852-4361-b68c-a1ad30efdbef",
+      "status": {
+        "id": 2,
+        "name": "Arrived",
+        "color": "#28a745"
+      },
+      "created_at": "2023-06-10T15:07:15.741Z",
+      "updated_at": "2023-06-13T06:28:08.127Z",
+      "product_url": "",
+      "shop_price": 22.24,
+      "dollar_rate": "384",
+      "order_date": "2024-06-05",
+      "order_number": "",
+      "arrived_date": "2024-06-08",
+      "shipment_price": "0",
+      "gifty_price": "16500",
+      "is_in_stock": true,
+      "shop_price_arm": 8540.16,
+      "clean_income": 5959.84
     }
   ]
 }

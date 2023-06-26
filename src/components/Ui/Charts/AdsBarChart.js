@@ -1,7 +1,7 @@
 import React, {useMemo} from 'react';
 import {Bar} from "react-chartjs-2";
 import zoomPlugin from 'chartjs-plugin-zoom';
-import { CategoryScale, LinearScale, Chart } from "chart.js/auto";
+import {CategoryScale, LinearScale, Chart} from "chart.js/auto";
 import moment from 'moment'
 
 Chart.register(CategoryScale);
@@ -32,54 +32,60 @@ const options = {
     },
 };
 
-const AdsBarChart = ({ads}) => {
-    const labels = ['Jan', "Feb",'Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+const AdsBarChart = ({ads, year}) => {
+    const labels = ['Jan', "Feb", 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
-    const priceAds = ads.reduce((acc, { created_at, price_arm }) => {
+    const priceAds = ads.reduce((acc, {created_at, price_arm}) => {
         const orderDate = labels[moment(created_at).month()]
+        const createYearDate = moment(created_at).year()
 
-        if (orderDate in acc) {
-            acc[orderDate] += price_arm;
-        } else {
-            acc[orderDate] = price_arm;
+        if (createYearDate === +year) {
+            if (orderDate in acc) {
+                acc[orderDate] += price_arm;
+            } else {
+                acc[orderDate] = price_arm;
+            }
         }
 
         return acc;
     }, {});
 
-    const priceCountAds = ads.reduce((acc, { created_at }) => {
+    const priceCountAds = ads.reduce((acc, {created_at}) => {
         const orderDate = labels[moment(created_at).month()]
+        const createYearDate = moment(created_at).year()
 
-        if (orderDate in acc) {
-            if (created_at)  acc[orderDate].push(created_at);
-        } else acc[orderDate] = [created_at];
+        if (createYearDate === +year) {
+            if (orderDate in acc) {
+                if (created_at) acc[orderDate].push(created_at);
+            } else acc[orderDate] = [created_at];
+        }
 
         return acc;
     }, {});
 
-    const priceDataAds = useMemo(()=>{
+    const priceDataAds = useMemo(() => {
         const temp = []
 
-        labels.map((label)=>{
-            if (priceAds[label]){
+        labels.map((label) => {
+            if (priceAds[label]) {
                 temp.push(priceAds[label].toFixed(0))
-            }else temp.push(0)
+            } else temp.push(0)
         })
         return temp
 
-    },[priceAds])
+    }, [priceAds])
 
-    const countDataAds = useMemo(()=>{
+    const countDataAds = useMemo(() => {
         const temp = []
 
-        labels.map((label)=>{
-            if (priceCountAds[label]){
+        labels.map((label) => {
+            if (priceCountAds[label]) {
                 temp.push(priceCountAds[label].length)
-            }else temp.push(0)
+            } else temp.push(0)
         })
         return temp
 
-    },[priceCountAds])
+    }, [priceCountAds])
 
     const data = {
         labels: labels,

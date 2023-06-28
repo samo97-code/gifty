@@ -76,6 +76,7 @@ const Products = () => {
                 name: filters.name,
                 brand: filters.brand,
                 categories: filters.categories,
+                model: filters.model,
                 statuses: filters.statuses,
                 sortBy: filters.sortBy,
                 dateRanges: filters.dates,
@@ -230,6 +231,13 @@ const Products = () => {
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
                                             <span>{item.category?.name}</span>
+                                        </td> : null
+                                }
+                                {
+                                    defaultHeaders.includes('model') ?
+                                        <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+                                            width="15%">
+                                            <span>{item.model}</span>
                                         </td> : null
                                 }
                                 {

@@ -96,6 +96,16 @@ const ProductFilters = ({showFilters, filters, defaultValues, categories, onSetF
                     />
                 </div>
 
+                <div className="form-group mb-4">
+                    <label htmlFor="model" className="block mb-1 text-lg font-semibold">Search Model</label>
+                    <input id="model" name="model"
+                           value={filters.model}
+                           className="px-3 py-3 w-full shadow-md text-primary-100 focus:border-primary-100 focus:ring-primary-100"
+                           placeholder="Search By Model" type="text"
+                           onChange={(e) => onChangeHandler(e)}
+                    />
+                </div>
+
                 <div className="form-group mb-4 sort-by">
                     <label className="block mb-1 text-lg font-semibold">Sort By</label>
                     <Multiselect

@@ -16,7 +16,7 @@ const CreateProduct = () => {
     const [loading, setLoading] = useState(true)
     const [categories, setCategories] = useState([])
     const [tempClean, setTempClean] = useState(0)
-    const {register, handleSubmit, reset, watch, formState: {errors}} = useForm();
+    const {register, handleSubmit, reset, watch, setValue, formState: {errors}} = useForm();
 
     const watchCategory = watch("category");
     const watchStatus = watch("status");
@@ -26,24 +26,26 @@ const CreateProduct = () => {
     const watchDollarRate = watch("dollarRate");
     const watchShipmentPrice = watch("shipmentPrice");
 
+
     useEffect(() => {
         fetchAllCategories()
     }, [])
 
-    useEffect(()=>{
-        if (watchGiftyPrice && watchShipmentPrice){
+    useEffect(() => {
+        if (watchGiftyPrice && watchShipmentPrice) {
             const shopPriceArm = watchShopPrice * watchDollarRate
             const cleanIncome = +watchGiftyPrice - +watchShipmentPrice - +shopPriceArm - 2000
             setTempClean(cleanIncome)
 
         }
-    },[watchGiftyPrice])
+    }, [watchGiftyPrice])
 
     const fetchAllCategories = async () => {
         try {
             const resp = await dispatch(fetchCategories())
             if (resp.data) {
                 setCategories(resp.data)
+                setValue('category', 'watch')
             }
         } catch (e) {
             catchErrors(e)
@@ -68,7 +70,7 @@ const CreateProduct = () => {
             const prepareData = {
                 ...data,
                 id: uuidv4(),
-                status: statuses.find((item)=>item.id === +data.status),
+                status: statuses.find((item) => item.id === +data.status),
                 isInStock: !!data.arrivedDate,
                 shopPrice: +data.shopPrice,
                 dollarRate: +data.dollarRate,
@@ -79,7 +81,6 @@ const CreateProduct = () => {
                 created_at: new Date(),
                 updated_at: new Date()
             }
-
 
             const resp = await dispatch(createProduct(await convertCamelToSnack(prepareData)))
             if (resp.status === 201) {
@@ -148,6 +149,21 @@ const CreateProduct = () => {
                             <p className="mt-[2px] text-sm text-error font-semibold">Field is required</p> : null}
 
                     </div> : null
+                }
+
+                {
+                    watchCategory === 'watch'
+                        ? <div className="form-group mb-4">
+                            <label htmlFor="model"
+                                   className="block mb-1 text-primary-100 text-lg font-semibold">Watch Model</label>
+                            <input id="model" name="model"
+                                   className="px-3 py-3 w-full shadow-md text-primary-100 focus:border-primary-100 focus:ring-primary-100"
+                                   placeholder="Watch Model" type="text" {...register('model')}/>
+
+                            {errors.model ?
+                                <p className="mt-[2px] text-sm text-error font-semibold">Field is required</p> : null}
+                        </div>
+                        : null
                 }
 
                 {

@@ -246,6 +246,21 @@ const EditProduct = () => {
                 }
 
                 {
+                    watchCategory === 'watch'
+                        ? <div className="form-group mb-4">
+                            <label htmlFor="model"
+                                   className="block mb-1 text-primary-100 text-lg font-semibold">Watch Model</label>
+                            <input id="model" name="model"
+                                   className="px-3 py-3 w-full shadow-md text-primary-100 focus:border-primary-100 focus:ring-primary-100"
+                                   placeholder="Watch Model" type="text" {...register('model')}/>
+
+                            {errors.model ?
+                                <p className="mt-[2px] text-sm text-error font-semibold">Field is required</p> : null}
+                        </div>
+                        : null
+                }
+
+                {
                     watchCategory === 'perfume' ?
                         <div className="form-group mb-4">
                             <label htmlFor="size"

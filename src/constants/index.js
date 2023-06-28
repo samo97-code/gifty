@@ -128,6 +128,7 @@ export const allHeaders =  [
     {id: 21, label: 'Ebay Seller', value: 'ebay_seller'},
     {id: 5, label: 'Status', value: 'status'},
     {id: 6, label: 'Category', value: 'category'},
+    {id: 23, label: 'Watch Model', value: 'model'},
     {id: 7, label: 'In Stock', value: 'is_in_stock'},
     {id: 8, label: 'Size', value: 'size'},
     {id: 9, label: 'Quantity', value: 'quantity'},

@@ -64,6 +64,7 @@ const EditProduct = () => {
         setValue('createdAt', data.created_at)
         setValue('soldDate', data.sold_date)
         setValue('ebaySeller', data.ebay_seller)
+        setValue('model', data.model)
     }
 
     const fetchAllCategories = async () => {

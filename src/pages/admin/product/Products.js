@@ -208,7 +208,7 @@ const Products = () => {
                                     defaultHeaders.includes('shop') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span>{item.shop.name}</span>
+                                            <span>{item.shop?.name}</span>
                                         </td> : null
                                 }
                                 {

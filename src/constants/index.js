@@ -75,6 +75,11 @@ export const shops = [
         "id": 4,
         "name": "Ebay",
         "url": "https://www.ebay.com/"
+    },
+    {
+        "id": 5,
+        "name": "Amazon",
+        "url": "https://www.amazon.com/"
     }
 ]
 

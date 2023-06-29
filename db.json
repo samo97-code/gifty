@@ -1882,7 +1882,6 @@
     {
       "title": "Men's Toy Boy EDP 1.7 oz (50 ml)",
       "brand": "MOSCHINO",
-      "quantity": "1",
       "shop": {
         "id": 2,
         "name": "jomashop",
@@ -1893,15 +1892,19 @@
         "name": "Wishlist",
         "color": "#cb8122"
       },
+      "quantity": "1",
       "category": {
         "name": "perfume",
         "id": "67156383-d0aa-4f8e-9db4-b4a1e6770fa8"
       },
+      "size": {
+        "id": 4,
+        "name": "50ml"
+      },
       "id": "837d5f83-6278-4bf7-a2e0-90c1de413ea6",
-      "created_at": "2023-06-13T09:39:59.312Z",
-      "updated_at": "2023-06-13T09:39:59.312Z",
+      "updated_at": "2023-06-29T08:47:27.740Z",
       "product_url": "https://www.jomashop.com/moschino-mens-toy-boy-edp-1-7-oz-fragrances-8011003845125.html",
-      "shop_price": 44.99,
+      "shop_price": 42.99,
       "dollar_rate": 383,
       "order_date": "",
       "order_number": "",
@@ -1909,13 +1912,13 @@
       "shipment_price": 3000,
       "gifty_price": 35000,
       "is_in_stock": false,
-      "shop_price_arm": 17231.17,
-      "clean_income": 12768.83
+      "shop_price_arm": 16465.17,
+      "created_at": "2023-06-13T09:39:59.312Z",
+      "clean_income": 13534.83
     },
     {
       "title": "Si Passione / EDP Spray 1.7 oz (50 ml) (w)",
       "brand": "GIORGIO ARMANI",
-      "quantity": "1",
       "shop": {
         "id": 2,
         "name": "jomashop",
@@ -1926,13 +1929,17 @@
         "name": "Wishlist",
         "color": "#cb8122"
       },
+      "quantity": "1",
       "category": {
         "name": "perfume",
         "id": "67156383-d0aa-4f8e-9db4-b4a1e6770fa8"
       },
+      "size": {
+        "id": 4,
+        "name": "50ml"
+      },
       "id": "ce3f70fe-025c-4402-8777-d8b8d0105454",
-      "created_at": "2023-06-13T09:41:18.992Z",
-      "updated_at": "2023-06-13T09:41:18.992Z",
+      "updated_at": "2023-06-29T06:09:51.498Z",
       "product_url": "https://www.jomashop.com/giorgio-armani-fragrances-sipes17-a.html",
       "shop_price": 69.99,
       "dollar_rate": 383,
@@ -1943,6 +1950,7 @@
       "gifty_price": 48000,
       "is_in_stock": false,
       "shop_price_arm": 26806.17,
+      "created_at": "2023-06-13T09:41:18.992Z",
       "clean_income": 16193.83
     },
     {
@@ -2392,6 +2400,109 @@
       "created_at": "2023-06-27T18:19:20.923Z",
       "ebay_seller": "EXCELSIOR WATCHES",
       "clean_income": 30246.83
+    },
+    {
+      "title": "Aviator Chronograph Quartz Blue Dial Men's Watch",
+      "brand": "EMPORIO ARMANI",
+      "shop": {
+        "id": 2,
+        "name": "jomashop",
+        "url": "https://www.jomashop.com/"
+      },
+      "status": {
+        "id": 5,
+        "name": "Wishlist",
+        "color": "#cb8122"
+      },
+      "quantity": "1",
+      "category": {
+        "name": "watch",
+        "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
+      },
+      "model": "AR11105",
+      "id": "6c8de9c6-4645-438a-b94e-77042ed64bc5",
+      "updated_at": "2023-06-29T08:53:48.257Z",
+      "product_url": "https://www.jomashop.com/armani-avaitor-watch-ar11105.html?utm_medium=cpa&utm_campaign=3629892&utm_source=CJ&cjevent=4f14c2b1165a11ee8386003a0a18ba72&cjdata=MXxOfDB8WXww",
+      "shop_price": 149.99,
+      "dollar_rate": 384,
+      "order_date": "",
+      "order_number": "",
+      "arrived_date": "",
+      "shipment_price": 4000,
+      "gifty_price": 117000,
+      "is_in_stock": false,
+      "shop_price_arm": 57596.16,
+      "created_at": "2023-06-28T16:45:58.467Z",
+      "clean_income": 53403.84
+    },
+    {
+      "title": "Outerbanks Chronograph Quartz Blue Dial Men's Watch",
+      "brand": "ARMANI EXCHANGE",
+      "quantity": "1",
+      "shop": {
+        "id": 2,
+        "name": "jomashop",
+        "url": "https://www.jomashop.com/"
+      },
+      "status": {
+        "id": 5,
+        "name": "Wishlist",
+        "color": "#cb8122"
+      },
+      "category": {
+        "name": "watch",
+        "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
+      },
+      "model": "AX1335",
+      "id": "c3f5f230-4920-4fbe-9714-97a621aa511d",
+      "created_at": "2023-06-28T16:51:13.416Z",
+      "updated_at": "2023-06-28T16:51:13.416Z",
+      "product_url": "https://www.jomashop.com/armani-exchange-outerbanks-chronograph-quartz-blue-dial-mens-watch-ax1335.html",
+      "shop_price": 77.99,
+      "dollar_rate": 381,
+      "order_date": "",
+      "order_number": "",
+      "arrived_date": "",
+      "shipment_price": 4000,
+      "gifty_price": 60000,
+      "is_in_stock": false,
+      "shop_price_arm": 29714.19,
+      "clean_income": 24285.81
+    },
+    {
+      "title": "Armani Exchange AX Men's Stainless Steel Quartz Dress Watch",
+      "brand": "ARMANI EXCHANGE",
+      "shop": {
+        "id": 4,
+        "name": "Ebay",
+        "url": "https://www.ebay.com/"
+      },
+      "status": {
+        "id": 5,
+        "name": "Wishlist",
+        "color": "#cb8122"
+      },
+      "quantity": "1",
+      "category": {
+        "name": "watch",
+        "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
+      },
+      "model": "AX2103",
+      "id": "0c8fb808-5ccd-497d-80ce-45db8cc489e1",
+      "updated_at": "2023-06-29T08:56:54.709Z",
+      "product_url": "https://www.ebay.com/itm/183539781941?hash=item2abbd2d135%3Ag%3AgwgAAOSw2hxcB%7EpR&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5337429398&customid=55221882&toolid=10049",
+      "shop_price": 89.38,
+      "dollar_rate": 383,
+      "order_date": "",
+      "order_number": "",
+      "arrived_date": "",
+      "shipment_price": 4000,
+      "gifty_price": 73500,
+      "is_in_stock": false,
+      "shop_price_arm": 34232.54,
+      "created_at": "2023-06-28T18:53:20.750Z",
+      "ebay_seller": "Jomashop",
+      "clean_income": 33267.46
     }
   ]
 }

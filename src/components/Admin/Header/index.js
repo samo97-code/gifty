@@ -24,10 +24,12 @@ const Header = ({showSidebar,open}) => {
 
     return (
         <div className="bg-white shadow-md w-full h-[60px] px-6 sticky top-0 z-[1]">
-            {!showSidebar ? <Bars3Icon className="h-8 w-8 text-gray-600 cursor-pointer" onClick={()=>open()}/> : ''}
 
             <div className="flex justify-between items-center h-full">
-                <b>{user?.first_name} {user?.last_name}</b>
+                <div className="flex items-center gap-x-5">
+                    {!showSidebar ? <Bars3Icon className="h-8 w-8 text-gray-600 cursor-pointer" onClick={()=>open()}/> : ''}
+                    <b>{user?.first_name} {user?.last_name}</b>
+                </div>
 
                 <div>
 

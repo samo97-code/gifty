@@ -36,7 +36,8 @@ const EditAds = () => {
                 price: data.price,
                 dollar_rate: data.dollarRate,
                 price_arm: +(data.price * data.dollarRate).toFixed(2),
-                social: socials.find((item)=>item.label === data.social)
+                social: socials.find((item)=>item.label === data.social),
+                created_at: new Date()
             }
 
             const resp = await dispatch(updateAds(prepareData))

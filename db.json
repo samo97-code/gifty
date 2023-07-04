@@ -261,6 +261,17 @@
         "label": "Facebook"
       },
       "created_at": "2023-06-23T09:58:03.832Z"
+    },
+    {
+      "id": "77bc0acc-2037-4368-bdff-c1c404039ca3",
+      "price": "261.5",
+      "dollar_rate": "383",
+      "price_arm": 100154.5,
+      "social": {
+        "id": 1,
+        "label": "Instagram"
+      },
+      "created_at": "2023-07-02T05:21:53.972Z"
     }
   ],
   "products": [
@@ -2185,40 +2196,6 @@
       "clean_income": 60123
     },
     {
-      "title": "Invicta Specialty 39124 Men's Stainless Steel Red/Blue Bezel Chronograph Watch",
-      "brand": "INVICTA",
-      "shop": {
-        "id": 4,
-        "name": "Ebay",
-        "url": "https://www.ebay.com/"
-      },
-      "status": {
-        "id": 1,
-        "name": "Ordered",
-        "color": "#6c757d"
-      },
-      "quantity": "1",
-      "category": {
-        "name": "watch",
-        "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
-      },
-      "id": "115331f4-602e-4b4b-bda1-6f7c46765e1f",
-      "updated_at": "2023-06-26T05:17:36.205Z",
-      "product_url": "https://www.ebay.com/itm/314656722319",
-      "shop_price": 41.99,
-      "dollar_rate": 383,
-      "order_date": "2023-06-26",
-      "order_number": "27-10209-71607",
-      "arrived_date": "",
-      "shipment_price": 3000,
-      "gifty_price": 41000,
-      "is_in_stock": false,
-      "shop_price_arm": 16082.17,
-      "created_at": "2023-06-26T03:31:32.710Z",
-      "ebay_seller": "giftstreet123",
-      "clean_income": 19917.83
-    },
-    {
       "title": "Ladies Flora",
       "brand": "Gucci",
       "shop": {
@@ -2386,7 +2363,7 @@
       },
       "model": "40772",
       "id": "b7965b51-c6b3-445f-ba3f-7942154f2011",
-      "updated_at": "2023-06-28T09:11:24.281Z",
+      "updated_at": "2023-07-03T18:12:04.715Z",
       "product_url": "https://www.ebay.com/itm/354865343568",
       "shop_price": 78.99,
       "dollar_rate": 383,
@@ -2394,12 +2371,12 @@
       "order_number": " 14-10220-55518",
       "arrived_date": "",
       "shipment_price": 3000,
-      "gifty_price": 65500,
+      "gifty_price": 68500,
       "is_in_stock": false,
       "shop_price_arm": 30253.17,
       "created_at": "2023-06-27T18:19:20.923Z",
       "ebay_seller": "EXCELSIOR WATCHES",
-      "clean_income": 30246.83
+      "clean_income": 33246.83
     },
     {
       "title": "Aviator Chronograph Quartz Blue Dial Men's Watch",
@@ -2503,6 +2480,142 @@
       "created_at": "2023-06-28T18:53:20.750Z",
       "ebay_seller": "Jomashop",
       "clean_income": 33267.46
+    },
+    {
+      "title": "Men's K Gift Set Fragrances 3423478970656",
+      "brand": "DOLCE & GABBANA",
+      "shop": {
+        "id": 2,
+        "name": "jomashop",
+        "url": "https://www.jomashop.com/"
+      },
+      "status": {
+        "id": 5,
+        "name": "Wishlist",
+        "color": "#cb8122"
+      },
+      "quantity": "1",
+      "category": {
+        "name": "giftset",
+        "id": "b4e4cfe5-c1b2-4559-83c8-3eaff7378802"
+      },
+      "model": "",
+      "id": "5b77e354-d827-4e08-8167-8c1c5dd23cd4",
+      "updated_at": "2023-07-03T16:12:55.131Z",
+      "product_url": "https://www.jomashop.com/dolce-gabbana-mens-k-gift-set-fragrances-3423478970656.html",
+      "shop_price": 56.99,
+      "dollar_rate": 383,
+      "order_date": "",
+      "order_number": "",
+      "arrived_date": "",
+      "shipment_price": 4000,
+      "gifty_price": 53000,
+      "is_in_stock": false,
+      "shop_price_arm": 21827.17,
+      "created_at": "2023-07-03T16:12:07.723Z",
+      "clean_income": 25172.83
+    },
+    {
+      "title": "Men's Club De Nuit Gift Set Fragrances",
+      "brand": "ARMAF",
+      "quantity": "1",
+      "shop": {
+        "id": 2,
+        "name": "jomashop",
+        "url": "https://www.jomashop.com/"
+      },
+      "status": {
+        "id": 5,
+        "name": "Wishlist",
+        "color": "#cb8122"
+      },
+      "category": {
+        "name": "giftset",
+        "id": "b4e4cfe5-c1b2-4559-83c8-3eaff7378802"
+      },
+      "model": "",
+      "id": "69d2b088-d871-4847-a30a-fd0adf806063",
+      "created_at": "2023-07-03T16:14:50.519Z",
+      "updated_at": "2023-07-03T16:14:50.519Z",
+      "product_url": "https://www.jomashop.com/armaf-mens-club-de-nuit-gift-set-fragrances-6294015148350.html",
+      "shop_price": 64.99,
+      "dollar_rate": 383,
+      "order_date": "",
+      "order_number": "",
+      "arrived_date": "",
+      "shipment_price": 4000,
+      "gifty_price": 47000,
+      "is_in_stock": false,
+      "shop_price_arm": 24891.17,
+      "clean_income": 16108.83
+    },
+    {
+      "title": "Ladies My Way Gift Set Fragrances",
+      "brand": "GIORGIO ARMANI",
+      "shop": {
+        "id": 2,
+        "name": "jomashop",
+        "url": "https://www.jomashop.com/"
+      },
+      "status": {
+        "id": 5,
+        "name": "Wishlist",
+        "color": "#cb8122"
+      },
+      "quantity": "1",
+      "category": {
+        "name": "giftset",
+        "id": "b4e4cfe5-c1b2-4559-83c8-3eaff7378802"
+      },
+      "model": "",
+      "id": "2cf7ac6c-0132-4447-af82-b17cf4336a9b",
+      "updated_at": "2023-07-03T16:17:36.668Z",
+      "product_url": "https://www.jomashop.com/giorgio-armani-ladies-my-way-gift-set-fragrances-3614273613682.html",
+      "shop_price": 84.99,
+      "dollar_rate": 383,
+      "order_date": "",
+      "order_number": "",
+      "arrived_date": "",
+      "shipment_price": 4000,
+      "gifty_price": 63000,
+      "is_in_stock": false,
+      "shop_price_arm": 32551.17,
+      "created_at": "2023-07-03T16:16:43.144Z",
+      "clean_income": 24448.83
+    },
+    {
+      "title": "Bolt Chronograph Men's Watch",
+      "brand": "INVICTA",
+      "quantity": "1",
+      "shop": {
+        "id": 2,
+        "name": "jomashop",
+        "url": "https://www.jomashop.com/"
+      },
+      "status": {
+        "id": 5,
+        "name": "Wishlist",
+        "color": "#cb8122"
+      },
+      "category": {
+        "name": "watch",
+        "id": "d7556595-17b0-4206-a8a3-b8b51363734b"
+      },
+      "model": "26539",
+      "id": "ac794409-1a41-4a03-9b90-31b54206f64b",
+      "created_at": "2023-07-04T04:16:14.555Z",
+      "updated_at": "2023-07-04T04:16:14.555Z",
+      "product_url": "https://www.jomashop.com/invicta-bolt-watch-26539.html",
+      "shop_price": 199,
+      "dollar_rate": 383,
+      "order_date": "",
+      "order_number": "",
+      "arrived_date": "",
+      "shipment_price": 3000,
+      "gifty_price": 137500,
+      "is_in_stock": false,
+      "shop_price_arm": 76217,
+      "clean_income": 56283
     }
   ]
 }

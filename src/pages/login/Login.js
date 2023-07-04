@@ -30,7 +30,6 @@ const Login = () => {
             if (!findItem) return cogoToast.success('User not exists')
 
             setCookie('gifty_user', findItem, {
-                path: '/',
                 maxAge: 60 * 60 * 24 * 59,
             })
             cogoToast.success('Successfully LoggedIn')

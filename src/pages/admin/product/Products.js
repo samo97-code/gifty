@@ -222,7 +222,7 @@ const Products = () => {
                                     defaultHeaders.includes('status') ?
                                         <td className="border-t-0 px-3 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                                             width="15%">
-                                            <span style={{background: `${item.status.color}`}}
+                                            <span style={{background: `${item.status?.color}`}}
                                                   className={`px-4 py-2 rounded-[16px] text-white font-semibold`}>{item.status?.name}</span>
                                         </td> : null
                                 }
